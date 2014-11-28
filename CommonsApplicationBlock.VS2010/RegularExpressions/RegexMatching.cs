@@ -39,6 +39,10 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.RegularExpression
     /// </para>
     /// </summary>
     /// <seealso cref="SourcePro.Csharp.Practices.FoundationLibrary.Commons.RegularExpressions"/>
+    /// <seealso cref="RegexOptions"/>
+    /// <seealso cref="Match"/>
+    /// <seealso cref="MatchCollection"/>
+    /// <seealso cref="System.Text.RegularExpressions.Regex"/>
     public class RegexMatching : IMatching
     {
         private string _patternExpression;

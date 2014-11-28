@@ -19,7 +19,6 @@
 
 #endregion
 
-using System;
 
 namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons
 {
