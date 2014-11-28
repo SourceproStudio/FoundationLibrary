@@ -59,6 +59,7 @@
     <Compile Include="RegularExpressions\MatchingImplements\EmailAddressRegexMatching.cs" />
     <Compile Include="RegularExpressions\MatchingImplements\EnvironmentVariableRegexMatching.cs" />
     <Compile Include="RegularExpressions\MatchingImplements\SecondGenerationIDCardRegexMatching.cs" />
+    <Compile Include="RegularExpressions\MatchingImplements\TelephoneNumberRegexMatching.cs" />
     <Compile Include="RegularExpressions\Regex.cs" />
     <Compile Include="RegularExpressions\RegexMatching.cs" />
   </ItemGroup>
