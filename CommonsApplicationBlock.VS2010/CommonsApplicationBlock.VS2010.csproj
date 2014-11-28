@@ -55,6 +55,7 @@
     <Compile Include="FoundationLibraryConstants.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegularExpressions\IMatching.cs" />
+    <Compile Include="RegularExpressions\MatchingImplements\DateTimeRegexMatching.cs" />
     <Compile Include="RegularExpressions\MatchingImplements\EnvironmentVariableRegexMatching.cs" />
     <Compile Include="RegularExpressions\Regex.cs" />
     <Compile Include="RegularExpressions\RegexMatching.cs" />
