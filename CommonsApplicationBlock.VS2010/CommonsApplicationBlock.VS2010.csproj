@@ -52,11 +52,15 @@
     <Compile Include="ApplicationOperatingMode.cs" />
     <Compile Include="ApplicationOperatingModeDiscovery.cs" />
     <Compile Include="ApplicationOperatingModeRegistration.cs" />
+    <Compile Include="FoundationLibraryConstants.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegularExpressions\IMatching.cs" />
+    <Compile Include="RegularExpressions\RegexMatching.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Sn.pfx" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
