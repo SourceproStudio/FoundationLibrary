@@ -52,7 +52,7 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons
         /// <summary>
         /// 未知模式的应用程序。
         /// </summary>
-        Unknown = 4
+        Unknown = 0
     }
 }
 
