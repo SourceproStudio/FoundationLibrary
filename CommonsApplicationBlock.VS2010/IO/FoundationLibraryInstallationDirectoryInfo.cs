@@ -175,6 +175,32 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.IO
         }
 
         #endregion
+
+        #region SubFolders
+        /// <summary>
+        /// 定义了安装路径下的子文件夹。
+        /// </summary>
+        [Serializable, Flags]
+        public enum SubFolders
+        {
+            /// <summary>
+            /// 代表根目录。
+            /// </summary>
+            Root = 0,
+            /// <summary>
+            /// 代表Bin文件夹（此文件夹中包含所有程序集）。
+            /// </summary>
+            Bin = 1,
+            /// <summary>
+            /// 配置文件文件夹。
+            /// </summary>
+            Config = 2,
+            /// <summary>
+            /// XML文档文件夹。
+            /// </summary>
+            Xml = 4
+        }
+        #endregion
     }
 }
 
