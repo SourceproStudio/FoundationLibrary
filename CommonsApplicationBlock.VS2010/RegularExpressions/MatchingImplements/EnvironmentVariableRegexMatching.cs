@@ -19,7 +19,6 @@
 
 #endregion
 
-using System;
 using System.Text.RegularExpressions;
 
 namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.RegularExpressions.MatchingImplements
