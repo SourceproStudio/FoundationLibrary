@@ -32,7 +32,7 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.Resources
     /// Namespace : <see cref="SourcePro.Csharp.Practices.FoundationLibrary.Commons.Resources"/>
     /// </para>
     /// <para>
-    /// Type : <see cref="ResourceCollection<T>"/>
+    /// Type : <see cref="ResourceCollection{T}"/>
     /// </para>
     /// <para>
     /// The minimum .Net Framework version requirements : 4.0
@@ -46,13 +46,13 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.Resources
         #region ResourceCollection Constructors
 
         /// <summary>
-        /// 用于初始化一个<see cref="ResourceCollection<T>" />对象实例。
+        /// 用于初始化一个<see cref="ResourceCollection{T}" />对象实例。
         /// </summary>
         public ResourceCollection()
         { }
 
         /// <summary>
-        /// 用于初始化一个<see cref="ResourceCollection<T>" />对象实例。
+        /// 用于初始化一个<see cref="ResourceCollection{T}" />对象实例。
         /// </summary>
         /// <param name="initialization">用于初始化集合的数据。</param>
         public ResourceCollection(IEnumerable<Resource<T>> initialization)
