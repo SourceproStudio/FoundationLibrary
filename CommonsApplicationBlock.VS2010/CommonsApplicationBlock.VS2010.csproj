@@ -67,8 +67,7 @@
     <Compile Include="RegularExpressions\MatchingImplements\TelephoneNumberRegexMatching.cs" />
     <Compile Include="RegularExpressions\Regex.cs" />
     <Compile Include="RegularExpressions\RegexMatching.cs" />
-    <Compile Include="Resources\ResourceItem.cs" />
-    <Compile Include="Resources\StringResourceItem.cs" />
+    <Compile Include="Resources\Resource.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Sn.pfx" />
