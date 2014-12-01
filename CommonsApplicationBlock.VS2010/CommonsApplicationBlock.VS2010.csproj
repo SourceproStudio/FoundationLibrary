@@ -70,7 +70,6 @@
     <Compile Include="Resources\Resource.cs" />
     <Compile Include="Resources\ResourceCollection.cs" />
     <Compile Include="Resources\ResourceFileNotFoundException.cs" />
-    <Compile Include="Resources\ResourceFileReader.cs" />
     <Compile Include="Resources\StringResource.cs" />
     <Compile Include="Resources\StringResourceCollection.cs" />
   </ItemGroup>
