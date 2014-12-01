@@ -46,6 +46,7 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.Resources
     /// <see cref="ResourceItem{TName, TValue}"/> is an abstract type !
     /// </remarks>
     /// <seealso cref="SourcePro.Csharp.Practices.FoundationLibrary.Commons.Resources"/>
+    [Serializable]
     public abstract class ResourceItem<TName, TValue>
     {
         private TName _name;
