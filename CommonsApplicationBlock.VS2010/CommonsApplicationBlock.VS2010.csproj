@@ -68,6 +68,7 @@
     <Compile Include="RegularExpressions\Regex.cs" />
     <Compile Include="RegularExpressions\RegexMatching.cs" />
     <Compile Include="Resources\ResourceItem.cs" />
+    <Compile Include="Resources\StringResourceItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Sn.pfx" />
