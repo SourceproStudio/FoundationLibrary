@@ -121,6 +121,33 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons
             EnvironmentVariables.AllreadyVerified = false;
         }
         #endregion
+
+        #region SetInstallationPathEnvironmentVariable
+        /// <summary>
+        /// 将路径<paramref name="installedPath"/>设置为环境变量。
+        /// </summary>
+        /// <param name="installedPath">指定的安装路径。</param>
+        /// <exception cref="SecurityException">
+        /// 当当前线程用户无访问系统环境变量权限时，抛出此异常。
+        /// </exception>
+        static public void SetInstallationPathEnvironmentVariable(string installedPath)
+        {
+            try
+            {
+                Environment.SetEnvironmentVariable(EnvironmentVariables.InstallationPathEnvironmentVariableName, installedPath, EnvironmentVariableTarget.Machine);
+                EnvironmentVariables.InstallationPath = installedPath;
+                EnvironmentVariables.AllreadyVerified = true;
+            }
+            catch (SecurityException securityEx)
+            {
+                throw securityEx;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        #endregion
     }
 }
 

@@ -19,9 +19,8 @@
 
 #endregion
 
-using System;
-using SourcePro.Csharp.Practices.FoundationLibrary.Commons.RegularExpressions.MatchingImplements;
 using SourcePro.Csharp.Practices.FoundationLibrary.Commons.RegularExpressions;
+using SourcePro.Csharp.Practices.FoundationLibrary.Commons.RegularExpressions.MatchingImplements;
 
 namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.IO
 {
