@@ -1,6 +1,8 @@
-﻿using System.Windows.Forms;
+﻿using System;
 using System.IO;
-using System;
+using System.Windows.Forms;
+
+/*引用基础库资源处理命名空间。SourceProStudio.Practices.FoundationLibrary.Commons.dll*/
 using SourcePro.Csharp.Practices.FoundationLibrary.Commons.Resources;
 
 namespace SourcePro.Csharp.Examples
