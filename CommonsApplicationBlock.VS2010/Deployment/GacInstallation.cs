@@ -20,8 +20,8 @@
 #endregion
 
 using System;
-using System.IO;
 using System.EnterpriseServices.Internal;
+using System.IO;
 
 namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.Deployment
 {
