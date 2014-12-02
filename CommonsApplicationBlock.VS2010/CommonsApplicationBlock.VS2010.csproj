@@ -73,6 +73,7 @@
     <Compile Include="Resources\ResourceReader.cs" />
     <Compile Include="Resources\StringResource.cs" />
     <Compile Include="Resources\StringResourceCollection.cs" />
+    <Compile Include="Resources\StringResourceReader.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Sn.pfx" />
