@@ -40,6 +40,9 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Web.Caching.Internal
     /// </para>
     /// </summary>
     /// <seealso cref="SourcePro.Csharp.Practices.FoundationLibrary.Web.Caching.Internal"/>
+    /// <seealso cref="System.Web.Caching"/>
+    /// <seealso cref="Priority"/>
+    /// <seealso cref="CacheItemPriority"/>
     internal class CacheItemPriorityConverter
     {
         private CacheItemPriority _sourcePriority;
