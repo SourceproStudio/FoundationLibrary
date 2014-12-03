@@ -49,6 +49,7 @@
     <Compile Include="ApplicationOperatingModeRegistration.cs" />
     <Compile Include="Deployment\GacInstallation.cs" />
     <Compile Include="EnvironmentVariables.cs" />
+    <Compile Include="IO\ApplicationRunningDirectoryInfo.cs" />
     <Compile Include="IO\InstallationDirectoryInfo.cs" />
     <Compile Include="IO\InstallationPathNotExistsReasons.cs" />
     <Compile Include="IO\InstallationPathReplacement.cs" />
@@ -70,6 +71,7 @@
     <Compile Include="Resources\StringResource.cs" />
     <Compile Include="Resources\StringResourceCollection.cs" />
     <Compile Include="Resources\StringResourceReader.cs" />
+    <Compile Include="UnknownApplicationOperatingModeException.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Sn.pfx" />
