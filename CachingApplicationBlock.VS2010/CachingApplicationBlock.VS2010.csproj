@@ -42,6 +42,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,10 +51,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CacheItem.cs" />
+    <Compile Include="CacheItemPolicy.cs" />
+    <Compile Include="CacheItemPriority.cs" />
+    <Compile Include="CacheItemWasRemovedCallback.cs" />
+    <Compile Include="CacheItemWasUpdatedCallback.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Sn.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CommonsApplicationBlock.VS2010\CommonsApplicationBlock.VS2010.csproj">
+      <Project>{27E2BEC9-DA35-4136-9A4F-D6F776BB33B6}</Project>
+      <Name>CommonsApplicationBlock.VS2010</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
