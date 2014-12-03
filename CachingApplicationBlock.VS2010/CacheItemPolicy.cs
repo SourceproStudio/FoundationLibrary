@@ -47,12 +47,33 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Caching
         private IList<string> _dependencies;
         private CacheItemWasRemovedCallback _removedCallBack;
         private CacheItemWasUpdatedCallback _updatedCallBack;
+        private CacheItemPriority _priority;
+        #region NoneAbsoluteExpiration
+        /// <summary>
+        /// 无效的绝对缓存项失效时间。
+        /// </summary>
+        public static readonly DateTime NoneAbsoluteExpiration = new DateTime(1983, 9, 15, 0, 0, 0, 0);
+        #endregion
+        #region NoneSlidingExpiration
+        /// <summary>
+        /// 无效的滑动缓存项失效时间设置。
+        /// </summary>
+        public static readonly TimeSpan NoneSlidingExpiration = new TimeSpan(0, 0, 0, 0, 1);
+        #endregion
 
         #region AbsoluteExpiration
         /// <summary>
+        /// <para>
         /// 缓存绝对失效时间。
+        /// </para>
+        /// <para>
+        /// 如果设置<see cref="AbsoluteExpiration"/>，则<see cref="SlidingExpiration"/>必须设置为<see cref="CacheItemPolicy"/>.NoneSlidingExpiration。
+        /// </para>
         /// </summary>
         /// <value>设置或获取缓存项绝对失效时间。</value>
+        /// <remarks>
+        /// 如果设置<see cref="AbsoluteExpiration"/>，则<see cref="SlidingExpiration"/>必须设置为<see cref="CacheItemPolicy"/>.NoneSlidingExpiration。
+        /// </remarks>
         public virtual DateTime AbsoluteExpiration
         {
             get { return _absoluteExpiration; }
@@ -62,9 +83,13 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Caching
 
         #region SlidingExpiration
         /// <summary>
-        /// 滑动的缓存项失效时间设定。
+        /// <para>滑动的缓存项失效时间设定。</para>
+        /// <para>如果设置<see cref="SlidingExpiration"/>，则<see cref="AbsoluteExpiration"/>必须设置为<see cref="CacheItemPolicy"/>.NoneAbsoluteExpiration。</para>
         /// </summary>
         /// <value>设置或获取滑动的缓存项失效时间设定。</value>
+        /// <remarks>
+        /// 如果设置<see cref="SlidingExpiration"/>，则<see cref="AbsoluteExpiration"/>必须设置为<see cref="CacheItemPolicy"/>.NoneAbsoluteExpiration。
+        /// </remarks>
         public virtual TimeSpan SlidingExpiration
         {
             get { return _slidingExpiration; }
@@ -114,8 +139,22 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Caching
         /// 用于初始化一个<see cref="CacheItemPolicy" />对象实例。
         /// </summary>
         public CacheItemPolicy()
-        { }
+        {
 
+        }
+
+        #endregion
+
+        #region Priority
+        /// <summary>
+        /// 缓存项优先级。
+        /// </summary>
+        /// <value>设置或获取缓存项优先级。</value>
+        public virtual CacheItemPriority Priority
+        {
+            get { return _priority; }
+            set { _priority = value; }
+        }
         #endregion
     }
 }
