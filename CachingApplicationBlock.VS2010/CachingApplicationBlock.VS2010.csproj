@@ -57,6 +57,7 @@
     <Compile Include="CacheItemWasRemovedCallback.cs" />
     <Compile Include="CacheItemWasUpdatedCallback.cs" />
     <Compile Include="Internal\CacheItemPriorityConverter.cs" />
+    <Compile Include="Internal\Web\CacheItemPriorityConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
