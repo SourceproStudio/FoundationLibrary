@@ -52,10 +52,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CacheItem.cs" />
+    <Compile Include="CacheItemDependency.cs" />
     <Compile Include="CacheItemPolicy.cs" />
     <Compile Include="CacheItemPriority.cs" />
     <Compile Include="CacheItemWasRemovedCallback.cs" />
     <Compile Include="CacheItemWasUpdatedCallback.cs" />
+    <Compile Include="ICache.cs" />
     <Compile Include="Internal\CacheItemPriorityConverter.cs" />
     <Compile Include="Internal\Web\CacheItemPriorityConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
