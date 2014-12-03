@@ -38,11 +38,13 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Caching
     /// </para>
     /// </summary>
     /// <seealso cref="SourcePro.Csharp.Practices.FoundationLibrary.Caching"/>
+    /// <seealso cref="CacheItemPolicy"/>
     [Serializable]
     public class CacheItem
     {
         private string _key;
         private object _data;
+        private CacheItemPolicy _policy;
 
         #region Key
         /// <summary>
@@ -72,6 +74,18 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Caching
         {
             get { return _data; }
             set { _data = value; }
+        }
+        #endregion
+
+        #region Policy
+        /// <summary>
+        /// 缓存项使用的策略。
+        /// </summary>
+        /// <value>设置或获取缓存策略。</value>
+        public virtual CacheItemPolicy Policy
+        {
+            get { return _policy; }
+            set { _policy = value; }
         }
         #endregion
 

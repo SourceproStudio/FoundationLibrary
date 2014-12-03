@@ -140,7 +140,9 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Caching
         /// </summary>
         public CacheItemPolicy()
         {
-
+            this.AbsoluteExpiration = CacheItemPolicy.NoneAbsoluteExpiration;
+            this.SlidingExpiration = new TimeSpan(0, 30, 0);
+            this.Dependencies = new List<string>();
         }
 
         #endregion
