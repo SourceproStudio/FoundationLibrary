@@ -37,6 +37,8 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Caching.Internal
     /// </para>
     /// </summary>
     /// <seealso cref="SourcePro.Csharp.Practices.FoundationLibrary.Caching.Internal"/>
+    /// <seealso cref="System.Runtime.Caching"/>
+    /// <seealso cref="System.Runtime.Caching.CacheItemPriority"/>
     internal class CacheItemPriorityConverter
     {
         private CacheItemPriority _sourcePriority;
