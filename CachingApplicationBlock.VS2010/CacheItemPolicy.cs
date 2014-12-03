@@ -44,7 +44,6 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Caching
     {
         private DateTime _absoluteExpiration;
         private TimeSpan _slidingExpiration;
-        private IList<string> _dependencies;
         private CacheItemWasRemovedCallback _removedCallBack;
         private CacheItemWasUpdatedCallback _updatedCallBack;
         private CacheItemPriority _priority;
@@ -59,6 +58,7 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Caching
         /// 无效的滑动缓存项失效时间设置。
         /// </summary>
         public static readonly TimeSpan NoneSlidingExpiration = new TimeSpan(0, 0, 0, 0, 1);
+        private CacheItemDependency _dependency;
         #endregion
 
         #region AbsoluteExpiration
@@ -97,18 +97,6 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Caching
         }
         #endregion
 
-        #region Dependencies
-        /// <summary>
-        /// 缓存项依赖的文件。
-        /// </summary>
-        /// <value>获取缓存项依赖的文件。</value>
-        public virtual IList<string> Dependencies
-        {
-            get { return _dependencies; }
-            protected set { _dependencies = value; }
-        }
-        #endregion
-
         #region RemovedCallBack
         /// <summary>
         /// 缓存项被移除后执行的回调方法。
@@ -142,7 +130,7 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Caching
         {
             this.AbsoluteExpiration = CacheItemPolicy.NoneAbsoluteExpiration;
             this.SlidingExpiration = new TimeSpan(0, 30, 0);
-            this.Dependencies = new List<string>();
+            this.Priority = CacheItemPriority.Default;
         }
 
         #endregion
@@ -156,6 +144,18 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Caching
         {
             get { return _priority; }
             set { _priority = value; }
+        }
+        #endregion
+
+        #region Dependency
+        /// <summary>
+        /// 缓存项依赖环境。
+        /// </summary>
+        /// <value>设置或获取缓存项依赖环境。</value>
+        public virtual CacheItemDependency Dependency
+        {
+            get { return _dependency; }
+            set { _dependency = value; }
         }
         #endregion
     }
