@@ -46,6 +46,7 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Caching
         private CacheItemWasRemovedCallback _removedCallBack;
         private CacheItemWasUpdatedCallback _updatedCallBack;
         private CacheItemPriority _priority;
+        private CacheItemDependency _dependency;
         #region NoneAbsoluteExpiration
         /// <summary>
         /// 无效的绝对缓存项失效时间。
@@ -57,7 +58,6 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Caching
         /// 无效的滑动缓存项失效时间设置。
         /// </summary>
         public static readonly TimeSpan NoneSlidingExpiration = new TimeSpan(0, 0, 0, 0, 1);
-        private CacheItemDependency _dependency;
         #endregion
 
         #region ExpirationOption
