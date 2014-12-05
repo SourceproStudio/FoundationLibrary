@@ -51,14 +51,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cache.cs" />
     <Compile Include="CacheItem.cs" />
     <Compile Include="CacheItemDependency.cs" />
+    <Compile Include="CacheItemExpirationOptions.cs" />
     <Compile Include="CacheItemPolicy.cs" />
     <Compile Include="CacheItemPriority.cs" />
     <Compile Include="CacheItemWasRemovedCallback.cs" />
     <Compile Include="CacheItemWasUpdatedCallback.cs" />
     <Compile Include="ICache.cs" />
     <Compile Include="Internal\CacheItemPriorityConverter.cs" />
+    <Compile Include="Internal\InternalCacheItemRemovedCallBackHandler.cs" />
+    <Compile Include="Internal\InternalCacheItemUpdatedCallBackHandler.cs" />
     <Compile Include="Internal\Web\CacheItemPriorityConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

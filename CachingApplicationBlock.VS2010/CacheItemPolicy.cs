@@ -70,7 +70,7 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Caching
         {
             get
             {
-                if ((this.AbsoluteExpiration - CacheItemPolicy.NoneAbsoluteExpiration).TotalMilliseconds > 0)
+                if ((this.AbsoluteExpiration - CacheItemPolicy.NoneAbsoluteExpiration).TotalMilliseconds > 0 && (this.AbsoluteExpiration - DateTime.Now).TotalMilliseconds > 0)
                 {
                     return CacheItemExpirationOptions.Absolute;
                 }
@@ -80,7 +80,8 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Caching
                 }
                 else
                 {
-                    return CacheItemExpirationOptions.Default;
+                    this.SlidingExpiration = new TimeSpan(0, 30, 0, 0, 0);
+                    return CacheItemExpirationOptions.Sliding;
                 }
             }
         }

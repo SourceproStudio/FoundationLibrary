@@ -233,8 +233,8 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Caching
         /// <summary>
         /// 移除指定名称的数据缓存项。
         /// </summary>
-        /// <param name="name">数据缓存项标识名称。</param>
-        void Remove(string name);
+        /// <param name="key">数据缓存项标识名称。</param>
+        void Remove(string key);
         #endregion
     }
 }
