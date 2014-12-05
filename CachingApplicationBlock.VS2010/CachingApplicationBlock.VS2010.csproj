@@ -66,6 +66,8 @@
     <Compile Include="Internal\Web\CacheItemPriorityConverter.cs" />
     <Compile Include="Internal\Web\InternalCacheItemRemovedCallBackHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Web\AspCacheItemDependency.cs" />
+    <Compile Include="Web\AspCacheItemPolicy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Sn.pfx" />
