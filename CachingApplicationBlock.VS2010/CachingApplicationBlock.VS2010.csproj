@@ -64,6 +64,7 @@
     <Compile Include="Internal\InternalCacheItemRemovedCallBackHandler.cs" />
     <Compile Include="Internal\InternalCacheItemUpdatedCallBackHandler.cs" />
     <Compile Include="Internal\Web\CacheItemPriorityConverter.cs" />
+    <Compile Include="Internal\Web\InternalCacheItemRemovedCallBackHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
