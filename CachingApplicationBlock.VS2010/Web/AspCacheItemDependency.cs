@@ -19,7 +19,7 @@
 
 #endregion
 
-using System;
+using System.Web.Caching;
 using SourcePro.Csharp.Practices.FoundationLibrary.Caching;
 
 namespace SourcePro.Csharp.Practices.FoundationLibrary.Web.Caching
@@ -50,6 +50,23 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Web.Caching
             : base(files)
         { }
 
+        #endregion
+
+        #region GetDependency
+        /// <summary>
+        /// 获取对应的<see cref="CacheDependency"/>对象实例。
+        /// </summary>
+        /// <returns><see cref="CacheDependency"/>对象实例。</returns>
+        public virtual CacheDependency GetDependency()
+        {
+            if (base.DependencyFiles.Count > 0)
+            {
+                string[] arrary = new string[base.DependencyFiles.Count];
+                base.DependencyFiles.CopyTo(arrary, 0);
+                return new CacheDependency(arrary);
+            }
+            else return null;
+        }
         #endregion
     }
 }
