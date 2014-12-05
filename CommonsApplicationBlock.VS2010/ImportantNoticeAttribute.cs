@@ -49,6 +49,18 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons
     public sealed class ImportantNoticeAttribute : Attribute
     {
         private string _message;
+        static private bool _traceListenerIsAdded = false;
+
+        #region TraceListenerIsAdded
+        /// <summary>
+        /// 是否已经添加了默认监听器。
+        /// </summary>
+        static private bool TraceListenerIsAdded
+        {
+            get { return _traceListenerIsAdded; }
+            set { _traceListenerIsAdded = value; }
+        }
+        #endregion
 
         #region Message
         /// <summary>
@@ -72,7 +84,12 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons
         /// <param name="message">重要源代码通知信息。</param>
         public ImportantNoticeAttribute(string message)
         {
-            Trace.Fail(message);
+            if (!ImportantNoticeAttribute.TraceListenerIsAdded)
+            {
+                Trace.Listeners.Add(new DefaultTraceListener());
+                ImportantNoticeAttribute.TraceListenerIsAdded = true;
+            }
+            Trace.Write(message);
             this.Message = message;
         }
 
