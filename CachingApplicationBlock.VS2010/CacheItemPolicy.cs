@@ -59,6 +59,19 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Caching
         /// </summary>
         public static readonly TimeSpan NoneSlidingExpiration = new TimeSpan(0, 0, 0, 0, 1);
         private CacheItemDependency _dependency;
+        private CacheItemExpirationOptions _expirationOption;
+        #endregion
+
+        #region ExpirationOption
+        /// <summary>
+        /// 缓存项失效选项。
+        /// </summary>
+        /// <value>缓存项失效选项。</value>
+        public virtual CacheItemExpirationOptions ExpirationOption
+        {
+            get { return _expirationOption; }
+            set { _expirationOption = value; }
+        }
         #endregion
 
         #region AbsoluteExpiration
@@ -131,6 +144,7 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Caching
             this.AbsoluteExpiration = CacheItemPolicy.NoneAbsoluteExpiration;
             this.SlidingExpiration = new TimeSpan(0, 30, 0);
             this.Priority = CacheItemPriority.Default;
+            this.ExpirationOption = CacheItemExpirationOptions.Default;
         }
 
         #endregion
