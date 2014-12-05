@@ -49,6 +49,7 @@
     <Compile Include="ApplicationOperatingModeRegistration.cs" />
     <Compile Include="Deployment\GacInstallation.cs" />
     <Compile Include="EnvironmentVariables.cs" />
+    <Compile Include="ImportantNoticeAttribute.cs" />
     <Compile Include="IO\ApplicationRunningDirectoryInfo.cs" />
     <Compile Include="IO\InstallationDirectoryInfo.cs" />
     <Compile Include="IO\InstallationPathNotExistsReasons.cs" />
