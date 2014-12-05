@@ -21,6 +21,7 @@
 
 using System;
 using SourcePro.Csharp.Practices.FoundationLibrary.Caching;
+using SourcePro.Csharp.Practices.FoundationLibrary.Commons;
 
 namespace SourcePro.Csharp.Practices.FoundationLibrary.Web.Caching
 {
@@ -44,18 +45,42 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Web.Caching
     {
         #region UpdatedCallBack
         /// <summary>
-        /// <![CDATA[AspCacheItemPolicy中，不再提供缓存项更新后回调方法选项。调用时基础库将认为这是一个错误！]]>
+        /// <para>Warning !</para>
+        /// <para>
+        /// <see cref="AspCacheItemPolicy"/>中，不再提供缓存项更新后回调方法选项。
+        /// </para>
         /// </summary>
-        [Obsolete("AspCacheItemPolicy中，不再提供缓存项更新后回调方法选项。", true)]
+        /// <exception cref="NotImplementedException">
+        /// <see cref="AspCacheItemPolicy"/>中，不再提供缓存项更新后回调方法选项。
+        /// </exception>
+        [ImportantNotice("AspCacheItemPolicy中，不再提供缓存项更新后回调方法选项。")]
         public override CacheItemWasUpdatedCallback UpdatedCallBack
         {
             get
             {
-                return null;
+                throw new NotImplementedException();
             }
             set
             {
-                base.UpdatedCallBack = null;
+                throw new NotImplementedException();
+            }
+        }
+        #endregion
+
+        #region Dependency
+        /// <summary>
+        /// 缓存依赖。
+        /// </summary>
+        /// <value>设置或获取<see cref="AspCacheItemDependency"/>缓存依赖。</value>
+        public new AspCacheItemDependency Dependency
+        {
+            get
+            {
+                return base.Dependency as AspCacheItemDependency;
+            }
+            set
+            {
+                base.Dependency = value;
             }
         }
         #endregion
