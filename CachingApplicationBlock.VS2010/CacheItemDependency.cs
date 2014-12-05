@@ -71,7 +71,8 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Caching
         public CacheItemDependency(string[] files)
             : this()
         {
-            this.DependencyFiles = new List<string>(files);
+            if (!object.ReferenceEquals(files, null) && files.Length > 0)
+                this.DependencyFiles = new List<string>(files);
         }
 
         /// <summary>
