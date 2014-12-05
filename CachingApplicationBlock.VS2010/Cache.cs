@@ -22,11 +22,10 @@
 using System;
 using System.Collections.Generic;
 using System.Runtime.Caching;
+using SourcePro.Csharp.Practices.FoundationLibrary.Caching.Internal;
 using Item = System.Runtime.Caching.CacheItem;
 using Policy = System.Runtime.Caching.CacheItemPolicy;
 using Priority = System.Runtime.Caching.CacheItemPriority;
-using System.Threading;
-using SourcePro.Csharp.Practices.FoundationLibrary.Caching.Internal;
 
 namespace SourcePro.Csharp.Practices.FoundationLibrary.Caching
 {

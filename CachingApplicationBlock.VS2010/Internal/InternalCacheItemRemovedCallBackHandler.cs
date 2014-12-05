@@ -19,9 +19,8 @@
 
 #endregion
 
-using System;
-using System.Runtime.Caching;
 using System.Dynamic;
+using System.Runtime.Caching;
 
 namespace SourcePro.Csharp.Practices.FoundationLibrary.Caching.Internal
 {
