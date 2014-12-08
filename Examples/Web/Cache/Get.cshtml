@@ -1,0 +1,25 @@
+﻿@using SourcePro.Csharp.Practices.FoundationLibrary.Web.Caching;
+@{
+    Page.Title = "在此处显示标题";
+    //Layout = "在此处显示布局页";
+}
+@section head {
+}
+<div>
+    <h1>
+        此页用于获取缓存数据</h1>
+    @{
+        AspCache cache = new AspCache();
+        object data = cache["PersonData"];
+        if (object.ReferenceEquals(data, null))
+        {
+            <br />
+            <h6 style="color: Red">缓存数据不存在</h6>
+        }
+        else
+        {
+            <br />
+            <h6 style="color:Green">@((data as Person).Name)</h6>
+        }
+    }
+</div>

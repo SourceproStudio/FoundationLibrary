@@ -1,0 +1,25 @@
+﻿@using SourcePro.Csharp.Practices.FoundationLibrary.Web.Caching;
+@{
+    Page.Title = "在此处显示标题";
+    //Layout = "在此处显示布局页";
+}
+@section head {
+}
+<div>
+    <h1>
+        在此页设置缓存</h1>
+    @{
+        Person person = new Person() { Name = "Wang Yucai" };
+
+        AspCache cache = new AspCache();
+        cache.Add(new AspCacheItem("PersonData", person)
+        {
+            Policy = new AspCacheItemPolicy()
+            {
+                Dependency = new AspCacheItemDependency(Path.Combine(HttpContext.Current.Request.PhysicalApplicationPath, "web.config"))
+            }
+        });
+
+        this.Response.Redirect("Get", true);
+    }
+</div>

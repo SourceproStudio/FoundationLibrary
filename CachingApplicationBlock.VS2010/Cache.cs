@@ -120,8 +120,8 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Caching
                     AbsoluteExpiration = policy.ExpirationOption == CacheItemExpirationOptions.Sliding ? ObjectCache.InfiniteAbsoluteExpiration : policy.AbsoluteExpiration,
                     SlidingExpiration = policy.ExpirationOption == CacheItemExpirationOptions.Sliding ? policy.SlidingExpiration : ObjectCache.NoSlidingExpiration,
                     Priority = new CacheItemPriorityConverter(policy.Priority).Convert(),
-                    UpdateCallback = new CacheEntryUpdateCallback(new InternalCacheItemUpdatedCallBackHandler(policy.UpdatedCallBack).Do),
-                    RemovedCallback = new CacheEntryRemovedCallback(new InternalCacheItemRemovedCallBackHandler(policy.RemovedCallBack).Do)
+                    UpdateCallback = object.ReferenceEquals(policy.UpdatedCallBack, null) ? null : new CacheEntryUpdateCallback(new InternalCacheItemUpdatedCallBackHandler(policy.UpdatedCallBack).Do),
+                    RemovedCallback = object.ReferenceEquals(policy.UpdatedCallBack, null) ? new CacheEntryRemovedCallback(new InternalCacheItemRemovedCallBackHandler(policy.RemovedCallBack).Do) : null
                 };
                 this.SetChangeMonitor(cachePolicy, policy.Dependency);
                 return cachePolicy;
