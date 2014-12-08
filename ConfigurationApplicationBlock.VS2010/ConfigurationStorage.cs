@@ -88,6 +88,18 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration
             return cache.IsExists(sectionName);
         }
         #endregion
+
+        #region Get
+        /// <summary>
+        /// 获取已经缓存的配置。
+        /// </summary>
+        /// <param name="sectionName">自定义配置节名称。</param>
+        /// <returns>配置对象。</returns>
+        public virtual object Get(string sectionName)
+        {
+            return this.cache[sectionName];
+        }
+        #endregion
     }
 }
 
