@@ -45,7 +45,6 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.Val
         private const string RegularExpression2 = @"^(?<StartWith>~)(?<Suffix>[\u0020-\uFFFF]?)[\u0020-\uFFFF]*";
         private RegexMatching _matching1;
         private RegexMatching _matching2;
-        private bool _startWave = false;
         private bool _waveStart = false;
         private char _followWave;
         private bool _environmentVarStart;
