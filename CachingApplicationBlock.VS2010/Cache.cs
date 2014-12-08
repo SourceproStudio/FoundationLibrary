@@ -420,7 +420,11 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Caching
         /// <param name="data">需要缓存的数据。</param>
         public virtual void Update(string key, object data)
         {
-            if (this.IsExists(key)) this.CacheProvider[key] = data;
+            if (this.IsExists(key))
+            {
+                if (this.Nullable || !object.ReferenceEquals(data, null))
+                    this.CacheProvider[key] = data;
+            }
         }
         #endregion
 

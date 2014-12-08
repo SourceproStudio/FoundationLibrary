@@ -19,7 +19,6 @@
 
 #endregion
 
-using System;
 using SourcePro.Csharp.Practices.FoundationLibrary.Caching;
 
 namespace SourcePro.Csharp.Practices.FoundationLibrary.Web.Caching
