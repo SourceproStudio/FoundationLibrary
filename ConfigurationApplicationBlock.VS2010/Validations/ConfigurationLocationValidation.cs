@@ -52,6 +52,7 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.Val
         private char _followEnvironmentVar;
         private const string Group1 = "StartWith";
         private const string Group2 = "Suffix";
+        private string _environmentVariableName;
 
         #region Matching1
         /// <summary>
@@ -125,6 +126,18 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.Val
         }
         #endregion
 
+        #region EnvironmentVariableName
+        /// <summary>
+        /// 环境变量模式名称。
+        /// </summary>
+        /// <value>获取环境变量模式中的名称。</value>
+        public virtual string EnvironmentVariableName
+        {
+            get { return _environmentVariableName; }
+            protected set { _environmentVariableName = value; }
+        }
+        #endregion
+
         #region ConfigurationLocationValidation Constructors
 
         /// <summary>
@@ -144,6 +157,7 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.Val
                     this.EnvironmentVarStart = match.Success && !object.ReferenceEquals(match.Groups[Group1], null) && match.Groups[Group1].Success;
                     this.FollowEnvironmentVar = match.Success && !object.ReferenceEquals(match.Groups[Group2], null) && match.Groups[Group2].Success && !string.IsNullOrWhiteSpace(match.Groups[Group2].Value)
                         ? match.Groups[Group2].Value.ToCharArray()[0] : '0';
+                    this.EnvironmentVariableName = match.Groups[Group1].Value.Replace("%", string.Empty);
                 }
                 else
                 {
