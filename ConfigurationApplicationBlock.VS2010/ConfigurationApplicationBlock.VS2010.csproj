@@ -48,11 +48,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConfigurationMergePriority.cs" />
-    <Compile Include="Internal\IConfigurationMerge.cs" />
+    <Compile Include="ConfigurationSourceSectionDesigner.csd.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConfigurationSourceSectionDesigner.csd</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ConfigurationSourceSectionDesigner.csd">
+      <Generator>CsdFileGenerator</Generator>
+      <LastGenOutput>ConfigurationSourceSectionDesigner.csd.cs</LastGenOutput>
+    </None>
+    <None Include="ConfigurationSourceSectionDesigner.csd.config">
+      <DependentUpon>ConfigurationSourceSectionDesigner.csd</DependentUpon>
+    </None>
+    <None Include="ConfigurationSourceSectionDesigner.csd.diagram">
+      <DependentUpon>ConfigurationSourceSectionDesigner.csd</DependentUpon>
+    </None>
+    <None Include="ConfigurationSourceSectionDesigner.csd.xsd">
+      <DependentUpon>ConfigurationSourceSectionDesigner.csd</DependentUpon>
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Sn.pfx" />
   </ItemGroup>
   <ItemGroup>
@@ -64,6 +82,9 @@
       <Project>{27E2BEC9-DA35-4136-9A4F-D6F776BB33B6}</Project>
       <Name>CommonsApplicationBlock.VS2010</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
