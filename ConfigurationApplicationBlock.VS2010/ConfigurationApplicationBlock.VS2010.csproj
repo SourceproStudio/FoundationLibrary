@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConfigurationLocation.cs" />
     <Compile Include="ConfigurationSourceSectionDesigner.csd.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
