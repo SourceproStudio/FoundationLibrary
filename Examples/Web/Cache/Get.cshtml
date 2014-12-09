@@ -13,13 +13,14 @@
         object data = cache["PersonData"];
         if (object.ReferenceEquals(data, null))
         {
-            <br />
-            <h6 style="color: Red">缓存数据不存在</h6>
+        <br />
+        <h6 style="color: Red">
+            缓存数据不存在</h6>
         }
         else
         {
-            <br />
-            <h6 style="color:Green">@((data as Person).Name)</h6>
+        <br />
+        <h6 style="color: Green">@((data as Person).Name)</h6>
         }
     }
 </div>
