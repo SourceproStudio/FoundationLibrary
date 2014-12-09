@@ -43,10 +43,12 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration
     /// </summary>
     /// <seealso cref="SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration"/>
     /// <seealso cref="ConfigurationSourceElement"/>
+    /// <seealso cref="ApplicationRunningDirectoryInfo"/>
     public class ConfigurationLocation
     {
         private bool _isExists = false;
         private string _path = string.Empty;
+        private ApplicationRunningDirectoryInfo _applicationPhysicalPath;
 
         #region IsExists
         /// <summary>
@@ -72,6 +74,18 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration
         }
         #endregion
 
+        #region ApplicationPhysicalPath
+        /// <summary>
+        /// 应用运行时的物理路径。
+        /// </summary>
+        /// <value>设置或获取应用运行时的物理路径。</value>
+        protected virtual ApplicationRunningDirectoryInfo ApplicationPhysicalPath
+        {
+            get { return _applicationPhysicalPath; }
+            set { _applicationPhysicalPath = value; }
+        }
+        #endregion
+
         #region ConfigurationLocation Constructors
 
         /// <summary>
@@ -82,6 +96,7 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration
         {
             if (!string.IsNullOrWhiteSpace(config.Path))
             {
+                this.ApplicationPhysicalPath = new ApplicationRunningDirectoryInfo(ApplicationOperatingMode.WindowsApplication);
                 this.Path = this.GetPath(config.Path);
                 this.IsExists = System.IO.File.Exists(this.Path);
             }
@@ -110,7 +125,7 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration
             }
             else if (validation.WaveStart)
             {
-                string appDir = new ApplicationRunningDirectoryInfo(ApplicationOperatingModeDiscovery.AutoDiscover()).Path;
+                string appDir = this.ApplicationPhysicalPath.Path;
                 return path.Replace("~",
                     validation.FollowWave.Equals('\\') ? appDir.TrimEnd('\\') : appDir.TrimEnd('\\') + @"\"
                     );
