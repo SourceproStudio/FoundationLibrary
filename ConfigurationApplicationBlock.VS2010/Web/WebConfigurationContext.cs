@@ -20,6 +20,7 @@
 #endregion
 
 using System;
+using SourcePro.Csharp.Practices.FoundationLibrary.Caching;
 using SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration;
 using SourcePro.Csharp.Practices.FoundationLibrary.Web.Caching;
 using Config = System.Configuration.Configuration;
@@ -103,7 +104,7 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.Web.Configuration
             {
                 Policy = new AspCacheItemPolicy()
                 {
-                    Priority = Caching.CacheItemPriority.High,
+                    Priority = CacheItemPriority.High,
                     AbsoluteExpiration = DateTime.Now.AddDays(1),
                     SlidingExpiration = AspCacheItemPolicy.NoneSlidingExpiration,
                     Dependency = new AspCacheItemDependency(dependencies),

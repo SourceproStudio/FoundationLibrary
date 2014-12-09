@@ -63,6 +63,7 @@
     <Compile Include="Validations\ConfigurationLocationValidation.cs" />
     <Compile Include="Web\InternalWebConfigurationManager.cs" />
     <Compile Include="Web\WebConfigurationContext.cs" />
+    <Compile Include="Web\WebConfigurationStorage.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ConfigurationSourceSectionDesigner.csd">
