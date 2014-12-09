@@ -41,6 +41,8 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.Web.Configuration
     /// </para>
     /// </summary>
     /// <seealso cref="SourcePro.Csharp.Practices.FoundationLibrary.Commons.Web.Configuration"/>
+    /// <seealso cref="ConfigurationStorage"/>
+    /// <seealso cref="AspCache"/>
     public class WebConfigurationStorage : ConfigurationStorage
     {
         AspCache cache = new AspCache();
