@@ -11,6 +11,11 @@
 	<xs:element name="sourcepro.configurationSource" type="tns:SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.ConfigurationSourceSectionCT" />
 	<xs:complexType name="SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.ConfigurationSourceElementCT">
 		<xs:sequence>
+			<xs:element minOccurs="0" name="aspnetCompatibilitySupportProperties" type="tns:SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.AspCompatiblePropertyElementCT">
+				<xs:annotation>
+					<xs:documentation>对ASP.NET的兼容性支持属性.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 		<xs:attribute name="sectionName" use="required" type="xs:string">
 			<xs:annotation>
@@ -40,5 +45,14 @@
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.AspCompatiblePropertyElementCT">
+		<xs:sequence>
+		</xs:sequence>
+		<xs:attribute name="virtualDirectory" use="required" type="xs:string">
+			<xs:annotation>
+				<xs:documentation>为自定义配置文件指定的虚拟目录。</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 </xs:schema>

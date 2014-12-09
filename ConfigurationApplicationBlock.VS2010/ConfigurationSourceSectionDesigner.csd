@@ -24,6 +24,13 @@
           </type>
         </attributeProperty>
       </attributeProperties>
+      <elementProperties>
+        <elementProperty name="AspNetCompatibilitySupportProperties" isRequired="false" isKey="false" isDefaultCollection="false" xmlName="aspnetCompatibilitySupportProperties" isReadOnly="false" documentation="对ASP.NET的兼容性支持属性.">
+          <type>
+            <configurationElementMoniker name="/b71fc659-0b10-49a6-8381-e4860a99f4cd/AspCompatiblePropertyElement" />
+          </type>
+        </elementProperty>
+      </elementProperties>
     </configurationElement>
     <configurationElementCollection name="ConfigurationSourceElementCollection" inheritanceModifier="Sealed" documentation="ConfigurationSourceElement集合。" collectionType="BasicMap" xmlItemName="add" codeGenOptions="Indexer, AddMethod, RemoveMethod">
       <itemType>
@@ -39,6 +46,15 @@
         </elementProperty>
       </elementProperties>
     </configurationSection>
+    <configurationElement name="AspCompatiblePropertyElement" documentation="提供兼容ASP.NET的属性配置。">
+      <attributeProperties>
+        <attributeProperty name="VirtualDirectory" isRequired="true" isKey="false" isDefaultCollection="false" xmlName="virtualDirectory" isReadOnly="false" documentation="为自定义配置文件指定的虚拟目录。" defaultValue="&quot;PrivateConfigs&quot;">
+          <type>
+            <externalTypeMoniker name="/b71fc659-0b10-49a6-8381-e4860a99f4cd/String" />
+          </type>
+        </attributeProperty>
+      </attributeProperties>
+    </configurationElement>
   </configurationElements>
   <propertyValidators>
     <validators />
