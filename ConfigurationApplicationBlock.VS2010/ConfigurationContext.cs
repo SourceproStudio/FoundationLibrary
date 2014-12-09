@@ -48,7 +48,7 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration
         /// <summary>
         /// 默认上下文。
         /// </summary>
-        static public ConfigurationContext Default = null;
+        static public readonly ConfigurationContext Default = ConfigurationContext.CreateDefault();
         #endregion
         private Config _configurationObject;
         private ConfigurationSourceSection _configurationSources;
@@ -95,17 +95,26 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration
         }
         #endregion
 
+        #region CreateDefault
+        /// <summary>
+        /// 创建默认配置上下文。
+        /// </summary>
+        /// <returns><see cref="ConfigurationContext"/>对象实例。</returns>
+        static private ConfigurationContext CreateDefault()
+        {
+            Config config = InternalConfigurationManager.OpenExeConfiguration();
+            ConfigurationSourceSection sourcesSection = config.GetSection(ConfigurationSourceSection.SectionName) as ConfigurationSourceSection;
+            return new ConfigurationContext() { ConfigurationObject = config, ConfigurationSources = sourcesSection };
+        }
+        #endregion
+
         #region ConfigurationContext Constructors
 
         /// <summary>
         /// 用于初始化一个<see cref="ConfigurationContext" />对象实例。
         /// </summary>
         protected ConfigurationContext()
-        {
-            Config config = InternalConfigurationManager.OpenExeConfiguration();
-            ConfigurationSourceSection sourcesSection = config.GetSection(ConfigurationSourceSection.SectionName) as ConfigurationSourceSection;
-            ConfigurationContext.Default = new ConfigurationContext() { ConfigurationObject = config, ConfigurationSources = sourcesSection };
-        }
+        { }
 
         #endregion
 
