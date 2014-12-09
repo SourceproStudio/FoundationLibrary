@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="ConfigurationContext.cs" />
     <Compile Include="ConfigurationLocation.cs" />
+    <Compile Include="ConfigurationManager.cs" />
     <Compile Include="ConfigurationSourceSectionDesigner.csd.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
