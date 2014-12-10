@@ -8,75 +8,74 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.Configuration;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+
 namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration
 {
-    
-    
     /// <summary>
     /// 用于配置数据库属性保护器类型。
     /// </summary>
-    public partial class DatabasePropertyProtectionElement : global::System.Configuration.ConfigurationElement
+    /// <seealso cref="ConfigurationElement"/>
+    public partial class DatabasePropertyProtectionElement : ConfigurationElement
     {
-        
         #region IsReadOnly override
         /// <summary>
-        /// Gets a value indicating whether the element is read-only.
+        /// 获取此配置元素是否只读。
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        /// <returns>是否只读。</returns>
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
         public override bool IsReadOnly()
         {
             return false;
         }
         #endregion
-        
+
         #region Name Property
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        private const string NamePropertyName = "name";
+
         /// <summary>
-        /// The XML name of the <see cref="Name"/> property.
+        /// 属性保护器名称。
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        internal const string NamePropertyName = "name";
-        
-        /// <summary>
-        /// Gets or sets 属性保护器名称。
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        [global::System.ComponentModel.DescriptionAttribute("属性保护器名称。")]
-        [global::System.Configuration.ConfigurationPropertyAttribute(global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabasePropertyProtectionElement.NamePropertyName, IsRequired=true, IsKey=true, IsDefaultCollection=false)]
+        /// <value>设置或获取属性保护器名称。</value>
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        [Description("属性保护器名称。")]
+        [ConfigurationProperty(DatabasePropertyProtectionElement.NamePropertyName, IsRequired = true, IsKey = true, IsDefaultCollection = false)]
         public virtual string Name
         {
             get
             {
-                return ((string)(base[global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabasePropertyProtectionElement.NamePropertyName]));
+                return ((string)(base[DatabasePropertyProtectionElement.NamePropertyName]));
             }
             set
             {
-                base[global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabasePropertyProtectionElement.NamePropertyName] = value;
+                base[DatabasePropertyProtectionElement.NamePropertyName] = value;
             }
         }
         #endregion
-        
+
         #region Type Property
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        private const string TypePropertyName = "type";
+
         /// <summary>
-        /// The XML name of the <see cref="Type"/> property.
+        /// 实现了<see cref="SourcePro.Csharp.Practices.FoundationLibrary.Data.IDatabasePropertyProtection"/>接口的类型。
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        internal const string TypePropertyName = "type";
-        
-        /// <summary>
-        /// Gets or sets 实现了IDatabasePropertyProtection接口的类型。
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        [global::System.ComponentModel.DescriptionAttribute("实现了IDatabasePropertyProtection接口的类型。")]
-        [global::System.Configuration.ConfigurationPropertyAttribute(global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabasePropertyProtectionElement.TypePropertyName, IsRequired=true, IsKey=false, IsDefaultCollection=false)]
+        /// <value>设置或获取实现了<see cref="SourcePro.Csharp.Practices.FoundationLibrary.Data.IDatabasePropertyProtection"/>接口的类型。</value>
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        [Description("实现了IDatabasePropertyProtection接口的类型。")]
+        [ConfigurationProperty(DatabasePropertyProtectionElement.TypePropertyName, IsRequired = true, IsKey = false, IsDefaultCollection = false)]
         public virtual string Type
         {
             get
             {
-                return ((string)(base[global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabasePropertyProtectionElement.TypePropertyName]));
+                return ((string)(base[DatabasePropertyProtectionElement.TypePropertyName]));
             }
             set
             {
-                base[global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabasePropertyProtectionElement.TypePropertyName] = value;
+                base[DatabasePropertyProtectionElement.TypePropertyName] = value;
             }
         }
         #endregion
@@ -84,145 +83,175 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration
 }
 namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration
 {
-    
-    
     /// <summary>
-    /// DatabasePropertyProtectionElement集合。
+    /// <see cref="DatabasePropertyProtectionElement"/>集合。
     /// </summary>
-    [global::System.Configuration.ConfigurationCollectionAttribute(typeof(global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabasePropertyProtectionElement), CollectionType=global::System.Configuration.ConfigurationElementCollectionType.BasicMap, AddItemName=global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabasePropertyProtectionElementCollection.DatabasePropertyProtectionElementPropertyName)]
-    public sealed partial class DatabasePropertyProtectionElementCollection : global::System.Configuration.ConfigurationElementCollection
+    /// <seealso cref="DatabasePropertyProtectionElement"/>
+    /// <seealso cref="ConfigurationElementCollection"/>
+    /// <seealso cref="ConfigurationElementCollectionType"/>
+    [ConfigurationCollection(
+        typeof(DatabasePropertyProtectionElement), 
+        CollectionType = ConfigurationElementCollectionType.BasicMap, 
+        AddItemName = DatabasePropertyProtectionElementCollection.DatabasePropertyProtectionElementPropertyName)]
+    public sealed partial class DatabasePropertyProtectionElementCollection : ConfigurationElementCollection
     {
-        
         #region Constants
-        /// <summary>
-        /// The XML name of the individual <see cref="global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabasePropertyProtectionElement"/> instances in this collection.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        internal const string DatabasePropertyProtectionElementPropertyName = "add";
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        private const string DatabasePropertyProtectionElementPropertyName = "add";
         #endregion
-        
+
         #region Overrides
+
+        #region CollectionType
         /// <summary>
-        /// Gets the type of the <see cref="global::System.Configuration.ConfigurationElementCollection"/>.
+        /// 此集合的<see cref="ConfigurationElementCollectionType"/>值。
         /// </summary>
-        /// <returns>The <see cref="global::System.Configuration.ConfigurationElementCollectionType"/> of this collection.</returns>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        public override global::System.Configuration.ConfigurationElementCollectionType CollectionType
+        /// <value>获取此集合的<see cref="ConfigurationElementCollectionType"/>值。</value>
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        public override ConfigurationElementCollectionType CollectionType
         {
             get
             {
-                return global::System.Configuration.ConfigurationElementCollectionType.BasicMap;
+                return ConfigurationElementCollectionType.BasicMap;
             }
         }
-        
+        #endregion
+
+        #region ElementName
         /// <summary>
-        /// Gets the name used to identify this collection of elements
+        /// 集合中每个元素的名称。
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        /// <value>获取集合中每个元素的名称。</value>
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
         protected override string ElementName
         {
             get
             {
-                return global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabasePropertyProtectionElementCollection.DatabasePropertyProtectionElementPropertyName;
+                return DatabasePropertyProtectionElementCollection.DatabasePropertyProtectionElementPropertyName;
             }
         }
-        
+        #endregion
+
+        #region IsElementName
         /// <summary>
-        /// Indicates whether the specified <see cref="global::System.Configuration.ConfigurationElement"/> exists in the <see cref="global::System.Configuration.ConfigurationElementCollection"/>.
+        /// 验证<paramref name="elementName"/>是否等于add。
         /// </summary>
-        /// <param name="elementName">The name of the element to verify.</param>
-        /// <returns>
-        /// <see langword="true"/> if the element exists in the collection; otherwise, <see langword="false"/>.
-        /// </returns>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        /// <param name="elementName">需要验证的元素名称。</param>
+        /// <returns>true or false。</returns>
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
         protected override bool IsElementName(string elementName)
         {
-            return (elementName == global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabasePropertyProtectionElementCollection.DatabasePropertyProtectionElementPropertyName);
-        }
-        
-        /// <summary>
-        /// Gets the element key for the specified configuration element.
-        /// </summary>
-        /// <param name="element">The <see cref="global::System.Configuration.ConfigurationElement"/> to return the key for.</param>
-        /// <returns>
-        /// An <see cref="object"/> that acts as the key for the specified <see cref="global::System.Configuration.ConfigurationElement"/>.
-        /// </returns>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        protected override object GetElementKey(global::System.Configuration.ConfigurationElement element)
-        {
-            return ((global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabasePropertyProtectionElement)(element)).Name;
-        }
-        
-        /// <summary>
-        /// Creates a new <see cref="global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabasePropertyProtectionElement"/>.
-        /// </summary>
-        /// <returns>
-        /// A new <see cref="global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabasePropertyProtectionElement"/>.
-        /// </returns>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        protected override global::System.Configuration.ConfigurationElement CreateNewElement()
-        {
-            return new global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabasePropertyProtectionElement();
+            return (elementName == DatabasePropertyProtectionElementCollection.DatabasePropertyProtectionElementPropertyName);
         }
         #endregion
-        
+
+        #region GetElementKey
+        /// <summary>
+        /// 获取<paramref name="element"/>的标识名称。
+        /// </summary>
+        /// <param name="element"><see cref="DatabasePropertyProtectionElement"/>对象实例。</param>
+        /// <returns><see cref="DatabasePropertyProtectionElement"/>.Name属性。</returns>
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        protected override object GetElementKey(ConfigurationElement element)
+        {
+            return ((DatabasePropertyProtectionElement)(element)).Name;
+        }
+        #endregion
+
+        #region CreateNewElement
+        /// <summary>
+        /// 创建一个新的<see cref="DatabasePropertyProtectionElement"/>对象实例。
+        /// </summary>
+        /// <returns><see cref="DatabasePropertyProtectionElement"/>对象实例。</returns>
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        protected override ConfigurationElement CreateNewElement()
+        {
+            return new DatabasePropertyProtectionElement();
+        }
+        #endregion
+
+        #endregion
+
         #region Indexer
         /// <summary>
-        /// Gets the <see cref="global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabasePropertyProtectionElement"/> at the specified index.
+        /// 获取指定索引处的<see cref="DatabasePropertyProtectionElement"/>对象实例。
         /// </summary>
-        /// <param name="index">The index of the <see cref="global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabasePropertyProtectionElement"/> to retrieve.</param>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        public global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabasePropertyProtectionElement this[int index]
+        /// <param name="index">索引数字。</param>
+        /// <returns><see cref="DatabasePropertyProtectionElement"/>对象实例。</returns>
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        public DatabasePropertyProtectionElement this[int index]
         {
             get
             {
-                return ((global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabasePropertyProtectionElement)(base.BaseGet(index)));
+                return ((DatabasePropertyProtectionElement)(base.BaseGet(index)));
             }
         }
-        
+
         /// <summary>
-        /// Gets the <see cref="global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabasePropertyProtectionElement"/> with the specified key.
+        /// 获取指定名称的<see cref="DatabasePropertyProtectionElement"/>对象实例。
         /// </summary>
-        /// <param name="name">The key of the <see cref="global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabasePropertyProtectionElement"/> to retrieve.</param>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        public global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabasePropertyProtectionElement this[object name]
+        /// <param name="name">标识名称。</param>
+        /// <returns><see cref="DatabasePropertyProtectionElement"/>对象实例。</returns>
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        public DatabasePropertyProtectionElement this[object name]
         {
             get
             {
-                return ((global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabasePropertyProtectionElement)(base.BaseGet(name)));
+                return ((DatabasePropertyProtectionElement)(base.BaseGet(name)));
             }
         }
         #endregion
-        
+
         #region Add
         /// <summary>
-        /// Adds the specified <see cref="global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabasePropertyProtectionElement"/> to the <see cref="global::System.Configuration.ConfigurationElementCollection"/>.
+        /// 添加<paramref name="element"/>到此集合中。
         /// </summary>
-        /// <param name="add">The <see cref="global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabasePropertyProtectionElement"/> to add.</param>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        public void Add(global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabasePropertyProtectionElement add)
+        /// <param name="element"><see cref="DatabasePropertyProtectionElement"/>对象实例。</param>
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        public void Add(DatabasePropertyProtectionElement element)
         {
-            base.BaseAdd(add);
+            base.BaseAdd(element);
         }
         #endregion
-        
+
         #region Remove
         /// <summary>
-        /// Removes the specified <see cref="global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabasePropertyProtectionElement"/> from the <see cref="global::System.Configuration.ConfigurationElementCollection"/>.
+        /// 移除指定名称的<see cref="DatabasePropertyProtectionElement"/>元素。
         /// </summary>
-        /// <param name="add">The <see cref="global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabasePropertyProtectionElement"/> to remove.</param>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        public void Remove(global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabasePropertyProtectionElement add)
+        /// <param name="name">指定的名称。</param>
+        public void Remove(string name)
         {
-            base.BaseRemove(this.GetElementKey(add));
+            base.BaseRemove(name);
+        }
+
+        /// <summary>
+        /// 移除元素<paramref name="element"/>。
+        /// </summary>
+        /// <param name="element"><see cref="DatabasePropertyProtectionElement"/>对象实例。</param>
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        public void Remove(DatabasePropertyProtectionElement element)
+        {
+            this.Remove(element.Name);
         }
         #endregion
-        
+
+        #region RemoveAt
+        /// <summary>
+        /// 移除指定索引处的<see cref="DatabasePropertyProtectionElement"/>元素。
+        /// </summary>
+        /// <param name="index">索引数字。</param>
+        public void RemoveAt(int index)
+        {
+            base.BaseRemoveAt(index);
+        }
+        #endregion
+
         #region IsReadOnly override
         /// <summary>
-        /// Gets a value indicating whether the element is read-only.
+        /// 获取此配置元素是否只读。
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        /// <returns>true or false。</returns>
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
         public override bool IsReadOnly()
         {
             return false;
@@ -232,72 +261,70 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration
 }
 namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration
 {
-    
-    
     /// <summary>
     /// 数据库属性保护器配置。
     /// </summary>
-    public partial class DatabasePropertyProtectionSection : global::System.Configuration.ConfigurationSection
+    /// <seealso cref="ConfigurationSection"/>
+    public partial class DatabasePropertyProtectionSection : ConfigurationSection
     {
-        
+        #region SectionName
+        /// <summary>
+        /// <see cref="DatabasePropertyProtectionSection"/>配置节名称。
+        /// </summary>
+        public const string SectionName = "databaseProtections";
+        #endregion
+
         #region Xmlns Property
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        private const string XmlnsPropertyName = "xmlns";
+
         /// <summary>
-        /// The XML name of the <see cref="Xmlns"/> property.
+        /// 配置节对应的XML命名空间。
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        internal const string XmlnsPropertyName = "xmlns";
-        
-        /// <summary>
-        /// Gets the XML namespace of this Configuration Section.
-        /// </summary>
-        /// <remarks>
-        /// This property makes sure that if the configuration file contains the XML namespace,
-        /// the parser doesn't throw an exception because it encounters the unknown "xmlns" attribute.
-        /// </remarks>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        [global::System.Configuration.ConfigurationPropertyAttribute(global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabasePropertyProtectionSection.XmlnsPropertyName, IsRequired=false, IsKey=false, IsDefaultCollection=false)]
+        /// <value>获取配置节对应的XML命名空间。</value>
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        [ConfigurationProperty(DatabasePropertyProtectionSection.XmlnsPropertyName, IsRequired = false, IsKey = false, IsDefaultCollection = false)]
         public string Xmlns
         {
             get
             {
-                return ((string)(base[global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabasePropertyProtectionSection.XmlnsPropertyName]));
+                return ((string)(base[DatabasePropertyProtectionSection.XmlnsPropertyName]));
             }
         }
         #endregion
-        
+
         #region IsReadOnly override
         /// <summary>
-        /// Gets a value indicating whether the element is read-only.
+        /// 获取此配置元素是否只读。
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        /// <returns>true or false。</returns>
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
         public override bool IsReadOnly()
         {
             return false;
         }
         #endregion
-        
+
         #region Protections Property
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        private const string ProtectionsPropertyName = "";
+
         /// <summary>
-        /// The XML name of the <see cref="Protections"/> property.
+        /// 数据库属性保护器配置。
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        internal const string ProtectionsPropertyName = "";
-        
-        /// <summary>
-        /// Gets or sets 数据库属性保护器配置。
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        [global::System.ComponentModel.DescriptionAttribute("数据库属性保护器配置。")]
-        [global::System.Configuration.ConfigurationPropertyAttribute(global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabasePropertyProtectionSection.ProtectionsPropertyName, IsRequired=false, IsKey=false, IsDefaultCollection=true)]
-        public virtual global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabasePropertyProtectionElementCollection Protections
+        /// <value>设置或获取数据库属性保护器配置。</value>
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        [Description("数据库属性保护器配置。")]
+        [ConfigurationProperty(DatabasePropertyProtectionSection.ProtectionsPropertyName, IsRequired = false, IsKey = false, IsDefaultCollection = true)]
+        public virtual DatabasePropertyProtectionElementCollection Protections
         {
             get
             {
-                return ((global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabasePropertyProtectionElementCollection)(base[global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabasePropertyProtectionSection.ProtectionsPropertyName]));
+                return ((DatabasePropertyProtectionElementCollection)(base[DatabasePropertyProtectionSection.ProtectionsPropertyName]));
             }
             set
             {
-                base[global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabasePropertyProtectionSection.ProtectionsPropertyName] = value;
+                base[DatabasePropertyProtectionSection.ProtectionsPropertyName] = value;
             }
         }
         #endregion
@@ -305,73 +332,68 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration
 }
 namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration
 {
-    
-    
     /// <summary>
     /// 用于配置数据库访问组件类型。
     /// </summary>
-    public partial class DatabaseAccessProviderElement : global::System.Configuration.ConfigurationElement
+    /// <seealso cref="ConfigurationElement"/>
+    public partial class DatabaseAccessProviderElement : ConfigurationElement
     {
-        
         #region IsReadOnly override
         /// <summary>
-        /// Gets a value indicating whether the element is read-only.
+        /// 获取此配置元素是否只读。
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        /// <returns>true or false。</returns>
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
         public override bool IsReadOnly()
         {
             return false;
         }
         #endregion
-        
+
         #region Name Property
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        private const string NamePropertyName = "name";
+
         /// <summary>
-        /// The XML name of the <see cref="Name"/> property.
+        /// 数据库访问组件名称。
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        internal const string NamePropertyName = "name";
-        
-        /// <summary>
-        /// Gets or sets 数据库访问组件名称。
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        [global::System.ComponentModel.DescriptionAttribute("数据库访问组件名称。")]
-        [global::System.Configuration.ConfigurationPropertyAttribute(global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseAccessProviderElement.NamePropertyName, IsRequired=true, IsKey=true, IsDefaultCollection=false)]
+        /// <value>设置或获取数据库访问组件名称。</value>
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        [Description("数据库访问组件名称。")]
+        [ConfigurationProperty(DatabaseAccessProviderElement.NamePropertyName, IsRequired = true, IsKey = true, IsDefaultCollection = false)]
         public virtual string Name
         {
             get
             {
-                return ((string)(base[global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseAccessProviderElement.NamePropertyName]));
+                return ((string)(base[DatabaseAccessProviderElement.NamePropertyName]));
             }
             set
             {
-                base[global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseAccessProviderElement.NamePropertyName] = value;
+                base[DatabaseAccessProviderElement.NamePropertyName] = value;
             }
         }
         #endregion
-        
+
         #region Type Property
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        private const string TypePropertyName = "type";
+
         /// <summary>
-        /// The XML name of the <see cref="Type"/> property.
+        /// 实现了<see cref="SourcePro.Csharp.Practices.FoundationLibrary.Data.IDatabase"/>接口的类型。
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        internal const string TypePropertyName = "type";
-        
-        /// <summary>
-        /// Gets or sets 实现了IDatabase接口的类型。
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        [global::System.ComponentModel.DescriptionAttribute("实现了IDatabase接口的类型。")]
-        [global::System.Configuration.ConfigurationPropertyAttribute(global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseAccessProviderElement.TypePropertyName, IsRequired=true, IsKey=false, IsDefaultCollection=false)]
+        /// <value>设置或获取实现了<see cref="SourcePro.Csharp.Practices.FoundationLibrary.Data.IDatabase"/>接口的类型。</value>
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        [Description("实现了IDatabase接口的类型。")]
+        [ConfigurationProperty(DatabaseAccessProviderElement.TypePropertyName, IsRequired = true, IsKey = false, IsDefaultCollection = false)]
         public virtual string Type
         {
             get
             {
-                return ((string)(base[global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseAccessProviderElement.TypePropertyName]));
+                return ((string)(base[DatabaseAccessProviderElement.TypePropertyName]));
             }
             set
             {
-                base[global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseAccessProviderElement.TypePropertyName] = value;
+                base[DatabaseAccessProviderElement.TypePropertyName] = value;
             }
         }
         #endregion
@@ -379,145 +401,172 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration
 }
 namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration
 {
-    
-    
     /// <summary>
-    /// DatabaseAccessProviderElement集合。
+    /// <see cref="DatabaseAccessProviderElement"/>集合。
     /// </summary>
-    [global::System.Configuration.ConfigurationCollectionAttribute(typeof(global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseAccessProviderElement), CollectionType=global::System.Configuration.ConfigurationElementCollectionType.BasicMap, AddItemName=global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseAccessProviderElementCollection.DatabaseAccessProviderElementPropertyName)]
-    public sealed partial class DatabaseAccessProviderElementCollection : global::System.Configuration.ConfigurationElementCollection
+    /// <seealso cref="DatabaseAccessProviderElement"/>
+    /// <seealso cref="ConfigurationElementCollection"/>
+    /// <seealso cref="ConfigurationElementCollectionType"/>
+    [ConfigurationCollection(typeof(DatabaseAccessProviderElement), CollectionType = ConfigurationElementCollectionType.BasicMap, AddItemName = DatabaseAccessProviderElementCollection.DatabaseAccessProviderElementPropertyName)]
+    public sealed partial class DatabaseAccessProviderElementCollection : ConfigurationElementCollection
     {
-        
         #region Constants
-        /// <summary>
-        /// The XML name of the individual <see cref="global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseAccessProviderElement"/> instances in this collection.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        internal const string DatabaseAccessProviderElementPropertyName = "add";
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        private const string DatabaseAccessProviderElementPropertyName = "add";
         #endregion
-        
+
         #region Overrides
+
+        #region CollectionType
         /// <summary>
-        /// Gets the type of the <see cref="global::System.Configuration.ConfigurationElementCollection"/>.
+        /// 此集合的<see cref="ConfigurationElementCollectionType"/>值。
         /// </summary>
-        /// <returns>The <see cref="global::System.Configuration.ConfigurationElementCollectionType"/> of this collection.</returns>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        public override global::System.Configuration.ConfigurationElementCollectionType CollectionType
+        /// <value>获取此集合的<see cref="ConfigurationElementCollectionType"/>值。</value>
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        public override ConfigurationElementCollectionType CollectionType
         {
             get
             {
-                return global::System.Configuration.ConfigurationElementCollectionType.BasicMap;
+                return ConfigurationElementCollectionType.BasicMap;
             }
         }
-        
+        #endregion
+
+        #region ElementName
         /// <summary>
-        /// Gets the name used to identify this collection of elements
+        /// 集合中每个元素的名称。
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        /// <value>获取集合中每个元素的名称。</value>
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
         protected override string ElementName
         {
             get
             {
-                return global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseAccessProviderElementCollection.DatabaseAccessProviderElementPropertyName;
+                return DatabaseAccessProviderElementCollection.DatabaseAccessProviderElementPropertyName;
             }
         }
-        
+        #endregion
+
+        #region IsElementName
         /// <summary>
-        /// Indicates whether the specified <see cref="global::System.Configuration.ConfigurationElement"/> exists in the <see cref="global::System.Configuration.ConfigurationElementCollection"/>.
+        /// 验证<paramref name="elementName"/>是否等于add。
         /// </summary>
-        /// <param name="elementName">The name of the element to verify.</param>
-        /// <returns>
-        /// <see langword="true"/> if the element exists in the collection; otherwise, <see langword="false"/>.
-        /// </returns>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        /// <param name="elementName">需要验证的元素名称。</param>
+        /// <returns>true or false。</returns>
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
         protected override bool IsElementName(string elementName)
         {
-            return (elementName == global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseAccessProviderElementCollection.DatabaseAccessProviderElementPropertyName);
-        }
-        
-        /// <summary>
-        /// Gets the element key for the specified configuration element.
-        /// </summary>
-        /// <param name="element">The <see cref="global::System.Configuration.ConfigurationElement"/> to return the key for.</param>
-        /// <returns>
-        /// An <see cref="object"/> that acts as the key for the specified <see cref="global::System.Configuration.ConfigurationElement"/>.
-        /// </returns>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        protected override object GetElementKey(global::System.Configuration.ConfigurationElement element)
-        {
-            return ((global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseAccessProviderElement)(element)).Name;
-        }
-        
-        /// <summary>
-        /// Creates a new <see cref="global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseAccessProviderElement"/>.
-        /// </summary>
-        /// <returns>
-        /// A new <see cref="global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseAccessProviderElement"/>.
-        /// </returns>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        protected override global::System.Configuration.ConfigurationElement CreateNewElement()
-        {
-            return new global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseAccessProviderElement();
+            return (elementName == DatabaseAccessProviderElementCollection.DatabaseAccessProviderElementPropertyName);
         }
         #endregion
-        
+
+        #region GetElementKey
+        /// <summary>
+        /// 获取<paramref name="element"/>的键值。
+        /// </summary>
+        /// <param name="element"><see cref="DatabaseAccessProviderElement"/>对象实例。</param>
+        /// <returns><see cref="DatabaseAccessProviderElement"/>.Name属性值。</returns>
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        protected override object GetElementKey(ConfigurationElement element)
+        {
+            return ((DatabaseAccessProviderElement)(element)).Name;
+        }
+        #endregion
+
+        #region CreateNewElement
+        /// <summary>
+        /// 创建一个新的<see cref="DatabaseAccessProviderElement"/>对象实例。
+        /// </summary>
+        /// <returns><see cref="DatabaseAccessProviderElement"/>对象实例。</returns>
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        protected override ConfigurationElement CreateNewElement()
+        {
+            return new DatabaseAccessProviderElement();
+        }
+        #endregion
+
+        #endregion
+
         #region Indexer
         /// <summary>
-        /// Gets the <see cref="global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseAccessProviderElement"/> at the specified index.
+        /// 获取指定索引处的<see cref="DatabaseAccessProviderElement"/>对象实例。
         /// </summary>
-        /// <param name="index">The index of the <see cref="global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseAccessProviderElement"/> to retrieve.</param>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        public global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseAccessProviderElement this[int index]
+        /// <param name="index">索引数字。</param>
+        /// <returns><see cref="DatabaseAccessProviderElement"/>对象实例。</returns>
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        public DatabaseAccessProviderElement this[int index]
         {
             get
             {
-                return ((global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseAccessProviderElement)(base.BaseGet(index)));
+                return ((DatabaseAccessProviderElement)(base.BaseGet(index)));
             }
         }
-        
+
         /// <summary>
-        /// Gets the <see cref="global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseAccessProviderElement"/> with the specified key.
+        /// 获取指定名称的<see cref="DatabaseAccessProviderElement"/>对象实例。
         /// </summary>
-        /// <param name="name">The key of the <see cref="global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseAccessProviderElement"/> to retrieve.</param>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        public global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseAccessProviderElement this[object name]
+        /// <param name="name">标识名称。</param>
+        /// <returns><see cref="DatabaseAccessProviderElement"/>对象实例。</returns>
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        public DatabaseAccessProviderElement this[object name]
         {
             get
             {
-                return ((global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseAccessProviderElement)(base.BaseGet(name)));
+                return ((DatabaseAccessProviderElement)(base.BaseGet(name)));
             }
         }
         #endregion
-        
+
         #region Add
         /// <summary>
-        /// Adds the specified <see cref="global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseAccessProviderElement"/> to the <see cref="global::System.Configuration.ConfigurationElementCollection"/>.
+        /// 添加<paramref name="element"/>到集合中。
         /// </summary>
-        /// <param name="add">The <see cref="global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseAccessProviderElement"/> to add.</param>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        public void Add(global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseAccessProviderElement add)
+        /// <param name="element"><see cref="DatabaseAccessProviderElement"/>对象实例。</param>
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        public void Add(DatabaseAccessProviderElement element)
         {
-            base.BaseAdd(add);
+            base.BaseAdd(element);
         }
         #endregion
-        
+
         #region Remove
         /// <summary>
-        /// Removes the specified <see cref="global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseAccessProviderElement"/> from the <see cref="global::System.Configuration.ConfigurationElementCollection"/>.
+        /// 移除指定名称的<see cref="DatabaseAccessProviderElement"/>对象实例。
         /// </summary>
-        /// <param name="add">The <see cref="global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseAccessProviderElement"/> to remove.</param>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        public void Remove(global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseAccessProviderElement add)
+        /// <param name="name">标识名称。</param>
+        public void Remove(string name)
         {
-            base.BaseRemove(this.GetElementKey(add));
+            base.BaseRemove(name);
+        }
+
+        /// <summary>
+        /// 从此集合中移除<paramref name="element"/>。
+        /// </summary>
+        /// <param name="element"><see cref="DatabaseAccessProviderElement"/>对象实例。</param>
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        public void Remove(DatabaseAccessProviderElement element)
+        {
+            this.Remove(element.Name);
         }
         #endregion
-        
+
+        #region RemoveAt
+        /// <summary>
+        /// 移除指定索引处的<see cref="DatabaseAccessProviderElement"/>对象实例。
+        /// </summary>
+        /// <param name="index">索引数字。</param>
+        public void RemoveAt(int index)
+        {
+            this.RemoveAt(index);
+        }
+        #endregion
+
         #region IsReadOnly override
         /// <summary>
-        /// Gets a value indicating whether the element is read-only.
+        /// 获取此配置元素是否只读。
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        /// <returns>true or false。</returns>
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
         public override bool IsReadOnly()
         {
             return false;
@@ -527,67 +576,70 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration
 }
 namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration
 {
-    
-    
     /// <summary>
     /// 数据库访问组件配置。
     /// </summary>
-    public partial class DatabaseAccessProviderSection : global::System.Configuration.ConfigurationSection
+    /// <seealso cref="ConfigurationSection"/>
+    public partial class DatabaseAccessProviderSection : ConfigurationSection
     {
-        
-        #region Singleton Instance
+        #region SectionName
         /// <summary>
-        /// The XML name of the DatabaseAccessProviderSection Configuration Section.
+        /// <see cref="DatabaseAccessProviderSection"/>配置节名称。
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        internal const string DatabaseAccessProviderSectionSectionName = "databaseProviders";
-        
+        public const string SectionName = "databaseProviders";
+        #endregion
+
+        #region Xmlns Property
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        private const string XmlnsPropertyName = "xmlns";
+
         /// <summary>
-        /// Gets the DatabaseAccessProviderSection instance.
+        /// 此配置节的XML命名空间。
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        public static global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseAccessProviderSection Instance
+        /// <value>获取此配置节的XML命名空间。</value>
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        [ConfigurationProperty(DatabaseAccessProviderSection.XmlnsPropertyName, IsRequired = false, IsKey = false, IsDefaultCollection = false)]
+        public string Xmlns
         {
             get
             {
-                return ((global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseAccessProviderSection)(global::System.Configuration.ConfigurationManager.GetSection(global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseAccessProviderSection.DatabaseAccessProviderSectionSectionName)));
+                return ((string)(base[DatabaseAccessProviderSection.XmlnsPropertyName]));
             }
         }
         #endregion
-        
+
         #region IsReadOnly override
         /// <summary>
-        /// Gets a value indicating whether the element is read-only.
+        /// 获取此配置节是否只读。
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        /// <returns>true or false。</returns>
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
         public override bool IsReadOnly()
         {
             return false;
         }
         #endregion
-        
+
         #region Providers Property
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        private const string ProvidersPropertyName = "";
+
         /// <summary>
-        /// The XML name of the <see cref="Providers"/> property.
+        /// 数据库组件配置。
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        internal const string ProvidersPropertyName = "";
-        
-        /// <summary>
-        /// Gets or sets 数据库组件配置。
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        [global::System.ComponentModel.DescriptionAttribute("数据库组件配置。")]
-        [global::System.Configuration.ConfigurationPropertyAttribute(global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseAccessProviderSection.ProvidersPropertyName, IsRequired=false, IsKey=false, IsDefaultCollection=true)]
-        public virtual global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseAccessProviderElementCollection Providers
+        /// <value>设置或获取数据库组件配置。</value>
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        [Description("数据库组件配置。")]
+        [ConfigurationProperty(DatabaseAccessProviderSection.ProvidersPropertyName, IsRequired = false, IsKey = false, IsDefaultCollection = true)]
+        public virtual DatabaseAccessProviderElementCollection Providers
         {
             get
             {
-                return ((global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseAccessProviderElementCollection)(base[global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseAccessProviderSection.ProvidersPropertyName]));
+                return ((DatabaseAccessProviderElementCollection)(base[DatabaseAccessProviderSection.ProvidersPropertyName]));
             }
             set
             {
-                base[global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseAccessProviderSection.ProvidersPropertyName] = value;
+                base[DatabaseAccessProviderSection.ProvidersPropertyName] = value;
             }
         }
         #endregion
@@ -595,99 +647,92 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration
 }
 namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration
 {
-    
-    
     /// <summary>
     /// 用于配置经过保护的数据库属性。
     /// </summary>
-    public partial class IsProtectedDatabasePropertyElement : global::System.Configuration.ConfigurationElement
+    /// <seealso cref="ConfigurationElement"/>
+    public partial class IsProtectedDatabasePropertyElement : ConfigurationElement
     {
-        
         #region IsReadOnly override
         /// <summary>
-        /// Gets a value indicating whether the element is read-only.
+        /// 获取此配置元素是否只读。
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        /// <returns>true or false。</returns>
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
         public override bool IsReadOnly()
         {
             return false;
         }
         #endregion
-        
+
         #region PropertyName Property
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        private const string PropertyNamePropertyName = "propertyName";
+
         /// <summary>
-        /// The XML name of the <see cref="PropertyName"/> property.
+        /// 被保护的属性名称。
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        internal const string PropertyNamePropertyName = "propertyName";
-        
-        /// <summary>
-        /// Gets or sets 被保护的属性名称。
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        [global::System.ComponentModel.DescriptionAttribute("被保护的属性名称。")]
-        [global::System.Configuration.ConfigurationPropertyAttribute(global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.IsProtectedDatabasePropertyElement.PropertyNamePropertyName, IsRequired=true, IsKey=true, IsDefaultCollection=false)]
+        /// <value>设置或获取被保护的属性名称。</value>
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        [Description("被保护的属性名称。")]
+        [ConfigurationProperty(IsProtectedDatabasePropertyElement.PropertyNamePropertyName, IsRequired = true, IsKey = true, IsDefaultCollection = false)]
         public virtual string PropertyName
         {
             get
             {
-                return ((string)(base[global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.IsProtectedDatabasePropertyElement.PropertyNamePropertyName]));
+                return ((string)(base[IsProtectedDatabasePropertyElement.PropertyNamePropertyName]));
             }
             set
             {
-                base[global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.IsProtectedDatabasePropertyElement.PropertyNamePropertyName] = value;
+                base[IsProtectedDatabasePropertyElement.PropertyNamePropertyName] = value;
             }
         }
         #endregion
-        
+
         #region ProtectedValue Property
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        private const string ProtectedValuePropertyName = "protectedValue";
+
         /// <summary>
-        /// The XML name of the <see cref="ProtectedValue"/> property.
+        /// 经过保护的属性值。
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        internal const string ProtectedValuePropertyName = "protectedValue";
-        
-        /// <summary>
-        /// Gets or sets 经过保护的属性值。
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        [global::System.ComponentModel.DescriptionAttribute("经过保护的属性值。")]
-        [global::System.Configuration.ConfigurationPropertyAttribute(global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.IsProtectedDatabasePropertyElement.ProtectedValuePropertyName, IsRequired=true, IsKey=false, IsDefaultCollection=false)]
+        /// <value>设置或获取经过保护的属性值。</value>
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        [Description("经过保护的属性值。")]
+        [ConfigurationProperty(IsProtectedDatabasePropertyElement.ProtectedValuePropertyName, IsRequired = true, IsKey = false, IsDefaultCollection = false)]
         public virtual string ProtectedValue
         {
             get
             {
-                return ((string)(base[global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.IsProtectedDatabasePropertyElement.ProtectedValuePropertyName]));
+                return ((string)(base[IsProtectedDatabasePropertyElement.ProtectedValuePropertyName]));
             }
             set
             {
-                base[global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.IsProtectedDatabasePropertyElement.ProtectedValuePropertyName] = value;
+                base[IsProtectedDatabasePropertyElement.ProtectedValuePropertyName] = value;
             }
         }
         #endregion
-        
+
         #region ProtectionName Property
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        private const string ProtectionNamePropertyName = "protectionName";
+
         /// <summary>
-        /// The XML name of the <see cref="ProtectionName"/> property.
+        /// 属性保护器名称。
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        internal const string ProtectionNamePropertyName = "protectionName";
-        
-        /// <summary>
-        /// Gets or sets 属性保护器名称。
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        [global::System.ComponentModel.DescriptionAttribute("属性保护器名称。")]
-        [global::System.Configuration.ConfigurationPropertyAttribute(global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.IsProtectedDatabasePropertyElement.ProtectionNamePropertyName, IsRequired=false, IsKey=false, IsDefaultCollection=false)]
+        /// <value>设置或获取属性保护器名称。</value>
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        [Description("属性保护器名称。")]
+        [ConfigurationProperty(IsProtectedDatabasePropertyElement.ProtectionNamePropertyName, IsRequired = false, IsKey = false, IsDefaultCollection = false)]
         public virtual string ProtectionName
         {
             get
             {
-                return ((string)(base[global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.IsProtectedDatabasePropertyElement.ProtectionNamePropertyName]));
+                return ((string)(base[IsProtectedDatabasePropertyElement.ProtectionNamePropertyName]));
             }
             set
             {
-                base[global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.IsProtectedDatabasePropertyElement.ProtectionNamePropertyName] = value;
+                base[IsProtectedDatabasePropertyElement.ProtectionNamePropertyName] = value;
             }
         }
         #endregion
@@ -695,145 +740,148 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration
 }
 namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration
 {
-    
-    
     /// <summary>
-    /// IsProtectedDatabasePropertyElement集合。
+    /// <see cref="IsProtectedDatabasePropertyElement"/>集合。
     /// </summary>
-    [global::System.Configuration.ConfigurationCollectionAttribute(typeof(global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.IsProtectedDatabasePropertyElement), CollectionType=global::System.Configuration.ConfigurationElementCollectionType.BasicMap, AddItemName=global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.IsProtectedDatabasePropertyElementCollection.IsProtectedDatabasePropertyElementPropertyName)]
-    public sealed partial class IsProtectedDatabasePropertyElementCollection : global::System.Configuration.ConfigurationElementCollection
+    /// <seealso cref="IsProtectedDatabasePropertyElement"/>
+    /// <seealso cref="ConfigurationElementCollection"/>
+    /// <seealso cref="ConfigurationElementCollectionType"/>
+    [ConfigurationCollection(typeof(IsProtectedDatabasePropertyElement), CollectionType = ConfigurationElementCollectionType.BasicMap, AddItemName = IsProtectedDatabasePropertyElementCollection.IsProtectedDatabasePropertyElementPropertyName)]
+    public sealed partial class IsProtectedDatabasePropertyElementCollection : ConfigurationElementCollection
     {
-        
         #region Constants
-        /// <summary>
-        /// The XML name of the individual <see cref="global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.IsProtectedDatabasePropertyElement"/> instances in this collection.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        internal const string IsProtectedDatabasePropertyElementPropertyName = "add";
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        private const string IsProtectedDatabasePropertyElementPropertyName = "add";
         #endregion
-        
+
         #region Overrides
+
+        #region CollectionType
         /// <summary>
-        /// Gets the type of the <see cref="global::System.Configuration.ConfigurationElementCollection"/>.
+        /// 此集合的<see cref="ConfigurationElementCollectionType"/>值。
         /// </summary>
-        /// <returns>The <see cref="global::System.Configuration.ConfigurationElementCollectionType"/> of this collection.</returns>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        public override global::System.Configuration.ConfigurationElementCollectionType CollectionType
+        /// <value>获取此集合的<see cref="ConfigurationElementCollectionType"/>值。</value>
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        public override ConfigurationElementCollectionType CollectionType
         {
             get
             {
-                return global::System.Configuration.ConfigurationElementCollectionType.BasicMap;
+                return ConfigurationElementCollectionType.BasicMap;
             }
         }
-        
+        #endregion
+
+        #region ElementName
         /// <summary>
-        /// Gets the name used to identify this collection of elements
+        /// 集合中每个元素的名称。
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        /// <value>获取集合中每个元素的名称。</value>
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
         protected override string ElementName
         {
             get
             {
-                return global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.IsProtectedDatabasePropertyElementCollection.IsProtectedDatabasePropertyElementPropertyName;
+                return IsProtectedDatabasePropertyElementCollection.IsProtectedDatabasePropertyElementPropertyName;
             }
         }
-        
+        #endregion
+
         /// <summary>
-        /// Indicates whether the specified <see cref="global::System.Configuration.ConfigurationElement"/> exists in the <see cref="global::System.Configuration.ConfigurationElementCollection"/>.
+        /// Indicates whether the specified <see cref="ConfigurationElement"/> exists in the <see cref="ConfigurationElementCollection"/>.
         /// </summary>
         /// <param name="elementName">The name of the element to verify.</param>
         /// <returns>
         /// <see langword="true"/> if the element exists in the collection; otherwise, <see langword="false"/>.
         /// </returns>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
         protected override bool IsElementName(string elementName)
         {
-            return (elementName == global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.IsProtectedDatabasePropertyElementCollection.IsProtectedDatabasePropertyElementPropertyName);
+            return (elementName == IsProtectedDatabasePropertyElementCollection.IsProtectedDatabasePropertyElementPropertyName);
         }
-        
+
         /// <summary>
         /// Gets the element key for the specified configuration element.
         /// </summary>
-        /// <param name="element">The <see cref="global::System.Configuration.ConfigurationElement"/> to return the key for.</param>
+        /// <param name="element">The <see cref="ConfigurationElement"/> to return the key for.</param>
         /// <returns>
-        /// An <see cref="object"/> that acts as the key for the specified <see cref="global::System.Configuration.ConfigurationElement"/>.
+        /// An <see cref="object"/> that acts as the key for the specified <see cref="ConfigurationElement"/>.
         /// </returns>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        protected override object GetElementKey(global::System.Configuration.ConfigurationElement element)
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        protected override object GetElementKey(ConfigurationElement element)
         {
-            return ((global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.IsProtectedDatabasePropertyElement)(element)).PropertyName;
+            return ((IsProtectedDatabasePropertyElement)(element)).PropertyName;
         }
-        
+
         /// <summary>
-        /// Creates a new <see cref="global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.IsProtectedDatabasePropertyElement"/>.
+        /// Creates a new <see cref="IsProtectedDatabasePropertyElement"/>.
         /// </summary>
         /// <returns>
-        /// A new <see cref="global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.IsProtectedDatabasePropertyElement"/>.
+        /// A new <see cref="IsProtectedDatabasePropertyElement"/>.
         /// </returns>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        protected override global::System.Configuration.ConfigurationElement CreateNewElement()
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        protected override ConfigurationElement CreateNewElement()
         {
-            return new global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.IsProtectedDatabasePropertyElement();
+            return new IsProtectedDatabasePropertyElement();
         }
         #endregion
-        
+
         #region Indexer
         /// <summary>
-        /// Gets the <see cref="global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.IsProtectedDatabasePropertyElement"/> at the specified index.
+        /// Gets the <see cref="IsProtectedDatabasePropertyElement"/> at the specified index.
         /// </summary>
-        /// <param name="index">The index of the <see cref="global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.IsProtectedDatabasePropertyElement"/> to retrieve.</param>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        public global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.IsProtectedDatabasePropertyElement this[int index]
+        /// <param name="index">The index of the <see cref="IsProtectedDatabasePropertyElement"/> to retrieve.</param>
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        public IsProtectedDatabasePropertyElement this[int index]
         {
             get
             {
-                return ((global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.IsProtectedDatabasePropertyElement)(base.BaseGet(index)));
+                return ((IsProtectedDatabasePropertyElement)(base.BaseGet(index)));
             }
         }
-        
+
         /// <summary>
-        /// Gets the <see cref="global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.IsProtectedDatabasePropertyElement"/> with the specified key.
+        /// Gets the <see cref="IsProtectedDatabasePropertyElement"/> with the specified key.
         /// </summary>
-        /// <param name="propertyName">The key of the <see cref="global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.IsProtectedDatabasePropertyElement"/> to retrieve.</param>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        public global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.IsProtectedDatabasePropertyElement this[object propertyName]
+        /// <param name="propertyName">The key of the <see cref="IsProtectedDatabasePropertyElement"/> to retrieve.</param>
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        public IsProtectedDatabasePropertyElement this[object propertyName]
         {
             get
             {
-                return ((global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.IsProtectedDatabasePropertyElement)(base.BaseGet(propertyName)));
+                return ((IsProtectedDatabasePropertyElement)(base.BaseGet(propertyName)));
             }
         }
         #endregion
-        
+
         #region Add
         /// <summary>
-        /// Adds the specified <see cref="global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.IsProtectedDatabasePropertyElement"/> to the <see cref="global::System.Configuration.ConfigurationElementCollection"/>.
+        /// Adds the specified <see cref="IsProtectedDatabasePropertyElement"/> to the <see cref="ConfigurationElementCollection"/>.
         /// </summary>
-        /// <param name="add">The <see cref="global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.IsProtectedDatabasePropertyElement"/> to add.</param>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        public void Add(global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.IsProtectedDatabasePropertyElement add)
+        /// <param name="add">The <see cref="IsProtectedDatabasePropertyElement"/> to add.</param>
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        public void Add(IsProtectedDatabasePropertyElement add)
         {
             base.BaseAdd(add);
         }
         #endregion
-        
+
         #region Remove
         /// <summary>
-        /// Removes the specified <see cref="global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.IsProtectedDatabasePropertyElement"/> from the <see cref="global::System.Configuration.ConfigurationElementCollection"/>.
+        /// Removes the specified <see cref="IsProtectedDatabasePropertyElement"/> from the <see cref="ConfigurationElementCollection"/>.
         /// </summary>
-        /// <param name="add">The <see cref="global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.IsProtectedDatabasePropertyElement"/> to remove.</param>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        public void Remove(global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.IsProtectedDatabasePropertyElement add)
+        /// <param name="add">The <see cref="IsProtectedDatabasePropertyElement"/> to remove.</param>
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        public void Remove(IsProtectedDatabasePropertyElement add)
         {
             base.BaseRemove(this.GetElementKey(add));
         }
         #endregion
-        
+
         #region IsReadOnly override
         /// <summary>
         /// Gets a value indicating whether the element is read-only.
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
         public override bool IsReadOnly()
         {
             return false;
@@ -843,177 +891,177 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration
 }
 namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration
 {
-    
-    
+
+
     /// <summary>
     /// 数据库连接配置。
     /// </summary>
-    public partial class DatabaseConnectionElement : global::System.Configuration.ConfigurationElement
+    public partial class DatabaseConnectionElement : ConfigurationElement
     {
-        
+
         #region IsReadOnly override
         /// <summary>
         /// Gets a value indicating whether the element is read-only.
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
         public override bool IsReadOnly()
         {
             return false;
         }
         #endregion
-        
+
         #region Name Property
         /// <summary>
         /// The XML name of the <see cref="Name"/> property.
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        internal const string NamePropertyName = "name";
-        
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        private const string NamePropertyName = "name";
+
         /// <summary>
-        /// Gets or sets 数据库名称。
+        /// 数据库名称。
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        [global::System.ComponentModel.DescriptionAttribute("数据库名称。")]
-        [global::System.Configuration.ConfigurationPropertyAttribute(global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseConnectionElement.NamePropertyName, IsRequired=true, IsKey=true, IsDefaultCollection=false)]
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        [Description("数据库名称。")]
+        [ConfigurationProperty(DatabaseConnectionElement.NamePropertyName, IsRequired = true, IsKey = true, IsDefaultCollection = false)]
         public virtual string Name
         {
             get
             {
-                return ((string)(base[global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseConnectionElement.NamePropertyName]));
+                return ((string)(base[DatabaseConnectionElement.NamePropertyName]));
             }
             set
             {
-                base[global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseConnectionElement.NamePropertyName] = value;
+                base[DatabaseConnectionElement.NamePropertyName] = value;
             }
         }
         #endregion
-        
+
         #region ConnectionString Property
         /// <summary>
         /// The XML name of the <see cref="ConnectionString"/> property.
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        internal const string ConnectionStringPropertyName = "connectionString";
-        
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        private const string ConnectionStringPropertyName = "connectionString";
+
         /// <summary>
-        /// Gets or sets 数据库连接串。
+        /// 数据库连接串。
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        [global::System.ComponentModel.DescriptionAttribute("数据库连接串。")]
-        [global::System.Configuration.ConfigurationPropertyAttribute(global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseConnectionElement.ConnectionStringPropertyName, IsRequired=true, IsKey=false, IsDefaultCollection=false)]
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        [Description("数据库连接串。")]
+        [ConfigurationProperty(DatabaseConnectionElement.ConnectionStringPropertyName, IsRequired = true, IsKey = false, IsDefaultCollection = false)]
         public virtual string ConnectionString
         {
             get
             {
-                return ((string)(base[global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseConnectionElement.ConnectionStringPropertyName]));
+                return ((string)(base[DatabaseConnectionElement.ConnectionStringPropertyName]));
             }
             set
             {
-                base[global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseConnectionElement.ConnectionStringPropertyName] = value;
+                base[DatabaseConnectionElement.ConnectionStringPropertyName] = value;
             }
         }
         #endregion
-        
+
         #region DefaultSechema Property
         /// <summary>
         /// The XML name of the <see cref="DefaultSechema"/> property.
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        internal const string DefaultSechemaPropertyName = "defaultSechema";
-        
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        private const string DefaultSechemaPropertyName = "defaultSechema";
+
         /// <summary>
-        /// Gets or sets 默认架构名称。
+        /// 默认架构名称。
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        [global::System.ComponentModel.DescriptionAttribute("默认架构名称。")]
-        [global::System.Configuration.ConfigurationPropertyAttribute(global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseConnectionElement.DefaultSechemaPropertyName, IsRequired=false, IsKey=false, IsDefaultCollection=false, DefaultValue="dbo")]
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        [Description("默认架构名称。")]
+        [ConfigurationProperty(DatabaseConnectionElement.DefaultSechemaPropertyName, IsRequired = false, IsKey = false, IsDefaultCollection = false, DefaultValue = "dbo")]
         public virtual string DefaultSechema
         {
             get
             {
-                return ((string)(base[global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseConnectionElement.DefaultSechemaPropertyName]));
+                return ((string)(base[DatabaseConnectionElement.DefaultSechemaPropertyName]));
             }
             set
             {
-                base[global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseConnectionElement.DefaultSechemaPropertyName] = value;
+                base[DatabaseConnectionElement.DefaultSechemaPropertyName] = value;
             }
         }
         #endregion
-        
+
         #region CommandTimeoutSeconds Property
         /// <summary>
         /// The XML name of the <see cref="CommandTimeoutSeconds"/> property.
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        internal const string CommandTimeoutSecondsPropertyName = "commandTimeoutSeconds";
-        
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        private const string CommandTimeoutSecondsPropertyName = "commandTimeoutSeconds";
+
         /// <summary>
-        /// Gets or sets 数据库命令执行超时秒数。
+        /// 数据库命令执行超时秒数。
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        [global::System.ComponentModel.DescriptionAttribute("数据库命令执行超时秒数。")]
-        [global::System.Configuration.ConfigurationPropertyAttribute(global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseConnectionElement.CommandTimeoutSecondsPropertyName, IsRequired=false, IsKey=false, IsDefaultCollection=false, DefaultValue=0)]
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        [Description("数据库命令执行超时秒数。")]
+        [ConfigurationProperty(DatabaseConnectionElement.CommandTimeoutSecondsPropertyName, IsRequired = false, IsKey = false, IsDefaultCollection = false, DefaultValue = 0)]
         public virtual int CommandTimeoutSeconds
         {
             get
             {
-                return ((int)(base[global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseConnectionElement.CommandTimeoutSecondsPropertyName]));
+                return ((int)(base[DatabaseConnectionElement.CommandTimeoutSecondsPropertyName]));
             }
             set
             {
-                base[global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseConnectionElement.CommandTimeoutSecondsPropertyName] = value;
+                base[DatabaseConnectionElement.CommandTimeoutSecondsPropertyName] = value;
             }
         }
         #endregion
-        
+
         #region Provider Property
         /// <summary>
         /// The XML name of the <see cref="Provider"/> property.
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        internal const string ProviderPropertyName = "provider";
-        
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        private const string ProviderPropertyName = "provider";
+
         /// <summary>
-        /// Gets or sets 数据库访问器名称。
+        /// 数据库访问器名称。
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        [global::System.ComponentModel.DescriptionAttribute("数据库访问器名称。")]
-        [global::System.Configuration.ConfigurationPropertyAttribute(global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseConnectionElement.ProviderPropertyName, IsRequired=false, IsKey=false, IsDefaultCollection=false)]
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        [Description("数据库访问器名称。")]
+        [ConfigurationProperty(DatabaseConnectionElement.ProviderPropertyName, IsRequired = false, IsKey = false, IsDefaultCollection = false)]
         public virtual string Provider
         {
             get
             {
-                return ((string)(base[global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseConnectionElement.ProviderPropertyName]));
+                return ((string)(base[DatabaseConnectionElement.ProviderPropertyName]));
             }
             set
             {
-                base[global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseConnectionElement.ProviderPropertyName] = value;
+                base[DatabaseConnectionElement.ProviderPropertyName] = value;
             }
         }
         #endregion
-        
+
         #region Protections Property
         /// <summary>
         /// The XML name of the <see cref="Protections"/> property.
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        internal const string ProtectionsPropertyName = "protections";
-        
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        private const string ProtectionsPropertyName = "protections";
+
         /// <summary>
-        /// Gets or sets 需要保护的数据库属性。
+        /// 需要保护的数据库属性。
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        [global::System.ComponentModel.DescriptionAttribute("需要保护的数据库属性。")]
-        [global::System.Configuration.ConfigurationPropertyAttribute(global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseConnectionElement.ProtectionsPropertyName, IsRequired=false, IsKey=false, IsDefaultCollection=false)]
-        public virtual global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.IsProtectedDatabasePropertyElementCollection Protections
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        [Description("需要保护的数据库属性。")]
+        [ConfigurationProperty(DatabaseConnectionElement.ProtectionsPropertyName, IsRequired = false, IsKey = false, IsDefaultCollection = false)]
+        public virtual IsProtectedDatabasePropertyElementCollection Protections
         {
             get
             {
-                return ((global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.IsProtectedDatabasePropertyElementCollection)(base[global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseConnectionElement.ProtectionsPropertyName]));
+                return ((IsProtectedDatabasePropertyElementCollection)(base[DatabaseConnectionElement.ProtectionsPropertyName]));
             }
             set
             {
-                base[global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseConnectionElement.ProtectionsPropertyName] = value;
+                base[DatabaseConnectionElement.ProtectionsPropertyName] = value;
             }
         }
         #endregion
@@ -1021,145 +1069,145 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration
 }
 namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration
 {
-    
-    
+
+
     /// <summary>
     /// DatabaseConnectionElement集合。
     /// </summary>
-    [global::System.Configuration.ConfigurationCollectionAttribute(typeof(global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseConnectionElement), CollectionType=global::System.Configuration.ConfigurationElementCollectionType.BasicMap, AddItemName=global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseConnectionElementCollection.DatabaseConnectionElementPropertyName)]
-    public sealed partial class DatabaseConnectionElementCollection : global::System.Configuration.ConfigurationElementCollection
+    [ConfigurationCollection(typeof(DatabaseConnectionElement), CollectionType = ConfigurationElementCollectionType.BasicMap, AddItemName = DatabaseConnectionElementCollection.DatabaseConnectionElementPropertyName)]
+    public sealed partial class DatabaseConnectionElementCollection : ConfigurationElementCollection
     {
-        
+
         #region Constants
         /// <summary>
-        /// The XML name of the individual <see cref="global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseConnectionElement"/> instances in this collection.
+        /// The XML name of the individual <see cref="DatabaseConnectionElement"/> instances in this collection.
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        internal const string DatabaseConnectionElementPropertyName = "add";
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        private const string DatabaseConnectionElementPropertyName = "add";
         #endregion
-        
+
         #region Overrides
         /// <summary>
-        /// Gets the type of the <see cref="global::System.Configuration.ConfigurationElementCollection"/>.
+        /// Gets the type of the <see cref="ConfigurationElementCollection"/>.
         /// </summary>
-        /// <returns>The <see cref="global::System.Configuration.ConfigurationElementCollectionType"/> of this collection.</returns>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        public override global::System.Configuration.ConfigurationElementCollectionType CollectionType
+        /// <returns>The <see cref="ConfigurationElementCollectionType"/> of this collection.</returns>
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        public override ConfigurationElementCollectionType CollectionType
         {
             get
             {
-                return global::System.Configuration.ConfigurationElementCollectionType.BasicMap;
+                return ConfigurationElementCollectionType.BasicMap;
             }
         }
-        
+
         /// <summary>
         /// Gets the name used to identify this collection of elements
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
         protected override string ElementName
         {
             get
             {
-                return global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseConnectionElementCollection.DatabaseConnectionElementPropertyName;
+                return DatabaseConnectionElementCollection.DatabaseConnectionElementPropertyName;
             }
         }
-        
+
         /// <summary>
-        /// Indicates whether the specified <see cref="global::System.Configuration.ConfigurationElement"/> exists in the <see cref="global::System.Configuration.ConfigurationElementCollection"/>.
+        /// Indicates whether the specified <see cref="ConfigurationElement"/> exists in the <see cref="ConfigurationElementCollection"/>.
         /// </summary>
         /// <param name="elementName">The name of the element to verify.</param>
         /// <returns>
         /// <see langword="true"/> if the element exists in the collection; otherwise, <see langword="false"/>.
         /// </returns>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
         protected override bool IsElementName(string elementName)
         {
-            return (elementName == global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseConnectionElementCollection.DatabaseConnectionElementPropertyName);
+            return (elementName == DatabaseConnectionElementCollection.DatabaseConnectionElementPropertyName);
         }
-        
+
         /// <summary>
         /// Gets the element key for the specified configuration element.
         /// </summary>
-        /// <param name="element">The <see cref="global::System.Configuration.ConfigurationElement"/> to return the key for.</param>
+        /// <param name="element">The <see cref="ConfigurationElement"/> to return the key for.</param>
         /// <returns>
-        /// An <see cref="object"/> that acts as the key for the specified <see cref="global::System.Configuration.ConfigurationElement"/>.
+        /// An <see cref="object"/> that acts as the key for the specified <see cref="ConfigurationElement"/>.
         /// </returns>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        protected override object GetElementKey(global::System.Configuration.ConfigurationElement element)
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        protected override object GetElementKey(ConfigurationElement element)
         {
-            return ((global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseConnectionElement)(element)).Name;
+            return ((DatabaseConnectionElement)(element)).Name;
         }
-        
+
         /// <summary>
-        /// Creates a new <see cref="global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseConnectionElement"/>.
+        /// Creates a new <see cref="DatabaseConnectionElement"/>.
         /// </summary>
         /// <returns>
-        /// A new <see cref="global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseConnectionElement"/>.
+        /// A new <see cref="DatabaseConnectionElement"/>.
         /// </returns>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        protected override global::System.Configuration.ConfigurationElement CreateNewElement()
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        protected override ConfigurationElement CreateNewElement()
         {
-            return new global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseConnectionElement();
+            return new DatabaseConnectionElement();
         }
         #endregion
-        
+
         #region Indexer
         /// <summary>
-        /// Gets the <see cref="global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseConnectionElement"/> at the specified index.
+        /// Gets the <see cref="DatabaseConnectionElement"/> at the specified index.
         /// </summary>
-        /// <param name="index">The index of the <see cref="global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseConnectionElement"/> to retrieve.</param>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        public global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseConnectionElement this[int index]
+        /// <param name="index">The index of the <see cref="DatabaseConnectionElement"/> to retrieve.</param>
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        public DatabaseConnectionElement this[int index]
         {
             get
             {
-                return ((global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseConnectionElement)(base.BaseGet(index)));
+                return ((DatabaseConnectionElement)(base.BaseGet(index)));
             }
         }
-        
+
         /// <summary>
-        /// Gets the <see cref="global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseConnectionElement"/> with the specified key.
+        /// Gets the <see cref="DatabaseConnectionElement"/> with the specified key.
         /// </summary>
-        /// <param name="name">The key of the <see cref="global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseConnectionElement"/> to retrieve.</param>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        public global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseConnectionElement this[object name]
+        /// <param name="name">The key of the <see cref="DatabaseConnectionElement"/> to retrieve.</param>
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        public DatabaseConnectionElement this[object name]
         {
             get
             {
-                return ((global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseConnectionElement)(base.BaseGet(name)));
+                return ((DatabaseConnectionElement)(base.BaseGet(name)));
             }
         }
         #endregion
-        
+
         #region Add
         /// <summary>
-        /// Adds the specified <see cref="global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseConnectionElement"/> to the <see cref="global::System.Configuration.ConfigurationElementCollection"/>.
+        /// Adds the specified <see cref="DatabaseConnectionElement"/> to the <see cref="ConfigurationElementCollection"/>.
         /// </summary>
-        /// <param name="add">The <see cref="global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseConnectionElement"/> to add.</param>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        public void Add(global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseConnectionElement add)
+        /// <param name="add">The <see cref="DatabaseConnectionElement"/> to add.</param>
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        public void Add(DatabaseConnectionElement add)
         {
             base.BaseAdd(add);
         }
         #endregion
-        
+
         #region Remove
         /// <summary>
-        /// Removes the specified <see cref="global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseConnectionElement"/> from the <see cref="global::System.Configuration.ConfigurationElementCollection"/>.
+        /// Removes the specified <see cref="DatabaseConnectionElement"/> from the <see cref="ConfigurationElementCollection"/>.
         /// </summary>
-        /// <param name="add">The <see cref="global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseConnectionElement"/> to remove.</param>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        public void Remove(global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseConnectionElement add)
+        /// <param name="add">The <see cref="DatabaseConnectionElement"/> to remove.</param>
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        public void Remove(DatabaseConnectionElement add)
         {
             base.BaseRemove(this.GetElementKey(add));
         }
         #endregion
-        
+
         #region IsReadOnly override
         /// <summary>
         /// Gets a value indicating whether the element is read-only.
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
         public override bool IsReadOnly()
         {
             return false;
@@ -1169,89 +1217,21 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration
 }
 namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration
 {
-    
-    
+
+
     /// <summary>
     /// 数据库连接配置。
     /// </summary>
-    public partial class DatabaseConnectionSection : global::System.Configuration.ConfigurationSection
+    public partial class DatabaseConnectionSection : ConfigurationSection
     {
-        
-        #region Singleton Instance
-        /// <summary>
-        /// The XML name of the DatabaseConnectionSection Configuration Section.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        internal const string DatabaseConnectionSectionSectionName = "databaseConnections";
-        
-        /// <summary>
-        /// Gets the DatabaseConnectionSection instance.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        public static global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseConnectionSection Instance
-        {
-            get
-            {
-                return ((global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseConnectionSection)(global::System.Configuration.ConfigurationManager.GetSection(global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseConnectionSection.DatabaseConnectionSectionSectionName)));
-            }
-        }
-        #endregion
-        
-        #region IsReadOnly override
-        /// <summary>
-        /// Gets a value indicating whether the element is read-only.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        public override bool IsReadOnly()
-        {
-            return false;
-        }
-        #endregion
-        
-        #region Connections Property
-        /// <summary>
-        /// The XML name of the <see cref="Connections"/> property.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        internal const string ConnectionsPropertyName = "";
-        
-        /// <summary>
-        /// Gets or sets 数据库连接配置。
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        [global::System.ComponentModel.DescriptionAttribute("数据库连接配置。")]
-        [global::System.Configuration.ConfigurationPropertyAttribute(global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseConnectionSection.ConnectionsPropertyName, IsRequired=false, IsKey=false, IsDefaultCollection=true)]
-        public virtual global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseConnectionElementCollection Connections
-        {
-            get
-            {
-                return ((global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseConnectionElementCollection)(base[global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseConnectionSection.ConnectionsPropertyName]));
-            }
-            set
-            {
-                base[global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DatabaseConnectionSection.ConnectionsPropertyName] = value;
-            }
-        }
-        #endregion
-    }
-}
-namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration
-{
-    
-    
-    /// <summary>
-    /// 数据库默认选项配置。
-    /// </summary>
-    public partial class DefaultDatabaseOptionsSection : global::System.Configuration.ConfigurationSection
-    {
-        
+
         #region Xmlns Property
         /// <summary>
         /// The XML name of the <see cref="Xmlns"/> property.
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        internal const string XmlnsPropertyName = "xmlns";
-        
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        private const string XmlnsPropertyName = "xmlns";
+
         /// <summary>
         /// Gets the XML namespace of this Configuration Section.
         /// </summary>
@@ -1259,102 +1239,175 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration
         /// This property makes sure that if the configuration file contains the XML namespace,
         /// the parser doesn't throw an exception because it encounters the unknown "xmlns" attribute.
         /// </remarks>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        [global::System.Configuration.ConfigurationPropertyAttribute(global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DefaultDatabaseOptionsSection.XmlnsPropertyName, IsRequired=false, IsKey=false, IsDefaultCollection=false)]
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        [ConfigurationProperty(DatabaseConnectionSection.XmlnsPropertyName, IsRequired = false, IsKey = false, IsDefaultCollection = false)]
         public string Xmlns
         {
             get
             {
-                return ((string)(base[global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DefaultDatabaseOptionsSection.XmlnsPropertyName]));
+                return ((string)(base[DatabaseConnectionSection.XmlnsPropertyName]));
             }
         }
         #endregion
-        
+
         #region IsReadOnly override
         /// <summary>
         /// Gets a value indicating whether the element is read-only.
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
         public override bool IsReadOnly()
         {
             return false;
         }
         #endregion
-        
+
+        #region Connections Property
+        /// <summary>
+        /// The XML name of the <see cref="Connections"/> property.
+        /// </summary>
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        private const string ConnectionsPropertyName = "";
+
+        /// <summary>
+        /// 数据库连接配置。
+        /// </summary>
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        [Description("数据库连接配置。")]
+        [ConfigurationProperty(DatabaseConnectionSection.ConnectionsPropertyName, IsRequired = false, IsKey = false, IsDefaultCollection = true)]
+        public virtual DatabaseConnectionElementCollection Connections
+        {
+            get
+            {
+                return ((DatabaseConnectionElementCollection)(base[DatabaseConnectionSection.ConnectionsPropertyName]));
+            }
+            set
+            {
+                base[DatabaseConnectionSection.ConnectionsPropertyName] = value;
+            }
+        }
+        #endregion
+    }
+}
+namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration
+{
+
+
+    /// <summary>
+    /// 数据库默认选项配置。
+    /// </summary>
+    public partial class DefaultDatabaseOptionsSection : ConfigurationSection
+    {
+
+        #region Xmlns Property
+        /// <summary>
+        /// The XML name of the <see cref="Xmlns"/> property.
+        /// </summary>
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        private const string XmlnsPropertyName = "xmlns";
+
+        /// <summary>
+        /// Gets the XML namespace of this Configuration Section.
+        /// </summary>
+        /// <remarks>
+        /// This property makes sure that if the configuration file contains the XML namespace,
+        /// the parser doesn't throw an exception because it encounters the unknown "xmlns" attribute.
+        /// </remarks>
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        [ConfigurationProperty(DefaultDatabaseOptionsSection.XmlnsPropertyName, IsRequired = false, IsKey = false, IsDefaultCollection = false)]
+        public string Xmlns
+        {
+            get
+            {
+                return ((string)(base[DefaultDatabaseOptionsSection.XmlnsPropertyName]));
+            }
+        }
+        #endregion
+
+        #region IsReadOnly override
+        /// <summary>
+        /// Gets a value indicating whether the element is read-only.
+        /// </summary>
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        public override bool IsReadOnly()
+        {
+            return false;
+        }
+        #endregion
+
         #region DefaultDatabaseConnection Property
         /// <summary>
         /// The XML name of the <see cref="DefaultDatabaseConnection"/> property.
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        internal const string DefaultDatabaseConnectionPropertyName = "defaultDatabaseConnection";
-        
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        private const string DefaultDatabaseConnectionPropertyName = "defaultDatabaseConnection";
+
         /// <summary>
-        /// Gets or sets 默认的数据库连接名称。
+        /// 默认的数据库连接名称。
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        [global::System.ComponentModel.DescriptionAttribute("默认的数据库连接名称。")]
-        [global::System.Configuration.ConfigurationPropertyAttribute(global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DefaultDatabaseOptionsSection.DefaultDatabaseConnectionPropertyName, IsRequired=true, IsKey=false, IsDefaultCollection=false)]
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        [Description("默认的数据库连接名称。")]
+        [ConfigurationProperty(DefaultDatabaseOptionsSection.DefaultDatabaseConnectionPropertyName, IsRequired = true, IsKey = false, IsDefaultCollection = false)]
         public virtual string DefaultDatabaseConnection
         {
             get
             {
-                return ((string)(base[global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DefaultDatabaseOptionsSection.DefaultDatabaseConnectionPropertyName]));
+                return ((string)(base[DefaultDatabaseOptionsSection.DefaultDatabaseConnectionPropertyName]));
             }
             set
             {
-                base[global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DefaultDatabaseOptionsSection.DefaultDatabaseConnectionPropertyName] = value;
+                base[DefaultDatabaseOptionsSection.DefaultDatabaseConnectionPropertyName] = value;
             }
         }
         #endregion
-        
+
         #region DefaultDatabaseProvider Property
         /// <summary>
         /// The XML name of the <see cref="DefaultDatabaseProvider"/> property.
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        internal const string DefaultDatabaseProviderPropertyName = "defaultDatabaseProvider";
-        
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        private const string DefaultDatabaseProviderPropertyName = "defaultDatabaseProvider";
+
         /// <summary>
-        /// Gets or sets 默认的数据库访问器。
+        /// 默认的数据库访问器。
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        [global::System.ComponentModel.DescriptionAttribute("默认的数据库访问器。")]
-        [global::System.Configuration.ConfigurationPropertyAttribute(global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DefaultDatabaseOptionsSection.DefaultDatabaseProviderPropertyName, IsRequired=true, IsKey=false, IsDefaultCollection=false)]
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        [Description("默认的数据库访问器。")]
+        [ConfigurationProperty(DefaultDatabaseOptionsSection.DefaultDatabaseProviderPropertyName, IsRequired = true, IsKey = false, IsDefaultCollection = false)]
         public virtual string DefaultDatabaseProvider
         {
             get
             {
-                return ((string)(base[global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DefaultDatabaseOptionsSection.DefaultDatabaseProviderPropertyName]));
+                return ((string)(base[DefaultDatabaseOptionsSection.DefaultDatabaseProviderPropertyName]));
             }
             set
             {
-                base[global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DefaultDatabaseOptionsSection.DefaultDatabaseProviderPropertyName] = value;
+                base[DefaultDatabaseOptionsSection.DefaultDatabaseProviderPropertyName] = value;
             }
         }
         #endregion
-        
+
         #region DefaultDatabaseProtection Property
         /// <summary>
         /// The XML name of the <see cref="DefaultDatabaseProtection"/> property.
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        internal const string DefaultDatabaseProtectionPropertyName = "defaultDatabaseProtection";
-        
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        private const string DefaultDatabaseProtectionPropertyName = "defaultDatabaseProtection";
+
         /// <summary>
-        /// Gets or sets 默认的数据库属性保护器。
+        /// 默认的数据库属性保护器。
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        [global::System.ComponentModel.DescriptionAttribute("默认的数据库属性保护器。")]
-        [global::System.Configuration.ConfigurationPropertyAttribute(global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DefaultDatabaseOptionsSection.DefaultDatabaseProtectionPropertyName, IsRequired=true, IsKey=false, IsDefaultCollection=false)]
+        [GeneratedCode("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        [Description("默认的数据库属性保护器。")]
+        [ConfigurationProperty(DefaultDatabaseOptionsSection.DefaultDatabaseProtectionPropertyName, IsRequired = true, IsKey = false, IsDefaultCollection = false)]
         public virtual string DefaultDatabaseProtection
         {
             get
             {
-                return ((string)(base[global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DefaultDatabaseOptionsSection.DefaultDatabaseProtectionPropertyName]));
+                return ((string)(base[DefaultDatabaseOptionsSection.DefaultDatabaseProtectionPropertyName]));
             }
             set
             {
-                base[global::SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.DefaultDatabaseOptionsSection.DefaultDatabaseProtectionPropertyName] = value;
+                base[DefaultDatabaseOptionsSection.DefaultDatabaseProtectionPropertyName] = value;
             }
         }
         #endregion

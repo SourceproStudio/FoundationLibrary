@@ -58,7 +58,7 @@
         <configurationElementMoniker name="/f8c4f2a4-f938-48ed-8447-70428dbe1498/DatabaseAccessProviderElement" />
       </itemType>
     </configurationElementCollection>
-    <configurationSection name="DatabaseAccessProviderSection" documentation="数据库访问组件配置。" codeGenOptions="Singleton" xmlSectionName="databaseProviders">
+    <configurationSection name="DatabaseAccessProviderSection" documentation="数据库访问组件配置。" codeGenOptions="XmlnsProperty" xmlSectionName="databaseProviders">
       <elementProperties>
         <elementProperty name="Providers" isRequired="false" isKey="false" isDefaultCollection="true" xmlName="" isReadOnly="false" documentation="数据库组件配置。">
           <type>
@@ -132,7 +132,7 @@
         <configurationElementMoniker name="/f8c4f2a4-f938-48ed-8447-70428dbe1498/DatabaseConnectionElement" />
       </itemType>
     </configurationElementCollection>
-    <configurationSection name="DatabaseConnectionSection" documentation="数据库连接配置。" codeGenOptions="Singleton" xmlSectionName="databaseConnections">
+    <configurationSection name="DatabaseConnectionSection" documentation="数据库连接配置。" codeGenOptions="XmlnsProperty" xmlSectionName="databaseConnections">
       <elementProperties>
         <elementProperty name="Connections" isRequired="false" isKey="false" isDefaultCollection="true" xmlName="" isReadOnly="false" documentation="数据库连接配置。">
           <type>
