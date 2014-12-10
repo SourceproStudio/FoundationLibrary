@@ -19,11 +19,10 @@
 
 #endregion
 
-using System;
-using SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration;
-using System.Configuration;
-using Config = System.Configuration.Configuration;
 using System.Collections.Generic;
+using System.Configuration;
+using SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration;
+using Config = System.Configuration.Configuration;
 using Location = SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.ConfigurationLocation;
 using Manager = SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.ConfigurationManager;
 

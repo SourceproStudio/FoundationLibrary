@@ -20,9 +20,9 @@
 #endregion
 
 using System;
+using SourcePro.Csharp.Practices.FoundationLibrary.Caching;
 using SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration;
 using SourcePro.Csharp.Practices.FoundationLibrary.Web.Caching;
-using SourcePro.Csharp.Practices.FoundationLibrary.Caching;
 
 namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.Web.Configuration
 {
@@ -102,7 +102,7 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.Web.Configuration
         /// <returns>配置对象。</returns>
         public override object Get(string sectionName)
         {
-            return base.Get(sectionName);
+            return this.cache.Get(sectionName);
         }
         #endregion
     }

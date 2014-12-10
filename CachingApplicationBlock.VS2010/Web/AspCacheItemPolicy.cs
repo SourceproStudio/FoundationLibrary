@@ -61,9 +61,7 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Web.Caching
                 throw new NotImplementedException();
             }
             set
-            {
-                throw new NotImplementedException();
-            }
+            { }
         }
         #endregion
 

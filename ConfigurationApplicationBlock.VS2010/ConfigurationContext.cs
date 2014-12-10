@@ -102,9 +102,14 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration
         /// <returns><see cref="ConfigurationContext"/>对象实例。</returns>
         static private ConfigurationContext CreateDefault()
         {
-            Config config = InternalConfigurationManager.OpenExeConfiguration();
-            ConfigurationSourceSection sourcesSection = config.GetSection(ConfigurationSourceSection.SectionName) as ConfigurationSourceSection;
-            return new ConfigurationContext() { ConfigurationObject = config, ConfigurationSources = sourcesSection };
+            ApplicationOperatingMode mode = ApplicationOperatingModeDiscovery.AutoDiscover();
+            if (mode != ApplicationOperatingMode.Unknown && mode != ApplicationOperatingMode.WebApplication)
+            {
+                Config config = InternalConfigurationManager.OpenExeConfiguration();
+                ConfigurationSourceSection sourcesSection = config.GetSection(ConfigurationSourceSection.SectionName) as ConfigurationSourceSection;
+                return new ConfigurationContext() { ConfigurationObject = config, ConfigurationSources = sourcesSection };
+            }
+            else return null;
         }
         #endregion
 
