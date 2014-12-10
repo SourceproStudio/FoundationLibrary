@@ -58,6 +58,7 @@
     <Compile Include="IDatabasePropertyProtection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Protections\Base64Protection.cs" />
+    <Compile Include="Protections\HexProtection.cs" />
     <Compile Include="Protections\NoneProtection.cs" />
   </ItemGroup>
   <ItemGroup>
