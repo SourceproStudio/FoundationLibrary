@@ -55,6 +55,7 @@
       <DependentUpon>DataAccessConfigurationSectionDesigner.csd</DependentUpon>
     </Compile>
     <Compile Include="DatabaseDescriptionAttribute.cs" />
+    <Compile Include="IDatabasePropertyProtection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
