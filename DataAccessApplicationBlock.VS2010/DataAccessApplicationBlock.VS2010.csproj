@@ -40,6 +40,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -48,10 +49,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatabaseDescriptionAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Sn.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CachingApplicationBlock.VS2010\CachingApplicationBlock.VS2010.csproj">
+      <Project>{AE7F3336-6420-4179-B63D-C2AC4870F9D8}</Project>
+      <Name>CachingApplicationBlock.VS2010</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonsApplicationBlock.VS2010\CommonsApplicationBlock.VS2010.csproj">
+      <Project>{27E2BEC9-DA35-4136-9A4F-D6F776BB33B6}</Project>
+      <Name>CommonsApplicationBlock.VS2010</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConfigurationApplicationBlock.VS2010\ConfigurationApplicationBlock.VS2010.csproj">
+      <Project>{AB626D14-A62B-4429-94B8-3C7747E4A523}</Project>
+      <Name>ConfigurationApplicationBlock.VS2010</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
