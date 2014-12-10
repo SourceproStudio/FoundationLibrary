@@ -49,10 +49,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configuration\DataAccessConfigurationSectionDesigner.csd.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataAccessConfigurationSectionDesigner.csd</DependentUpon>
+    </Compile>
     <Compile Include="DatabaseDescriptionAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Configuration\DataAccessConfigurationSectionDesigner.csd">
+      <Generator>CsdFileGenerator</Generator>
+      <LastGenOutput>DataAccessConfigurationSectionDesigner.csd.cs</LastGenOutput>
+    </None>
+    <None Include="Configuration\DataAccessConfigurationSectionDesigner.csd.config">
+      <DependentUpon>DataAccessConfigurationSectionDesigner.csd</DependentUpon>
+    </None>
+    <None Include="Configuration\DataAccessConfigurationSectionDesigner.csd.diagram">
+      <DependentUpon>DataAccessConfigurationSectionDesigner.csd</DependentUpon>
+    </None>
+    <None Include="Configuration\DataAccessConfigurationSectionDesigner.csd.xsd">
+      <DependentUpon>DataAccessConfigurationSectionDesigner.csd</DependentUpon>
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Sn.pfx" />
   </ItemGroup>
   <ItemGroup>
@@ -68,6 +88,10 @@
       <Project>{AB626D14-A62B-4429-94B8-3C7747E4A523}</Project>
       <Name>ConfigurationApplicationBlock.VS2010</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
