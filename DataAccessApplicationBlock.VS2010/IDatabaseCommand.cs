@@ -113,7 +113,7 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Data
         /// </summary>
         /// <param name="selectCmd">查询命令。</param>
         /// <param name="dataSet"><see cref="DataSet"/>对象实例。</param>
-        void ExecuteFile(string selectCmd, DataSet dataSet);
+        void ExecuteFill(string selectCmd, DataSet dataSet);
         #endregion
 
         #region ExecuteDataSet

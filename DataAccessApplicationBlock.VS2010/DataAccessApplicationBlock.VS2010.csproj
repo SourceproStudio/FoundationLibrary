@@ -55,6 +55,7 @@
       <DependentUpon>DataAccessConfigurationSectionDesigner.csd</DependentUpon>
     </Compile>
     <Compile Include="Configuration\DatabaseSectionGroup.cs" />
+    <Compile Include="Database.cs" />
     <Compile Include="DatabaseCommandExecuteEventArgs.cs" />
     <Compile Include="DatabaseCommandExecuteEventHandler.cs" />
     <Compile Include="DatabaseConnectionErrorEventArgs.cs" />
