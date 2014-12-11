@@ -55,7 +55,10 @@
       <DependentUpon>DataAccessConfigurationSectionDesigner.csd</DependentUpon>
     </Compile>
     <Compile Include="Configuration\DatabaseSectionGroup.cs" />
+    <Compile Include="DatabaseConnectionErrorEventArgs.cs" />
+    <Compile Include="DatabaseConnectionErrorEventHandler.cs" />
     <Compile Include="DatabaseDescriptionAttribute.cs" />
+    <Compile Include="IDatabaseConnection.cs" />
     <Compile Include="IDatabasePropertyProtection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Protections\Base64Protection.cs" />
