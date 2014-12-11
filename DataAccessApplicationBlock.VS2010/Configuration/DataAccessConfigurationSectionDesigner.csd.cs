@@ -8,9 +8,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System.Configuration;
 using System.CodeDom.Compiler;
 using System.ComponentModel;
+using System.Configuration;
 
 namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration
 {

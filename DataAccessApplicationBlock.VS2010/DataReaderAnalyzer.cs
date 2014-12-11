@@ -19,7 +19,6 @@
 
 #endregion
 
-using System;
 using System.Data.Common;
 
 namespace SourcePro.Csharp.Practices.FoundationLibrary.Data
