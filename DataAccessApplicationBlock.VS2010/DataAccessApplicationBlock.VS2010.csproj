@@ -63,7 +63,9 @@
     <Compile Include="DataReaderAnalyzer.cs" />
     <Compile Include="IDatabaseCommand.cs" />
     <Compile Include="IDatabaseConnection.cs" />
+    <Compile Include="IDatabaseParameter.cs" />
     <Compile Include="IDatabasePropertyProtection.cs" />
+    <Compile Include="IDatabaseProvider.cs" />
     <Compile Include="IDatabaseTransaction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Protections\Base64Protection.cs" />
