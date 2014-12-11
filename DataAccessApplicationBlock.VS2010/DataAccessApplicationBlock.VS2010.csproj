@@ -56,6 +56,7 @@
     </Compile>
     <Compile Include="Configuration\DatabaseSectionGroup.cs" />
     <Compile Include="DatabaseCommandExecuteEventArgs.cs" />
+    <Compile Include="DatabaseCommandExecuteEventHandler.cs" />
     <Compile Include="DatabaseConnectionErrorEventArgs.cs" />
     <Compile Include="DatabaseConnectionErrorEventHandler.cs" />
     <Compile Include="DatabaseDescriptionAttribute.cs" />
