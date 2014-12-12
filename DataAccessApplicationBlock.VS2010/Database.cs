@@ -229,7 +229,9 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Data
         /// <returns>参数名称。</returns>
         protected virtual string BuildParameterName(string paraName)
         {
-            return string.Format("{0}{1}", this.ParameterNamePrefix, paraName);
+            if (!paraName.StartsWith(this.ParameterNamePrefix))
+                return string.Format("{0}{1}", this.ParameterNamePrefix, paraName);
+            else return paraName;
         }
         #endregion
 
@@ -578,6 +580,36 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Data
                 }
             }
             catch { }
+        }
+        #endregion
+
+        #region CreateOutputParameter
+        /// <summary>
+        /// 创建一个用于输出的<see cref="DbParameter"/>对象实例。
+        /// </summary>
+        /// <param name="name">数据库参数名称。</param>
+        /// <param name="value">参数值。</param>
+        /// <param name="dbType"><see cref="DbType"/>中的一个值。</param>
+        /// <returns><see cref="DbParameter"/>对象实例。</returns>
+        public virtual DbParameter CreateOutputParameter(string name, object value, DbType dbType = DbType.Object)
+        {
+            DbParameter parameter = this.CreateParameter(name, value, ParameterDirection.Output, dbType);
+            return parameter;
+        }
+
+        /// <summary>
+        /// 创建一个用于输出的<see cref="DbParameter"/>对象实例。
+        /// </summary>
+        /// <param name="name">数据库参数名称。</param>
+        /// <param name="value">参数值。</param>
+        /// <param name="size">参数长度。</param>
+        /// <param name="dbType"><see cref="DbType"/>中的一个值。</param>
+        /// <returns><see cref="DbParameter"/>对象实例。</returns>
+        public virtual DbParameter CreateOutputParameter(string name, object value, int size, DbType dbType = DbType.Object)
+        {
+            DbParameter parameter = this.CreateOutputParameter(name, value, dbType);
+            parameter.Size = size;
+            return parameter;
         }
         #endregion
     }

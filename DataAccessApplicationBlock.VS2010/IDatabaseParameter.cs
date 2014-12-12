@@ -72,6 +72,27 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Data
         /// <param name="parameters">参数数组。</param>
         void AddParameters(DbCommand cmd, params DbParameter[] parameters);
         #endregion
+
+        #region CreateOutputParameter
+        /// <summary>
+        /// 创建一个用于输出的<see cref="DbParameter"/>对象实例。
+        /// </summary>
+        /// <param name="name">数据库参数名称。</param>
+        /// <param name="value">参数值。</param>
+        /// <param name="dbType"><see cref="DbType"/>中的一个值。</param>
+        /// <returns><see cref="DbParameter"/>对象实例。</returns>
+        DbParameter CreateOutputParameter(string name, object value, DbType dbType = DbType.Object);
+
+        /// <summary>
+        /// 创建一个用于输出的<see cref="DbParameter"/>对象实例。
+        /// </summary>
+        /// <param name="name">数据库参数名称。</param>
+        /// <param name="value">参数值。</param>
+        /// <param name="size">参数长度。</param>
+        /// <param name="dbType"><see cref="DbType"/>中的一个值。</param>
+        /// <returns><see cref="DbParameter"/>对象实例。</returns>
+        DbParameter CreateOutputParameter(string name, object value, int size, DbType dbType = DbType.Object);
+        #endregion
     }
 }
 
