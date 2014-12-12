@@ -75,6 +75,7 @@
     <Compile Include="Protections\Base64Protection.cs" />
     <Compile Include="Protections\HexProtection.cs" />
     <Compile Include="Protections\NoneProtection.cs" />
+    <Compile Include="SqlClient\DbTypeExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Configuration\DataAccessConfigurationSectionDesigner.csd">
