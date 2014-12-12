@@ -33,5 +33,5 @@ using System.Runtime.InteropServices;
 // 方法是按如下所示使用“*”:
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.5457.38236")]
-/*Generate By AssemblyInfoManager v2.0.5441.37112. Time: 2014-12-10 10:37:16*/
+[assembly: AssemblyFileVersion("1.0.5459.54947")]
+/*Generate By AssemblyInfoManager v2.0.5441.37112. Time: 2014-12-12 15:15:47*/
