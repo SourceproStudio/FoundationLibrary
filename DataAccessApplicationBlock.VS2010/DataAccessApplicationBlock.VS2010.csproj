@@ -62,6 +62,7 @@
     <Compile Include="DatabaseConnectionErrorEventHandler.cs" />
     <Compile Include="DatabaseContext.cs" />
     <Compile Include="DatabaseDescriptionAttribute.cs" />
+    <Compile Include="DatabaseFactory.cs" />
     <Compile Include="DatabaseInitializer.cs" />
     <Compile Include="DataReaderAnalyzer.cs" />
     <Compile Include="IDatabaseCommand.cs" />
