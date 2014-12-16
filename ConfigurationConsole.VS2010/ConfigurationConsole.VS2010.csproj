@@ -39,6 +39,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -50,6 +51,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commons\Actions.cs" />
+    <Compile Include="Controls\ConfigurationSourceEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ConfigurationSourceEditor.Designer.cs">
+      <DependentUpon>ConfigurationSourceEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LicenseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LicenseForm.Designer.cs">
+      <DependentUpon>LicenseForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\OperatingForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +76,9 @@
     <Compile Include="Forms\StartupForm.Designer.cs">
       <DependentUpon>StartupForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Partials\ConfigurationSourceEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Partials\OperatingForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +87,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\ConfigurationSourceEditor.resx">
+      <DependentUpon>ConfigurationSourceEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LicenseForm.resx">
+      <DependentUpon>LicenseForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\OperatingForm.resx">
       <DependentUpon>OperatingForm.cs</DependentUpon>
     </EmbeddedResource>

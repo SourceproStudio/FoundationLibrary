@@ -24,6 +24,10 @@ using System.IO;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Diagnostics;
+using SourcePro.Csharp.Lab.Commons;
+using Config = System.Configuration.Configuration;
+using SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration;
+using SourcePro.Csharp.Lab.Controls;
 
 namespace SourcePro.Csharp.Lab.Forms
 {
@@ -44,6 +48,12 @@ namespace SourcePro.Csharp.Lab.Forms
     /// <seealso cref="SourcePro.Csharp.Lab.Forms"/>
     partial class OperatingForm
     {
+        private Actions _action = Actions.None;
+        private string _baseConfigureFile;
+        private Config _baseConfigure;
+        private bool _configurationInserted = false;
+        private bool _dataAccessInserted = false;
+
         #region OnLoad
         protected override void OnLoad(EventArgs e)
         {
@@ -80,12 +90,73 @@ namespace SourcePro.Csharp.Lab.Forms
         private void RegisterFormEvents()
         {
             this.FormClosed += new FormClosedEventHandler(HandleFormClosedEvent);
-            this.GithubMenuStripItem.Click += new EventHandler(HandleGithubMenuItemClick);
+            this.GithubMenuStripItem.Click += new EventHandler(HandleGithubMenuItemClickEvent);
+            this.LicenseMenuStripItem.Click += new EventHandler(HandelLicenseMenuItemClickEvent);
+            this.NewMenuStripItem.Click += new EventHandler(HandleCreateNewMenuStripItemClickEvent);
+            this.ResetMenuStripItem.Click += new EventHandler(HandleResetMenuStripItemClickEvent);
+            this.ConfigurationMenuStripItem.Click += new EventHandler(HandleInsertConfigurationSourceMenuStripItemClickEvent);
         }
         #endregion
 
-        #region HandleGithubMenuItemClick
-        private void HandleGithubMenuItemClick(object sender, EventArgs e)
+        #region HandleInsertConfigurationSourceMenuStripItemClickEvent
+        private void HandleInsertConfigurationSourceMenuStripItemClickEvent(object sender, EventArgs e)
+        {
+            if (!this._configurationInserted)
+            {
+                this.SetMenuItemsEnabled(false, this.ConfigurationMenuStripItem);
+                this._configurationInserted = true;
+                TabPage page = new TabPage("Configuration Source");
+                page.Controls.Add(new ConfigurationSourceEditor() { Dock = DockStyle.Fill, BaseConfigure = this._baseConfigure });
+                this.TabPagingContainer.TabPages.Add(page);
+                page.Select();
+            }
+        }
+        #endregion
+
+        #region HandleResetMenuStripItemClickEvent
+        private void HandleResetMenuStripItemClickEvent(object sender, EventArgs e)
+        {
+            this._action = Actions.None;
+            this._baseConfigure = null;
+            this._baseConfigureFile = null;
+            this.SetMenuItemsEnabled(true, this.NewMenuStripItem, this.OpenMenuStripItem, this.SaveAsMenuStripItem, this.SaveMenuStripItem);
+            this.SetMenuItemsEnabled(false, this.OperateMenuStripItem);
+            this.TabPagingContainer.TabPages.Clear();
+            this._configurationInserted = false;
+            this._dataAccessInserted = false;
+        }
+        #endregion
+
+        #region SetMenuItemsEnabled
+        private void SetMenuItemsEnabled(bool enabled = true, params ToolStripMenuItem[] items)
+        {
+            foreach (var item in items) item.Enabled = enabled;
+        }
+        #endregion
+
+        #region HandleCreateNewMenuStripItemClickEvent
+        private void HandleCreateNewMenuStripItemClickEvent(object sender, EventArgs e)
+        {
+            this._action = Actions.Create;
+            this._baseConfigure = ConfigurationContext.Default.ConfigurationObject;
+            this._baseConfigureFile = this._baseConfigure.FilePath;
+            this.SetMenuItemsEnabled(false, this.NewMenuStripItem, this.OpenMenuStripItem, this.SaveAsMenuStripItem);
+            this.SetMenuItemsEnabled(true, this.SaveMenuStripItem, this.OperateMenuStripItem, this.ConfigurationMenuStripItem, this.DataAccessMenuStripItem);
+        }
+        #endregion
+
+        #region HandelLicenseMenuItemClickEvent
+        private void HandelLicenseMenuItemClickEvent(object sender, EventArgs e)
+        {
+            using (LicenseForm licenseFrm = new LicenseForm())
+            {
+                licenseFrm.ShowDialog();
+            }
+        }
+        #endregion
+
+        #region HandleGithubMenuItemClickEvent
+        private void HandleGithubMenuItemClickEvent(object sender, EventArgs e)
         {
             try
             {

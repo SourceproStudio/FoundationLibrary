@@ -38,19 +38,22 @@
             this.SaveAsMenuStripItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.ExitMenuStripItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.HelpMenuStripItem = new System.Windows.Forms.ToolStripMenuItem();
             this.OperateMenuStripItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ConfigurationMenuStripItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DataAccessMenuStripItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.SettingMenuStripItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.GacInstallMenuStripItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.EnvarMenuStripItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.HelpMenuStripItem = new System.Windows.Forms.ToolStripMenuItem();
             this.LicenseMenuStripItem = new System.Windows.Forms.ToolStripMenuItem();
             this.GithubMenuStripItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.AboutMenuStripItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.SettingMenuStripItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.GacInstallMenuStripItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.EnvarMenuStripItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainStatusStrip = new System.Windows.Forms.StatusStrip();
             this.CopyrightToolStripItem = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.ResetMenuStripItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TabPagingContainer = new System.Windows.Forms.TabControl();
             this.MainMenuStrip.SuspendLayout();
             this.MainStatusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -79,6 +82,8 @@
             this.toolStripSeparator1,
             this.SaveMenuStripItem,
             this.SaveAsMenuStripItem,
+            this.toolStripSeparator4,
+            this.ResetMenuStripItem,
             this.toolStripSeparator2,
             this.ExitMenuStripItem});
             this.FileMenuStripItem.Name = "FileMenuStripItem";
@@ -131,6 +136,49 @@
             this.ExitMenuStripItem.Size = new System.Drawing.Size(189, 22);
             this.ExitMenuStripItem.Text = "E&xit";
             // 
+            // OperateMenuStripItem
+            // 
+            this.OperateMenuStripItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ConfigurationMenuStripItem,
+            this.DataAccessMenuStripItem});
+            this.OperateMenuStripItem.Enabled = false;
+            this.OperateMenuStripItem.Name = "OperateMenuStripItem";
+            this.OperateMenuStripItem.Size = new System.Drawing.Size(63, 20);
+            this.OperateMenuStripItem.Text = "&Operate";
+            // 
+            // ConfigurationMenuStripItem
+            // 
+            this.ConfigurationMenuStripItem.Name = "ConfigurationMenuStripItem";
+            this.ConfigurationMenuStripItem.Size = new System.Drawing.Size(224, 22);
+            this.ConfigurationMenuStripItem.Text = "Insert &Configuration Source";
+            // 
+            // DataAccessMenuStripItem
+            // 
+            this.DataAccessMenuStripItem.Name = "DataAccessMenuStripItem";
+            this.DataAccessMenuStripItem.Size = new System.Drawing.Size(224, 22);
+            this.DataAccessMenuStripItem.Text = "Insert &Data Access";
+            // 
+            // SettingMenuStripItem
+            // 
+            this.SettingMenuStripItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.GacInstallMenuStripItem,
+            this.EnvarMenuStripItem});
+            this.SettingMenuStripItem.Name = "SettingMenuStripItem";
+            this.SettingMenuStripItem.Size = new System.Drawing.Size(57, 20);
+            this.SettingMenuStripItem.Text = "&Setting";
+            // 
+            // GacInstallMenuStripItem
+            // 
+            this.GacInstallMenuStripItem.Name = "GacInstallMenuStripItem";
+            this.GacInstallMenuStripItem.Size = new System.Drawing.Size(190, 22);
+            this.GacInstallMenuStripItem.Text = "GAC &Install";
+            // 
+            // EnvarMenuStripItem
+            // 
+            this.EnvarMenuStripItem.Name = "EnvarMenuStripItem";
+            this.EnvarMenuStripItem.Size = new System.Drawing.Size(190, 22);
+            this.EnvarMenuStripItem.Text = "&Environment Variable";
+            // 
             // HelpMenuStripItem
             // 
             this.HelpMenuStripItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -141,27 +189,6 @@
             this.HelpMenuStripItem.Name = "HelpMenuStripItem";
             this.HelpMenuStripItem.Size = new System.Drawing.Size(45, 20);
             this.HelpMenuStripItem.Text = "&Help";
-            // 
-            // OperateMenuStripItem
-            // 
-            this.OperateMenuStripItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ConfigurationMenuStripItem,
-            this.DataAccessMenuStripItem});
-            this.OperateMenuStripItem.Name = "OperateMenuStripItem";
-            this.OperateMenuStripItem.Size = new System.Drawing.Size(63, 20);
-            this.OperateMenuStripItem.Text = "&Operate";
-            // 
-            // ConfigurationMenuStripItem
-            // 
-            this.ConfigurationMenuStripItem.Name = "ConfigurationMenuStripItem";
-            this.ConfigurationMenuStripItem.Size = new System.Drawing.Size(152, 22);
-            this.ConfigurationMenuStripItem.Text = "&Configuration";
-            // 
-            // DataAccessMenuStripItem
-            // 
-            this.DataAccessMenuStripItem.Name = "DataAccessMenuStripItem";
-            this.DataAccessMenuStripItem.Size = new System.Drawing.Size(152, 22);
-            this.DataAccessMenuStripItem.Text = "&Data Access";
             // 
             // LicenseMenuStripItem
             // 
@@ -189,27 +216,6 @@
             this.AboutMenuStripItem.Size = new System.Drawing.Size(181, 22);
             this.AboutMenuStripItem.Text = "&About me";
             // 
-            // SettingMenuStripItem
-            // 
-            this.SettingMenuStripItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.GacInstallMenuStripItem,
-            this.EnvarMenuStripItem});
-            this.SettingMenuStripItem.Name = "SettingMenuStripItem";
-            this.SettingMenuStripItem.Size = new System.Drawing.Size(57, 20);
-            this.SettingMenuStripItem.Text = "&Setting";
-            // 
-            // GacInstallMenuStripItem
-            // 
-            this.GacInstallMenuStripItem.Name = "GacInstallMenuStripItem";
-            this.GacInstallMenuStripItem.Size = new System.Drawing.Size(190, 22);
-            this.GacInstallMenuStripItem.Text = "GAC &Install";
-            // 
-            // EnvarMenuStripItem
-            // 
-            this.EnvarMenuStripItem.Name = "EnvarMenuStripItem";
-            this.EnvarMenuStripItem.Size = new System.Drawing.Size(190, 22);
-            this.EnvarMenuStripItem.Text = "&Environment Variable";
-            // 
             // MainStatusStrip
             // 
             this.MainStatusStrip.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -228,16 +234,37 @@
             this.CopyrightToolStripItem.Name = "CopyrightToolStripItem";
             this.CopyrightToolStripItem.Size = new System.Drawing.Size(0, 17);
             // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(186, 6);
+            // 
+            // ResetMenuStripItem
+            // 
+            this.ResetMenuStripItem.Name = "ResetMenuStripItem";
+            this.ResetMenuStripItem.Size = new System.Drawing.Size(189, 22);
+            this.ResetMenuStripItem.Text = "&Reset Status";
+            // 
+            // TabPagingContainer
+            // 
+            this.TabPagingContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TabPagingContainer.Location = new System.Drawing.Point(0, 24);
+            this.TabPagingContainer.Margin = new System.Windows.Forms.Padding(10);
+            this.TabPagingContainer.Name = "TabPagingContainer";
+            this.TabPagingContainer.SelectedIndex = 0;
+            this.TabPagingContainer.Size = new System.Drawing.Size(784, 316);
+            this.TabPagingContainer.TabIndex = 3;
+            // 
             // OperatingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(784, 362);
+            this.Controls.Add(this.TabPagingContainer);
             this.Controls.Add(this.MainStatusStrip);
             this.Controls.Add(this.MainMenuStrip);
             this.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MainMenuStrip = this.MainMenuStrip;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "OperatingForm";
             this.Text = "C# FoundationLibrary Configuration Console";
@@ -274,5 +301,8 @@
         private System.Windows.Forms.ToolStripMenuItem EnvarMenuStripItem;
         private System.Windows.Forms.StatusStrip MainStatusStrip;
         private System.Windows.Forms.ToolStripStatusLabel CopyrightToolStripItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripMenuItem ResetMenuStripItem;
+        private System.Windows.Forms.TabControl TabPagingContainer;
     }
 }
