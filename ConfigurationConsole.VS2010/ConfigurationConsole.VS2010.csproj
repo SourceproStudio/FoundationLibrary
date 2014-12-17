@@ -38,6 +38,8 @@
     <ApplicationIcon>Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -52,11 +54,27 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commons\Actions.cs" />
+    <Compile Include="Commons\DynamicAssembly.cs" />
+    <Compile Include="Commons\DynamicAssemblyDomain.cs" />
+    <Compile Include="Commons\GenerateReflectionInfoCompletedHandler.cs" />
+    <Compile Include="Commons\GenerateReflectionInfoErrorHandler.cs" />
     <Compile Include="Controls\ConfigurationSourceEditor.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controls\ConfigurationSourceEditor.Designer.cs">
       <DependentUpon>ConfigurationSourceEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DataAccessEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DataAccessEditor.Designer.cs">
+      <DependentUpon>DataAccessEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AssemblyAnalyseeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AssemblyAnalyseeDialog.Designer.cs">
+      <DependentUpon>AssemblyAnalyseeDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\LicenseForm.cs">
       <SubType>Form</SubType>
@@ -76,7 +94,13 @@
     <Compile Include="Forms\StartupForm.Designer.cs">
       <DependentUpon>StartupForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Partials\AssemblyAnalyseeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Partials\ConfigurationSourceEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Partials\DataAccessEditor.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Partials\OperatingForm.cs">
@@ -89,6 +113,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Controls\ConfigurationSourceEditor.resx">
       <DependentUpon>ConfigurationSourceEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DataAccessEditor.resx">
+      <DependentUpon>DataAccessEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AssemblyAnalyseeDialog.resx">
+      <DependentUpon>AssemblyAnalyseeDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LicenseForm.resx">
       <DependentUpon>LicenseForm.cs</DependentUpon>

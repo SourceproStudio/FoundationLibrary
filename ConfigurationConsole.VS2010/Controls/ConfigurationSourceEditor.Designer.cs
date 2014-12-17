@@ -43,11 +43,6 @@
             this.SectionOrGroupName = new System.Windows.Forms.ComboBox();
             this.DescriptionLabel02 = new System.Windows.Forms.Label();
             this.DescriptionLabel01 = new System.Windows.Forms.Label();
-            this.MainToolStrip = new System.Windows.Forms.ToolStrip();
-            this.OperateButtons = new System.Windows.Forms.ToolStripSplitButton();
-            this.CreateNewToolButton = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.ResetToolButton = new System.Windows.Forms.ToolStripMenuItem();
             this.SourceList = new System.Windows.Forms.ListView();
             this.SectionNameColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SourceColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -61,7 +56,6 @@
             this.MainSplitterContainer.Panel1.SuspendLayout();
             this.MainSplitterContainer.Panel2.SuspendLayout();
             this.MainSplitterContainer.SuspendLayout();
-            this.MainToolStrip.SuspendLayout();
             this.MinorToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,6 +74,7 @@
             // 
             this.ProtectionSelector.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ProtectionSelector.BackColor = System.Drawing.Color.White;
+            this.ProtectionSelector.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ProtectionSelector.FormattingEnabled = true;
             this.ProtectionSelector.Location = new System.Drawing.Point(526, 3);
             this.ProtectionSelector.Name = "ProtectionSelector";
@@ -114,7 +109,6 @@
             this.MainSplitterContainer.Panel1.Controls.Add(this.SectionOrGroupName);
             this.MainSplitterContainer.Panel1.Controls.Add(this.DescriptionLabel02);
             this.MainSplitterContainer.Panel1.Controls.Add(this.DescriptionLabel01);
-            this.MainSplitterContainer.Panel1.Controls.Add(this.MainToolStrip);
             // 
             // MainSplitterContainer.Panel2
             // 
@@ -129,7 +123,7 @@
             // 
             this.VirtualDirectory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.VirtualDirectory.Location = new System.Drawing.Point(16, 243);
+            this.VirtualDirectory.Location = new System.Drawing.Point(16, 217);
             this.VirtualDirectory.Name = "VirtualDirectory";
             this.VirtualDirectory.Size = new System.Drawing.Size(198, 21);
             this.VirtualDirectory.TabIndex = 8;
@@ -137,7 +131,7 @@
             // DescriptionLabel03
             // 
             this.DescriptionLabel03.AutoSize = true;
-            this.DescriptionLabel03.Location = new System.Drawing.Point(16, 212);
+            this.DescriptionLabel03.Location = new System.Drawing.Point(16, 186);
             this.DescriptionLabel03.Name = "DescriptionLabel03";
             this.DescriptionLabel03.Size = new System.Drawing.Size(246, 15);
             this.DescriptionLabel03.TabIndex = 7;
@@ -148,7 +142,7 @@
             this.CreateButton.BackColor = System.Drawing.Color.WhiteSmoke;
             this.CreateButton.FlatAppearance.BorderSize = 0;
             this.CreateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CreateButton.Location = new System.Drawing.Point(16, 322);
+            this.CreateButton.Location = new System.Drawing.Point(16, 296);
             this.CreateButton.Name = "CreateButton";
             this.CreateButton.Size = new System.Drawing.Size(75, 25);
             this.CreateButton.TabIndex = 6;
@@ -160,7 +154,7 @@
             this.SplitterLine.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.SplitterLine.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.SplitterLine.Location = new System.Drawing.Point(16, 304);
+            this.SplitterLine.Location = new System.Drawing.Point(16, 278);
             this.SplitterLine.Name = "SplitterLine";
             this.SplitterLine.Size = new System.Drawing.Size(198, 2);
             this.SplitterLine.TabIndex = 5;
@@ -170,7 +164,7 @@
             this.BrowseButton.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BrowseButton.FlatAppearance.BorderSize = 0;
             this.BrowseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BrowseButton.Location = new System.Drawing.Point(16, 165);
+            this.BrowseButton.Location = new System.Drawing.Point(16, 139);
             this.BrowseButton.Name = "BrowseButton";
             this.BrowseButton.Size = new System.Drawing.Size(75, 25);
             this.BrowseButton.TabIndex = 4;
@@ -183,7 +177,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ConfigureSourceFileName.BackColor = System.Drawing.Color.White;
             this.ConfigureSourceFileName.ForeColor = System.Drawing.Color.Gray;
-            this.ConfigureSourceFileName.Location = new System.Drawing.Point(16, 137);
+            this.ConfigureSourceFileName.Location = new System.Drawing.Point(16, 111);
             this.ConfigureSourceFileName.Name = "ConfigureSourceFileName";
             this.ConfigureSourceFileName.ReadOnly = true;
             this.ConfigureSourceFileName.Size = new System.Drawing.Size(198, 21);
@@ -198,7 +192,7 @@
             this.SectionOrGroupName.FormattingEnabled = true;
             this.SectionOrGroupName.Items.AddRange(new object[] {
             "sourcepro.data"});
-            this.SectionOrGroupName.Location = new System.Drawing.Point(16, 67);
+            this.SectionOrGroupName.Location = new System.Drawing.Point(16, 41);
             this.SectionOrGroupName.Name = "SectionOrGroupName";
             this.SectionOrGroupName.Size = new System.Drawing.Size(198, 23);
             this.SectionOrGroupName.TabIndex = 2;
@@ -206,7 +200,7 @@
             // DescriptionLabel02
             // 
             this.DescriptionLabel02.AutoSize = true;
-            this.DescriptionLabel02.Location = new System.Drawing.Point(13, 109);
+            this.DescriptionLabel02.Location = new System.Drawing.Point(13, 83);
             this.DescriptionLabel02.Name = "DescriptionLabel02";
             this.DescriptionLabel02.Size = new System.Drawing.Size(146, 15);
             this.DescriptionLabel02.TabIndex = 1;
@@ -215,54 +209,11 @@
             // DescriptionLabel01
             // 
             this.DescriptionLabel01.AutoSize = true;
-            this.DescriptionLabel01.Location = new System.Drawing.Point(13, 39);
+            this.DescriptionLabel01.Location = new System.Drawing.Point(13, 13);
             this.DescriptionLabel01.Name = "DescriptionLabel01";
             this.DescriptionLabel01.Size = new System.Drawing.Size(204, 15);
             this.DescriptionLabel01.TabIndex = 1;
             this.DescriptionLabel01.Text = "Configuration Section(Group) Name";
-            // 
-            // MainToolStrip
-            // 
-            this.MainToolStrip.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.MainToolStrip.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MainToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.OperateButtons});
-            this.MainToolStrip.Location = new System.Drawing.Point(0, 0);
-            this.MainToolStrip.Name = "MainToolStrip";
-            this.MainToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.MainToolStrip.Size = new System.Drawing.Size(228, 25);
-            this.MainToolStrip.TabIndex = 0;
-            this.MainToolStrip.Text = "toolStrip1";
-            // 
-            // OperateButtons
-            // 
-            this.OperateButtons.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.OperateButtons.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.CreateNewToolButton,
-            this.toolStripSeparator1,
-            this.ResetToolButton});
-            this.OperateButtons.Image = ((System.Drawing.Image)(resources.GetObject("OperateButtons.Image")));
-            this.OperateButtons.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.OperateButtons.Name = "OperateButtons";
-            this.OperateButtons.Size = new System.Drawing.Size(67, 22);
-            this.OperateButtons.Text = "&Operate";
-            // 
-            // CreateNewToolButton
-            // 
-            this.CreateNewToolButton.Name = "CreateNewToolButton";
-            this.CreateNewToolButton.Size = new System.Drawing.Size(218, 22);
-            this.CreateNewToolButton.Text = "&New Configuration Source";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(215, 6);
-            // 
-            // ResetToolButton
-            // 
-            this.ResetToolButton.Name = "ResetToolButton";
-            this.ResetToolButton.Size = new System.Drawing.Size(218, 22);
-            this.ResetToolButton.Text = "&Reset";
             // 
             // SourceList
             // 
@@ -357,8 +308,6 @@
             this.MainSplitterContainer.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MainSplitterContainer)).EndInit();
             this.MainSplitterContainer.ResumeLayout(false);
-            this.MainToolStrip.ResumeLayout(false);
-            this.MainToolStrip.PerformLayout();
             this.MinorToolStrip.ResumeLayout(false);
             this.MinorToolStrip.PerformLayout();
             this.ResumeLayout(false);
@@ -370,11 +319,6 @@
         private System.Windows.Forms.Panel ControlCaptionPanel;
         private System.Windows.Forms.Label ControlCaptionLabel;
         private System.Windows.Forms.SplitContainer MainSplitterContainer;
-        private System.Windows.Forms.ToolStrip MainToolStrip;
-        private System.Windows.Forms.ToolStripSplitButton OperateButtons;
-        private System.Windows.Forms.ToolStripMenuItem CreateNewToolButton;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripMenuItem ResetToolButton;
         private System.Windows.Forms.Label DescriptionLabel01;
         private System.Windows.Forms.ComboBox SectionOrGroupName;
         private System.Windows.Forms.Label DescriptionLabel02;

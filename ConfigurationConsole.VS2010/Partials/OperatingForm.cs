@@ -98,6 +98,22 @@ namespace SourcePro.Csharp.Lab.Forms
             this.SaveMenuStripItem.Click += new EventHandler(HandleSaveMenuStripItemClickEvent);
             this.SaveAsMenuStripItem.Click += new EventHandler(HandleSaveAsMenuStripItemClickEvent);
             this.OpenMenuStripItem.Click += new EventHandler(HandleOpenMenuStripItemClickEvent);
+            this.DataAccessMenuStripItem.Click += new EventHandler(HandleInsertDataAccessMenuStripItemClickEvent);
+        }
+        #endregion
+
+        #region HandleInsertDataAccessMenuStripItemClickEvent
+        private void HandleInsertDataAccessMenuStripItemClickEvent(object sender, EventArgs e)
+        {
+            if (!this._dataAccessInserted)
+            {
+                this.SetMenuItemsEnabled(false, this.DataAccessMenuStripItem);
+                this._dataAccessInserted = true;
+                TabPage page = new TabPage("Database Access Configuration");
+                page.Controls.Add(new DataAccessEditor() { Dock = DockStyle.Fill, BaseConfigure = this._baseConfigure });
+                this.TabPagingContainer.TabPages.Add(page);
+                page.Select();
+            }
         }
         #endregion
 
