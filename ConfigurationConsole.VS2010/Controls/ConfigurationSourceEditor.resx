@@ -120,9 +120,6 @@
   <metadata name="MainToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="MinorToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>338, 17</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="OperateButtons.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -139,19 +136,23 @@
         TgDQASA1MVpwzwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="SourceFileSelectDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>152, 17</value>
+  <metadata name="MinorToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>338, 17</value>
   </metadata>
   <data name="RemoveToolButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADzSURBVDhPzZEti0JBGIVHiywIZhE2bDGYjIKgv8HmNjFu
-        FsEmGDQLFsFm1qK/wWSziMUk7G5cv1i5+ox7RL17/UjigYeZOe85M3CveW5tjUlCGnyy7pdjTAwmMIW4
-        7PtEIQAtXt5a2LfhRePbIpyBH1jBEhbwrvF1EQzDQC+3oKH9kPVVMW8R8BEsg6NSBUp2r3ON1a/4fxFI
-        wOyk4L7gC1KKn4tAkGHnEFahCXWX12cNqXYUgzysXeFv+HR5v/Ch2p8YvGGOToMK96Dr4Y8hqvr+9Sxs
-        PIJzi4fvQE71/QURKID9ytUD9nzBK7K//ksfJGN2oLG+qe+KT8kAAAAASUVORK5CYII=
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEESURBVDhPzZG/S0JhFIbPbREhcA6hwaWhqVEI8m9wsy0a
+        m0NoExxyFlyCuzXron+DU1tLtDQF2pg/wrz6fLdXvN0+1El64eU73znPez641/63FmbnuIQDtXZXZHY6
+        N3vFb9Rnau8mAhmCIS8vnKkf6WU13i7gMqFPPMUTPKZ3qfFmAR4R6OvlELdUP3EeC/MLIACs4UihOgvv
+        XK17g/NA+F8BF4HeE4H0giH3C+G/BXAI0F7BCjzgZqrX48wpthabrxl+peAPPEj1ZrA3iv2IQYHBcxIU
+        3MUdT/+FJSeKx69XaH57wJGzpx+RuVI8XpDHtwzcV75f2d19Pdgq9eZfuieZLQFatr6Cx9ltAQAAAABJ
+        RU5ErkJggg==
 </value>
   </data>
+  <metadata name="SourceFileSelectDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>152, 17</value>
+  </metadata>
   <metadata name="FlashTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>479, 17</value>
   </metadata>

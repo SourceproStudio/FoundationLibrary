@@ -20,14 +20,14 @@
 #endregion
 
 using System;
-using System.IO;
-using System.Drawing;
-using System.Windows.Forms;
 using System.Diagnostics;
+using System.Drawing;
+using System.IO;
+using System.Windows.Forms;
 using SourcePro.Csharp.Lab.Commons;
-using Config = System.Configuration.Configuration;
-using SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration;
 using SourcePro.Csharp.Lab.Controls;
+using SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration;
+using Config = System.Configuration.Configuration;
 
 namespace SourcePro.Csharp.Lab.Forms
 {
@@ -95,6 +95,66 @@ namespace SourcePro.Csharp.Lab.Forms
             this.NewMenuStripItem.Click += new EventHandler(HandleCreateNewMenuStripItemClickEvent);
             this.ResetMenuStripItem.Click += new EventHandler(HandleResetMenuStripItemClickEvent);
             this.ConfigurationMenuStripItem.Click += new EventHandler(HandleInsertConfigurationSourceMenuStripItemClickEvent);
+            this.SaveMenuStripItem.Click += new EventHandler(HandleSaveMenuStripItemClickEvent);
+            this.SaveAsMenuStripItem.Click += new EventHandler(HandleSaveAsMenuStripItemClickEvent);
+            this.OpenMenuStripItem.Click += new EventHandler(HandleOpenMenuStripItemClickEvent);
+        }
+        #endregion
+
+        #region HandleOpenMenuStripItemClickEvent
+        private void HandleOpenMenuStripItemClickEvent(object sender, EventArgs e)
+        {
+            if (this.OpenDialog.ShowDialog() == DialogResult.OK)
+            {
+                this._baseConfigure = ConfigurationContext.Create(this.OpenDialog.FileName).ConfigurationObject;
+                this._baseConfigureFile = this._baseConfigure.FilePath;
+                if (!object.ReferenceEquals(_baseConfigure.Sections[ConfigurationSourceSection.SectionName], null))
+                {
+                    this.SetMenuItemsEnabled(false, this.ConfigurationMenuStripItem);
+                    this._configurationInserted = true;
+                    TabPage page = new TabPage("Configuration Source");
+                    page.Controls.Add(new ConfigurationSourceEditor() { Dock = DockStyle.Fill, BaseConfigure = this._baseConfigure });
+                    this.TabPagingContainer.TabPages.Add(page);
+                    page.Select();
+                }
+                this.SetMenuItemsEnabled(true, this.OperateMenuStripItem, this.SaveAsMenuStripItem, this.SaveMenuStripItem);
+                this.SetMenuItemsEnabled(false, this.NewMenuStripItem, this.OpenMenuStripItem);
+            }
+        }
+        #endregion
+
+        #region HandleSaveAsMenuStripItemClickEvent
+        private void HandleSaveAsMenuStripItemClickEvent(object sender, EventArgs e)
+        {
+            if (this.SaveAsDialog.ShowDialog() == DialogResult.OK)
+            {
+                if (this.TabPagingContainer.TabPages.Count > 0)
+                {
+                    foreach (TabPage item in this.TabPagingContainer.TabPages)
+                    {
+                        if (item.Controls[0].GetType().Equals(typeof(ConfigurationSourceEditor)))
+                        {
+                            (item.Controls[0] as ConfigurationSourceEditor).ResetConfigurationSource(this.SaveAsDialog.FileName);
+                        }
+                    }
+                }
+            }
+        }
+        #endregion
+
+        #region HandleSaveMenuStripItemClickEvent
+        private void HandleSaveMenuStripItemClickEvent(object sender, EventArgs e)
+        {
+            if (this.TabPagingContainer.TabPages.Count > 0)
+            {
+                foreach (TabPage item in this.TabPagingContainer.TabPages)
+                {
+                    if (item.Controls[0].GetType().Equals(typeof(ConfigurationSourceEditor)))
+                    {
+                        (item.Controls[0] as ConfigurationSourceEditor).ResetConfigurationSource();
+                    }
+                }
+            }
         }
         #endregion
 
@@ -140,8 +200,8 @@ namespace SourcePro.Csharp.Lab.Forms
             this._action = Actions.Create;
             this._baseConfigure = ConfigurationContext.Default.ConfigurationObject;
             this._baseConfigureFile = this._baseConfigure.FilePath;
-            this.SetMenuItemsEnabled(false, this.NewMenuStripItem, this.OpenMenuStripItem, this.SaveAsMenuStripItem);
-            this.SetMenuItemsEnabled(true, this.SaveMenuStripItem, this.OperateMenuStripItem, this.ConfigurationMenuStripItem, this.DataAccessMenuStripItem);
+            this.SetMenuItemsEnabled(false, this.NewMenuStripItem, this.OpenMenuStripItem);
+            this.SetMenuItemsEnabled(true, this.SaveMenuStripItem, this.OperateMenuStripItem, this.ConfigurationMenuStripItem, this.DataAccessMenuStripItem, this.SaveAsMenuStripItem);
         }
         #endregion
 

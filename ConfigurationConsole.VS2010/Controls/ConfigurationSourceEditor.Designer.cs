@@ -31,30 +31,30 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigurationSourceEditor));
             this.ControlCaptionPanel = new System.Windows.Forms.Panel();
+            this.ProtectionSelector = new System.Windows.Forms.ComboBox();
             this.ControlCaptionLabel = new System.Windows.Forms.Label();
             this.MainSplitterContainer = new System.Windows.Forms.SplitContainer();
+            this.VirtualDirectory = new System.Windows.Forms.TextBox();
+            this.DescriptionLabel03 = new System.Windows.Forms.Label();
+            this.CreateButton = new System.Windows.Forms.Button();
+            this.SplitterLine = new System.Windows.Forms.Panel();
+            this.BrowseButton = new System.Windows.Forms.Button();
+            this.ConfigureSourceFileName = new System.Windows.Forms.TextBox();
+            this.SectionOrGroupName = new System.Windows.Forms.ComboBox();
+            this.DescriptionLabel02 = new System.Windows.Forms.Label();
+            this.DescriptionLabel01 = new System.Windows.Forms.Label();
             this.MainToolStrip = new System.Windows.Forms.ToolStrip();
             this.OperateButtons = new System.Windows.Forms.ToolStripSplitButton();
             this.CreateNewToolButton = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.ResetToolButton = new System.Windows.Forms.ToolStripMenuItem();
-            this.DescriptionLabel01 = new System.Windows.Forms.Label();
-            this.SectionOrGroupName = new System.Windows.Forms.ComboBox();
-            this.DescriptionLabel02 = new System.Windows.Forms.Label();
-            this.ConfigureSourceFileName = new System.Windows.Forms.TextBox();
-            this.BrowseButton = new System.Windows.Forms.Button();
-            this.SplitterLine = new System.Windows.Forms.Panel();
-            this.CreateButton = new System.Windows.Forms.Button();
-            this.SourceFileSelectDialog = new System.Windows.Forms.OpenFileDialog();
-            this.MinorToolStrip = new System.Windows.Forms.ToolStrip();
-            this.RemoveToolButton = new System.Windows.Forms.ToolStripButton();
-            this.ProtectionSelector = new System.Windows.Forms.ComboBox();
             this.SourceList = new System.Windows.Forms.ListView();
             this.SectionNameColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SourceColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.DescriptionLabel03 = new System.Windows.Forms.Label();
-            this.VirtualDirectory = new System.Windows.Forms.TextBox();
             this.VirtualDirectoryColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.MinorToolStrip = new System.Windows.Forms.ToolStrip();
+            this.RemoveToolButton = new System.Windows.Forms.ToolStripButton();
+            this.SourceFileSelectDialog = new System.Windows.Forms.OpenFileDialog();
             this.FlashTimer = new System.Windows.Forms.Timer(this.components);
             this.ControlCaptionPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MainSplitterContainer)).BeginInit();
@@ -75,6 +75,16 @@
             this.ControlCaptionPanel.Name = "ControlCaptionPanel";
             this.ControlCaptionPanel.Size = new System.Drawing.Size(781, 30);
             this.ControlCaptionPanel.TabIndex = 0;
+            // 
+            // ProtectionSelector
+            // 
+            this.ProtectionSelector.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ProtectionSelector.BackColor = System.Drawing.Color.White;
+            this.ProtectionSelector.FormattingEnabled = true;
+            this.ProtectionSelector.Location = new System.Drawing.Point(526, 3);
+            this.ProtectionSelector.Name = "ProtectionSelector";
+            this.ProtectionSelector.Size = new System.Drawing.Size(250, 23);
+            this.ProtectionSelector.TabIndex = 1;
             // 
             // ControlCaptionLabel
             // 
@@ -114,6 +124,102 @@
             this.MainSplitterContainer.SplitterDistance = 230;
             this.MainSplitterContainer.SplitterWidth = 2;
             this.MainSplitterContainer.TabIndex = 1;
+            // 
+            // VirtualDirectory
+            // 
+            this.VirtualDirectory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.VirtualDirectory.Location = new System.Drawing.Point(16, 243);
+            this.VirtualDirectory.Name = "VirtualDirectory";
+            this.VirtualDirectory.Size = new System.Drawing.Size(198, 21);
+            this.VirtualDirectory.TabIndex = 8;
+            // 
+            // DescriptionLabel03
+            // 
+            this.DescriptionLabel03.AutoSize = true;
+            this.DescriptionLabel03.Location = new System.Drawing.Point(16, 212);
+            this.DescriptionLabel03.Name = "DescriptionLabel03";
+            this.DescriptionLabel03.Size = new System.Drawing.Size(246, 15);
+            this.DescriptionLabel03.TabIndex = 7;
+            this.DescriptionLabel03.Text = "ASP.NET Compatibility (Set Virtual Directory)";
+            // 
+            // CreateButton
+            // 
+            this.CreateButton.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.CreateButton.FlatAppearance.BorderSize = 0;
+            this.CreateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CreateButton.Location = new System.Drawing.Point(16, 322);
+            this.CreateButton.Name = "CreateButton";
+            this.CreateButton.Size = new System.Drawing.Size(75, 25);
+            this.CreateButton.TabIndex = 6;
+            this.CreateButton.Text = "OK";
+            this.CreateButton.UseVisualStyleBackColor = false;
+            // 
+            // SplitterLine
+            // 
+            this.SplitterLine.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SplitterLine.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.SplitterLine.Location = new System.Drawing.Point(16, 304);
+            this.SplitterLine.Name = "SplitterLine";
+            this.SplitterLine.Size = new System.Drawing.Size(198, 2);
+            this.SplitterLine.TabIndex = 5;
+            // 
+            // BrowseButton
+            // 
+            this.BrowseButton.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BrowseButton.FlatAppearance.BorderSize = 0;
+            this.BrowseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BrowseButton.Location = new System.Drawing.Point(16, 165);
+            this.BrowseButton.Name = "BrowseButton";
+            this.BrowseButton.Size = new System.Drawing.Size(75, 25);
+            this.BrowseButton.TabIndex = 4;
+            this.BrowseButton.Text = "Browse...";
+            this.BrowseButton.UseVisualStyleBackColor = false;
+            // 
+            // ConfigureSourceFileName
+            // 
+            this.ConfigureSourceFileName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ConfigureSourceFileName.BackColor = System.Drawing.Color.White;
+            this.ConfigureSourceFileName.ForeColor = System.Drawing.Color.Gray;
+            this.ConfigureSourceFileName.Location = new System.Drawing.Point(16, 137);
+            this.ConfigureSourceFileName.Name = "ConfigureSourceFileName";
+            this.ConfigureSourceFileName.ReadOnly = true;
+            this.ConfigureSourceFileName.Size = new System.Drawing.Size(198, 21);
+            this.ConfigureSourceFileName.TabIndex = 3;
+            this.ConfigureSourceFileName.Text = "(none)";
+            // 
+            // SectionOrGroupName
+            // 
+            this.SectionOrGroupName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SectionOrGroupName.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.SectionOrGroupName.FormattingEnabled = true;
+            this.SectionOrGroupName.Items.AddRange(new object[] {
+            "sourcepro.data"});
+            this.SectionOrGroupName.Location = new System.Drawing.Point(16, 67);
+            this.SectionOrGroupName.Name = "SectionOrGroupName";
+            this.SectionOrGroupName.Size = new System.Drawing.Size(198, 23);
+            this.SectionOrGroupName.TabIndex = 2;
+            // 
+            // DescriptionLabel02
+            // 
+            this.DescriptionLabel02.AutoSize = true;
+            this.DescriptionLabel02.Location = new System.Drawing.Point(13, 109);
+            this.DescriptionLabel02.Name = "DescriptionLabel02";
+            this.DescriptionLabel02.Size = new System.Drawing.Size(146, 15);
+            this.DescriptionLabel02.TabIndex = 1;
+            this.DescriptionLabel02.Text = "Configuration Source File";
+            // 
+            // DescriptionLabel01
+            // 
+            this.DescriptionLabel01.AutoSize = true;
+            this.DescriptionLabel01.Location = new System.Drawing.Point(13, 39);
+            this.DescriptionLabel01.Name = "DescriptionLabel01";
+            this.DescriptionLabel01.Size = new System.Drawing.Size(204, 15);
+            this.DescriptionLabel01.TabIndex = 1;
+            this.DescriptionLabel01.Text = "Configuration Section(Group) Name";
             // 
             // MainToolStrip
             // 
@@ -158,128 +264,6 @@
             this.ResetToolButton.Size = new System.Drawing.Size(218, 22);
             this.ResetToolButton.Text = "&Reset";
             // 
-            // DescriptionLabel01
-            // 
-            this.DescriptionLabel01.AutoSize = true;
-            this.DescriptionLabel01.Location = new System.Drawing.Point(13, 39);
-            this.DescriptionLabel01.Name = "DescriptionLabel01";
-            this.DescriptionLabel01.Size = new System.Drawing.Size(204, 15);
-            this.DescriptionLabel01.TabIndex = 1;
-            this.DescriptionLabel01.Text = "Configuration Section(Group) Name";
-            // 
-            // SectionOrGroupName
-            // 
-            this.SectionOrGroupName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.SectionOrGroupName.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.SectionOrGroupName.FormattingEnabled = true;
-            this.SectionOrGroupName.Items.AddRange(new object[] {
-            "sourcepro.data"});
-            this.SectionOrGroupName.Location = new System.Drawing.Point(16, 67);
-            this.SectionOrGroupName.Name = "SectionOrGroupName";
-            this.SectionOrGroupName.Size = new System.Drawing.Size(198, 23);
-            this.SectionOrGroupName.TabIndex = 2;
-            // 
-            // DescriptionLabel02
-            // 
-            this.DescriptionLabel02.AutoSize = true;
-            this.DescriptionLabel02.Location = new System.Drawing.Point(13, 109);
-            this.DescriptionLabel02.Name = "DescriptionLabel02";
-            this.DescriptionLabel02.Size = new System.Drawing.Size(146, 15);
-            this.DescriptionLabel02.TabIndex = 1;
-            this.DescriptionLabel02.Text = "Configuration Source File";
-            // 
-            // ConfigureSourceFileName
-            // 
-            this.ConfigureSourceFileName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ConfigureSourceFileName.BackColor = System.Drawing.Color.White;
-            this.ConfigureSourceFileName.ForeColor = System.Drawing.Color.Gray;
-            this.ConfigureSourceFileName.Location = new System.Drawing.Point(16, 137);
-            this.ConfigureSourceFileName.Name = "ConfigureSourceFileName";
-            this.ConfigureSourceFileName.ReadOnly = true;
-            this.ConfigureSourceFileName.Size = new System.Drawing.Size(198, 21);
-            this.ConfigureSourceFileName.TabIndex = 3;
-            this.ConfigureSourceFileName.Text = "(none)";
-            // 
-            // BrowseButton
-            // 
-            this.BrowseButton.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.BrowseButton.FlatAppearance.BorderSize = 0;
-            this.BrowseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BrowseButton.Location = new System.Drawing.Point(16, 165);
-            this.BrowseButton.Name = "BrowseButton";
-            this.BrowseButton.Size = new System.Drawing.Size(75, 25);
-            this.BrowseButton.TabIndex = 4;
-            this.BrowseButton.Text = "Browse...";
-            this.BrowseButton.UseVisualStyleBackColor = false;
-            // 
-            // SplitterLine
-            // 
-            this.SplitterLine.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.SplitterLine.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.SplitterLine.Location = new System.Drawing.Point(16, 304);
-            this.SplitterLine.Name = "SplitterLine";
-            this.SplitterLine.Size = new System.Drawing.Size(198, 2);
-            this.SplitterLine.TabIndex = 5;
-            // 
-            // CreateButton
-            // 
-            this.CreateButton.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.CreateButton.FlatAppearance.BorderSize = 0;
-            this.CreateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CreateButton.Location = new System.Drawing.Point(16, 322);
-            this.CreateButton.Name = "CreateButton";
-            this.CreateButton.Size = new System.Drawing.Size(75, 25);
-            this.CreateButton.TabIndex = 6;
-            this.CreateButton.Text = "OK";
-            this.CreateButton.UseVisualStyleBackColor = false;
-            // 
-            // SourceFileSelectDialog
-            // 
-            this.SourceFileSelectDialog.DefaultExt = "config";
-            this.SourceFileSelectDialog.FileName = "Source.config";
-            this.SourceFileSelectDialog.Filter = ".Net Configuration|*.config";
-            this.SourceFileSelectDialog.RestoreDirectory = true;
-            this.SourceFileSelectDialog.SupportMultiDottedExtensions = true;
-            this.SourceFileSelectDialog.Title = "Select A Configuration Source File";
-            // 
-            // MinorToolStrip
-            // 
-            this.MinorToolStrip.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.MinorToolStrip.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MinorToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.RemoveToolButton});
-            this.MinorToolStrip.Location = new System.Drawing.Point(0, 0);
-            this.MinorToolStrip.Name = "MinorToolStrip";
-            this.MinorToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.MinorToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.MinorToolStrip.Size = new System.Drawing.Size(547, 25);
-            this.MinorToolStrip.TabIndex = 0;
-            this.MinorToolStrip.Text = "toolStrip1";
-            // 
-            // RemoveToolButton
-            // 
-            this.RemoveToolButton.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RemoveToolButton.ForeColor = System.Drawing.Color.Maroon;
-            this.RemoveToolButton.Image = ((System.Drawing.Image)(resources.GetObject("RemoveToolButton.Image")));
-            this.RemoveToolButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.RemoveToolButton.Name = "RemoveToolButton";
-            this.RemoveToolButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.RemoveToolButton.Size = new System.Drawing.Size(139, 22);
-            this.RemoveToolButton.Text = "Remove Selected！";
-            // 
-            // ProtectionSelector
-            // 
-            this.ProtectionSelector.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ProtectionSelector.BackColor = System.Drawing.Color.White;
-            this.ProtectionSelector.FormattingEnabled = true;
-            this.ProtectionSelector.Location = new System.Drawing.Point(526, 3);
-            this.ProtectionSelector.Name = "ProtectionSelector";
-            this.ProtectionSelector.Size = new System.Drawing.Size(250, 23);
-            this.ProtectionSelector.TabIndex = 1;
-            // 
             // SourceList
             // 
             this.SourceList.BackColor = System.Drawing.Color.White;
@@ -311,28 +295,44 @@
             this.SourceColumn.Text = "Configuration Source File";
             this.SourceColumn.Width = 300;
             // 
-            // DescriptionLabel03
-            // 
-            this.DescriptionLabel03.AutoSize = true;
-            this.DescriptionLabel03.Location = new System.Drawing.Point(16, 212);
-            this.DescriptionLabel03.Name = "DescriptionLabel03";
-            this.DescriptionLabel03.Size = new System.Drawing.Size(129, 15);
-            this.DescriptionLabel03.TabIndex = 7;
-            this.DescriptionLabel03.Text = "ASP.NET Compatibility";
-            // 
-            // VirtualDirectory
-            // 
-            this.VirtualDirectory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.VirtualDirectory.Location = new System.Drawing.Point(16, 243);
-            this.VirtualDirectory.Name = "VirtualDirectory";
-            this.VirtualDirectory.Size = new System.Drawing.Size(198, 21);
-            this.VirtualDirectory.TabIndex = 8;
-            // 
             // VirtualDirectoryColumn
             // 
             this.VirtualDirectoryColumn.Text = "ASP.NET Compatibility";
             this.VirtualDirectoryColumn.Width = 150;
+            // 
+            // MinorToolStrip
+            // 
+            this.MinorToolStrip.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.MinorToolStrip.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MinorToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.RemoveToolButton});
+            this.MinorToolStrip.Location = new System.Drawing.Point(0, 0);
+            this.MinorToolStrip.Name = "MinorToolStrip";
+            this.MinorToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.MinorToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.MinorToolStrip.Size = new System.Drawing.Size(547, 25);
+            this.MinorToolStrip.TabIndex = 0;
+            this.MinorToolStrip.Text = "toolStrip1";
+            // 
+            // RemoveToolButton
+            // 
+            this.RemoveToolButton.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RemoveToolButton.ForeColor = System.Drawing.Color.Maroon;
+            this.RemoveToolButton.Image = ((System.Drawing.Image)(resources.GetObject("RemoveToolButton.Image")));
+            this.RemoveToolButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.RemoveToolButton.Name = "RemoveToolButton";
+            this.RemoveToolButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.RemoveToolButton.Size = new System.Drawing.Size(139, 22);
+            this.RemoveToolButton.Text = "Remove Selected！";
+            // 
+            // SourceFileSelectDialog
+            // 
+            this.SourceFileSelectDialog.DefaultExt = "config";
+            this.SourceFileSelectDialog.FileName = "Source.config";
+            this.SourceFileSelectDialog.Filter = ".Net Configuration|*.config";
+            this.SourceFileSelectDialog.RestoreDirectory = true;
+            this.SourceFileSelectDialog.SupportMultiDottedExtensions = true;
+            this.SourceFileSelectDialog.Title = "Select A Configuration Source File";
             // 
             // FlashTimer
             // 

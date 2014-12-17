@@ -36,6 +36,8 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.SaveMenuStripItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SaveAsMenuStripItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.ResetMenuStripItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.ExitMenuStripItem = new System.Windows.Forms.ToolStripMenuItem();
             this.OperateMenuStripItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,9 +53,9 @@
             this.AboutMenuStripItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainStatusStrip = new System.Windows.Forms.StatusStrip();
             this.CopyrightToolStripItem = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.ResetMenuStripItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TabPagingContainer = new System.Windows.Forms.TabControl();
+            this.SaveAsDialog = new System.Windows.Forms.SaveFileDialog();
+            this.OpenDialog = new System.Windows.Forms.OpenFileDialog();
             this.MainMenuStrip.SuspendLayout();
             this.MainStatusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -123,6 +125,17 @@
             | System.Windows.Forms.Keys.S)));
             this.SaveAsMenuStripItem.Size = new System.Drawing.Size(189, 22);
             this.SaveAsMenuStripItem.Text = "Save &As";
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(186, 6);
+            // 
+            // ResetMenuStripItem
+            // 
+            this.ResetMenuStripItem.Name = "ResetMenuStripItem";
+            this.ResetMenuStripItem.Size = new System.Drawing.Size(189, 22);
+            this.ResetMenuStripItem.Text = "&Reset Status";
             // 
             // toolStripSeparator2
             // 
@@ -234,17 +247,6 @@
             this.CopyrightToolStripItem.Name = "CopyrightToolStripItem";
             this.CopyrightToolStripItem.Size = new System.Drawing.Size(0, 17);
             // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(186, 6);
-            // 
-            // ResetMenuStripItem
-            // 
-            this.ResetMenuStripItem.Name = "ResetMenuStripItem";
-            this.ResetMenuStripItem.Size = new System.Drawing.Size(189, 22);
-            this.ResetMenuStripItem.Text = "&Reset Status";
-            // 
             // TabPagingContainer
             // 
             this.TabPagingContainer.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -254,6 +256,20 @@
             this.TabPagingContainer.SelectedIndex = 0;
             this.TabPagingContainer.Size = new System.Drawing.Size(784, 316);
             this.TabPagingContainer.TabIndex = 3;
+            // 
+            // SaveAsDialog
+            // 
+            this.SaveAsDialog.DefaultExt = "config";
+            this.SaveAsDialog.FileName = "SourceProStudio.ConfigurationSource.config";
+            this.SaveAsDialog.Filter = ".Net Configuration|*.config";
+            this.SaveAsDialog.Title = "Save As";
+            // 
+            // OpenDialog
+            // 
+            this.OpenDialog.DefaultExt = "config";
+            this.OpenDialog.FileName = "Configuration.config";
+            this.OpenDialog.Filter = ".Net Configuration|*.config";
+            this.OpenDialog.Title = "Open .Net Configuration File";
             // 
             // OperatingForm
             // 
@@ -304,5 +320,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripMenuItem ResetMenuStripItem;
         private System.Windows.Forms.TabControl TabPagingContainer;
+        private System.Windows.Forms.SaveFileDialog SaveAsDialog;
+        private System.Windows.Forms.OpenFileDialog OpenDialog;
     }
 }

@@ -20,14 +20,12 @@
 #endregion
 
 using System;
-using Config = System.Configuration.Configuration;
+using System.Drawing;
 using System.Windows.Forms;
-using RSAProtection = System.Configuration.RsaProtectedConfigurationProvider;
-using DpapiProection = System.Configuration.DpapiProtectedConfigurationProvider;
 using SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration;
 using SourcePro.Csharp.Practices.FoundationLibrary.Commons.RegularExpressions;
-using System.Drawing;
-using System.Threading;
+using Config = System.Configuration.Configuration;
+using RSAProtection = System.Configuration.RsaProtectedConfigurationProvider;
 
 namespace SourcePro.Csharp.Lab.Controls
 {
@@ -54,6 +52,7 @@ namespace SourcePro.Csharp.Lab.Controls
         private bool _virtualDirectoryIsMatching = true;
         private Control _invalidControl;
         private int _flashesTimes = 0;
+        private Font _removedFont = new Font("Arial", 9, FontStyle.Strikeout | FontStyle.Italic | FontStyle.Bold);
 
         #region BaseConfigure
         public Config BaseConfigure
@@ -70,6 +69,25 @@ namespace SourcePro.Csharp.Lab.Controls
             this.BrowseButton.Click += new EventHandler(HandleBrowseButtonClickEvent);
             this.VirtualDirectory.TextChanged += new EventHandler(HandleVirtualDirectoryInputChangedEvent);
             this.FlashTimer.Tick += new EventHandler(HandleFlashTimerTickEvent);
+            this.RemoveToolButton.Click += new EventHandler(HandleRemoveButtonClickEvent);
+        }
+        #endregion
+
+        #region HandleRemoveButtonClickEvent
+        private void HandleRemoveButtonClickEvent(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("You sure you want to delete the selected items?", "Question ?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                if (!object.ReferenceEquals(this.SourceList.SelectedItems, null) && this.SourceList.SelectedItems.Count > 0)
+                {
+                    foreach (ListViewItem item in this.SourceList.SelectedItems)
+                    {
+                        item.Tag = new { IsRemoved = true };
+                        item.Font = _removedFont;
+                        item.ForeColor = Color.Red;
+                    }
+                }
+            }
         }
         #endregion
 
@@ -157,7 +175,24 @@ namespace SourcePro.Csharp.Lab.Controls
         {
             if (this.ValidateControlsValue())
             {
-
+                bool exists = false;
+                foreach (ListViewItem item in this.SourceList.Items)
+                {
+                    if (item.Text.Equals(this.SectionOrGroupName.Text))
+                    {
+                        item.SubItems[1].Text = this.ConfigureSourceFileName.Text;
+                        item.SubItems[2].Text = this.VirtualDirectory.Text;
+                        exists = true;
+                        break;
+                    }
+                }
+                if (!exists)
+                {
+                    ListViewItem item = new ListViewItem(this.SectionOrGroupName.Text);
+                    item.SubItems.Add(new ListViewItem.ListViewSubItem() { Text = this.ConfigureSourceFileName.Text });
+                    item.SubItems.Add(new ListViewItem.ListViewSubItem() { Text = this.VirtualDirectory.Text });
+                    this.SourceList.Items.Add(item);
+                }
             }
         }
         #endregion
@@ -174,6 +209,10 @@ namespace SourcePro.Csharp.Lab.Controls
                     {
                         ListViewItem ctrlItem = new ListViewItem(item.Name);
                         ctrlItem.SubItems.Add(new ListViewItem.ListViewSubItem() { Text = item.Path });
+                        ctrlItem.SubItems.Add(new ListViewItem.ListViewSubItem()
+                        {
+                            Text = item.AspNetCompatibilitySupportProperties != null ? item.AspNetCompatibilitySupportProperties.VirtualDirectory : string.Empty
+                        });
                         this.SourceList.Items.Add(ctrlItem);
                     }
                 }
@@ -186,8 +225,11 @@ namespace SourcePro.Csharp.Lab.Controls
         {
             this.ProtectionSelector.Items.Add("(none)");
             this.ProtectionSelector.Items.Add(typeof(RSAProtection).Name);
-            this.ProtectionSelector.Items.Add(typeof(DpapiProection).Name);
             this.ProtectionSelector.Text = "(none)";
+            if (!object.ReferenceEquals(this._sourceConfig, null) && this._sourceConfig.SectionInformation.IsProtected)
+            {
+                this.ProtectionSelector.Text = this._sourceConfig.SectionInformation.ProtectionProvider.Name;
+            }
         }
         #endregion
 
@@ -195,8 +237,8 @@ namespace SourcePro.Csharp.Lab.Controls
         private void InitializeControl()
         {
             this.RegisterControlsEvent();
-            this.InitializeProtectionsList();
             this.InitializeBaseSourceList();
+            this.InitializeProtectionsList();
         }
         #endregion
 
@@ -205,6 +247,47 @@ namespace SourcePro.Csharp.Lab.Controls
         {
             base.OnLoad(e);
             this.InitializeControl();
+        }
+        #endregion
+
+        #region ResetConfigurationSource
+        internal void ResetConfigurationSource(string path = "")
+        {
+            bool isExists = true;
+            if (object.ReferenceEquals(this._sourceConfig, null))
+            {
+                isExists = false;
+                this._sourceConfig = new ConfigurationSourceSection() { Sources = new ConfigurationSourceElementCollection() };
+            }
+            else this._sourceConfig.Sources.Clear();
+            foreach (ListViewItem item in this.SourceList.Items)
+            {
+                if (object.ReferenceEquals(item.Tag, null))
+                {
+                    ConfigurationSourceElement element = new ConfigurationSourceElement() { Name = item.Text, Path = item.SubItems[1].Text };
+                    if (!string.IsNullOrWhiteSpace(item.SubItems[2].Text))
+                    {
+                        element.AspNetCompatibilitySupportProperties = new AspCompatiblePropertyElement() { VirtualDirectory = item.SubItems[2].Text };
+                    }
+                    else element.AspNetCompatibilitySupportProperties = null;
+                    this._sourceConfig.Sources.Add(element);
+                }
+            }
+            if (!isExists) this.BaseConfigure.Sections.Add(ConfigurationSourceSection.SectionName, this._sourceConfig);
+            if (this.ProtectionSelector.Text != "(none)" && !this._sourceConfig.SectionInformation.IsProtected && !this._sourceConfig.ElementInformation.IsLocked)
+            {
+                this._sourceConfig.SectionInformation.ProtectSection(this.ProtectionSelector.Text);
+                this._sourceConfig.SectionInformation.ForceSave = true;
+            }
+            else if (this.ProtectionSelector.Text == "(none)" && this._sourceConfig.SectionInformation.IsProtected)
+            {
+                this._sourceConfig.SectionInformation.UnprotectSection();
+                this._sourceConfig.SectionInformation.ForceSave = true;
+            }
+            if (string.IsNullOrWhiteSpace(path))
+                this.BaseConfigure.Save(System.Configuration.ConfigurationSaveMode.Full);
+            else
+                this.BaseConfigure.SaveAs(path, System.Configuration.ConfigurationSaveMode.Full);
         }
         #endregion
     }

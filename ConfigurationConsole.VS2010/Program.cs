@@ -16,7 +16,6 @@ namespace SourcePro.Csharp.Lab
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             ValidateCurrentUserRole();
-            Application.Run(GetFormInstanceWithCommandLine());
         }
 
         #region GetFormInstanceWithCommandLine
@@ -43,6 +42,10 @@ namespace SourcePro.Csharp.Lab
                 {
                     MessageBox.Show("Because you are not in the system administrator role, the tool will exit !", "Warning !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     Application.Exit();
+                }
+                else
+                {
+                    Application.Run(GetFormInstanceWithCommandLine());
                 }
             }
             catch (Exception ex)
