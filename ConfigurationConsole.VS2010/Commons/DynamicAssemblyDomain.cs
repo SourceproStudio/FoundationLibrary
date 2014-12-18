@@ -55,7 +55,7 @@ namespace SourcePro.Csharp.Lab.Commons
         public DynamicAssemblyDomain(string fileName)
         {
             _domain = AppDomain.CreateDomain("SourceProStudio.ConfiguratonConsole.PrivateAppDomain");
-            this._dynamicAssembly = (DynamicAssembly)_domain.CreateInstanceFromAndUnwrap("LIbConfig.exe", "SourcePro.Csharp.Lab.Commons.DynamicAssembly");
+            this._dynamicAssembly = (DynamicAssembly)_domain.CreateInstanceFromAndUnwrap(Assembly.GetExecutingAssembly().GetName().Name + ".exe", "SourcePro.Csharp.Lab.Commons.DynamicAssembly");
             this._dynamicAssembly.FileName = fileName;
         }
 
@@ -66,9 +66,9 @@ namespace SourcePro.Csharp.Lab.Commons
         /// 获取指定程序集中所有的类型。
         /// </summary>
         /// <returns><see cref="IList{T}"/>对象实例。</returns>
-        public IList<string> GetTypes()
+        public IList<Type> GetTypes()
         {
-            IList<string> list = this._dynamicAssembly.GetTypes();
+            IList<Type> list = this._dynamicAssembly.GetTypes();
             AppDomain.Unload(this._domain);
             return list;
         }

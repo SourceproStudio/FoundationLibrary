@@ -48,12 +48,31 @@ namespace SourcePro.Csharp.Lab.Forms
         private string[] _files;
         private GenerateReflectionInfoErrorHandler _errorCallback;
         private GenerateReflectionInfoCompletedHandler _completedCallback;
+        private BackgroundJobsCompletedHandler _jobsCompletedCallback;
+        private string _selectedType;
+        private string _selectedProviderName;
+
+        #region SelectedProviderName
+        public string SelectedProviderName
+        {
+            get { return _selectedProviderName; }
+            private set { _selectedProviderName = value; }
+        }
+        #endregion
 
         #region Files
         public string[] Files
         {
             get { return _files; }
             set { _files = value; }
+        }
+        #endregion
+
+        #region SelectedType
+        public string SelectedType
+        {
+            get { return _selectedType; }
+            private set { _selectedType = value; }
         }
         #endregion
 
@@ -71,8 +90,31 @@ namespace SourcePro.Csharp.Lab.Forms
         private void RegisterControlsEvent()
         {
             this.BackWorker.DoWork += new DoWorkEventHandler(DoBackgroundJobs);
+            this.BackWorker.RunWorkerCompleted += new RunWorkerCompletedEventHandler(HandleBackgroundJobsCompleted);
             this._errorCallback = new GenerateReflectionInfoErrorHandler(this.UpgradeErrorStatus);
             this._completedCallback = new GenerateReflectionInfoCompletedHandler(this.AppendType);
+            this._jobsCompletedCallback = new BackgroundJobsCompletedHandler(this.HideGenerateProgressControl);
+            this.TypeListBox.MouseDoubleClick += new MouseEventHandler(HandleSelectedDoubleClickEvent);
+        }
+        #endregion
+
+        #region HandleSelectedDoubleClickEvent
+        private void HandleSelectedDoubleClickEvent(object sender, MouseEventArgs e)
+        {
+            if (!object.ReferenceEquals(this.TypeListBox.SelectedItem, null))
+            {
+                this.SelectedType = this.TypeListBox.SelectedItem.ToString();
+                this.SelectedProviderName = (this.TypeListBox.SelectedItem as DbProviderItem).GetProviderName();
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+        }
+        #endregion
+
+        #region HandleBackgroundJobsCompleted
+        private void HandleBackgroundJobsCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            this._jobsCompletedCallback();
         }
         #endregion
 
@@ -84,9 +126,9 @@ namespace SourcePro.Csharp.Lab.Forms
                 try
                 {
                     DynamicAssemblyDomain domain = new DynamicAssemblyDomain(item);
-                    IList<string> types = domain.GetTypes();
-                    foreach (string typeItem in types)
-                        this._completedCallback(typeItem);
+                    IList<Type> types = domain.GetTypes();
+                    foreach (Type typeItem in types)
+                        this._completedCallback(new DbProviderItem() { SourceType = typeItem });
                 }
                 catch
                 {
@@ -122,12 +164,22 @@ namespace SourcePro.Csharp.Lab.Forms
         #endregion
 
         #region AppendType
-        private void AppendType(string typeName)
+        private void AppendType(DbProviderItem item)
         {
             if (this.TypeListBox.InvokeRequired)
-                this.TypeListBox.Invoke(this._completedCallback, typeName);
+                this.TypeListBox.Invoke(this._completedCallback, item);
             else
-                this.TypeListBox.Items.Add(typeName);
+                this.TypeListBox.Items.Add(item);
+        }
+        #endregion
+
+        #region HideGenerateProgressControl
+        private void HideGenerateProgressControl()
+        {
+            if (this.ProgressControlPanel.InvokeRequired)
+                this.ProgressControlPanel.Invoke(this._jobsCompletedCallback);
+            else
+                this.ProgressControlPanel.Hide();
         }
         #endregion
     }

@@ -31,16 +31,16 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AssemblyAnalyseeDialog));
             this.ProgressControlPanel = new System.Windows.Forms.Panel();
-            this.ProgressPictureBox = new System.Windows.Forms.PictureBox();
             this.ProgressTextLabel = new System.Windows.Forms.Label();
+            this.ProgressPictureBox = new System.Windows.Forms.PictureBox();
             this.BackWorker = new System.ComponentModel.BackgroundWorker();
             this.TypesPanel = new System.Windows.Forms.Panel();
+            this.TypeListBox = new System.Windows.Forms.ListBox();
             this.StatusImageList = new System.Windows.Forms.ImageList(this.components);
             this.StatusListView = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.TypeListBox = new System.Windows.Forms.ListBox();
             this.ProgressControlPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProgressPictureBox)).BeginInit();
             this.TypesPanel.SuspendLayout();
@@ -57,15 +57,6 @@
             this.ProgressControlPanel.Size = new System.Drawing.Size(594, 30);
             this.ProgressControlPanel.TabIndex = 0;
             // 
-            // ProgressPictureBox
-            // 
-            this.ProgressPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("ProgressPictureBox.Image")));
-            this.ProgressPictureBox.Location = new System.Drawing.Point(5, 7);
-            this.ProgressPictureBox.Name = "ProgressPictureBox";
-            this.ProgressPictureBox.Size = new System.Drawing.Size(16, 16);
-            this.ProgressPictureBox.TabIndex = 0;
-            this.ProgressPictureBox.TabStop = false;
-            // 
             // ProgressTextLabel
             // 
             this.ProgressTextLabel.AutoSize = true;
@@ -77,6 +68,15 @@
             this.ProgressTextLabel.TabIndex = 1;
             this.ProgressTextLabel.Text = "Generating reflection information. Hold on please.";
             // 
+            // ProgressPictureBox
+            // 
+            this.ProgressPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("ProgressPictureBox.Image")));
+            this.ProgressPictureBox.Location = new System.Drawing.Point(5, 7);
+            this.ProgressPictureBox.Name = "ProgressPictureBox";
+            this.ProgressPictureBox.Size = new System.Drawing.Size(16, 16);
+            this.ProgressPictureBox.TabIndex = 0;
+            this.ProgressPictureBox.TabStop = false;
+            // 
             // TypesPanel
             // 
             this.TypesPanel.Controls.Add(this.TypeListBox);
@@ -85,6 +85,20 @@
             this.TypesPanel.Name = "TypesPanel";
             this.TypesPanel.Size = new System.Drawing.Size(594, 200);
             this.TypesPanel.TabIndex = 1;
+            // 
+            // TypeListBox
+            // 
+            this.TypeListBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TypeListBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TypeListBox.Font = new System.Drawing.Font("Arial", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TypeListBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.TypeListBox.FormattingEnabled = true;
+            this.TypeListBox.ItemHeight = 15;
+            this.TypeListBox.Location = new System.Drawing.Point(0, 0);
+            this.TypeListBox.Name = "TypeListBox";
+            this.TypeListBox.Size = new System.Drawing.Size(594, 200);
+            this.TypeListBox.Sorted = true;
+            this.TypeListBox.TabIndex = 0;
             // 
             // StatusImageList
             // 
@@ -117,7 +131,6 @@
             // columnHeader1
             // 
             this.columnHeader1.Text = "";
-            this.columnHeader1.Width = 20;
             // 
             // columnHeader2
             // 
@@ -127,19 +140,6 @@
             // 
             this.columnHeader3.Text = "File\'s Name";
             this.columnHeader3.Width = 300;
-            // 
-            // TypeListBox
-            // 
-            this.TypeListBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TypeListBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TypeListBox.Font = new System.Drawing.Font("Arial", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TypeListBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.TypeListBox.FormattingEnabled = true;
-            this.TypeListBox.ItemHeight = 15;
-            this.TypeListBox.Location = new System.Drawing.Point(0, 0);
-            this.TypeListBox.Name = "TypeListBox";
-            this.TypeListBox.Size = new System.Drawing.Size(594, 200);
-            this.TypeListBox.TabIndex = 0;
             // 
             // AssemblyAnalyseeDialog
             // 

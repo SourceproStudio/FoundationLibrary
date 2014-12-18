@@ -90,11 +90,10 @@ namespace SourcePro.Csharp.Lab.Commons
         /// 获取指定程序集中所有的类型字符串。
         /// </summary>
         /// <returns><see cref="IList{T}"/>对象实例。</returns>
-        public IList<string> GetTypes()
+        public IList<Type> GetTypes()
         {
-            List<string> typeList = new List<string>();
             Type[] types = this.Load().GetTypes();
-            foreach (Type item in types) typeList.Add(item.AssemblyQualifiedName);
+            List<Type> typeList = new List<Type>(types);
             return typeList;
         }
         #endregion

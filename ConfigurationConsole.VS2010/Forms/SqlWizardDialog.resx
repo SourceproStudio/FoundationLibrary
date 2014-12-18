@@ -117,55 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="DbProviderToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="MainMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
-  </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="RemoveDbProviderButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEPSURBVDhPzZE9awJhEIT3bCQQsJaARRqLVCkFQX9DOu0k
-        pbUE7IQUWgs2gp21NvobrOxsxMYqkFiaxM87n1f38DwPvUocGN7d2ZlduJP7hiOShlloqRQetsjLWmSy
-        EplSv6ocDgSiW5EWlx1D6jbag46vA/Mbl+dwAf/hH1pex5eBMb4RGejlFmyYGm3Im1BbMDBYBCpctHXB
-        JwvLpta+xhtR+zkwpwh/eQInC5j90GfUfgoMjwQ6rtmQvgnrPq3PG9PYEWx+58LSa6afwW+ftsZb1NgB
-        DJ755yOv0ZBrPdj163jHLElqfH89x+aN34j2axig22QKGt8veIIlrpmvXHVp+iAN7wf15V96I4jsAPOj
-        vkoAi9ObAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <metadata name="DbProtectionToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>502, 17</value>
-  </metadata>
-  <data name="RemoveDbProtectionButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEKSURBVDhPzZExa8JwEMVPl1IQnEuhg4uDk6Mg1M/gpps4
-        OpeCW6GDzoKLkM1ZF/0MTm4uxcVJqI5aFdPE39+eGNMQM4kPHv+7d+/dQSL3DVckDwswplJ0OCIZW2QK
-        Z9RZlaOBwMOviMVl15C6i/ao4+vAXOTyCm7hBv6glXUcDoxPBEZ62YJtU6ONeV/UFgwMMQIfmB1d8MnC
-        uqm1b/LG1f4fmHOE557AxQJmC/pXtV8CQ4JA72Q2pO/Alk8b8iY1dgabq1zYec30S/jt0/Z4axr7A4MU
-        g4nXaMi1Aez7dbxfLElr/Hi9hGgHGNeGAbpDpqLx44Jn+MY185UbJ5o+SMP7Th3+S28EkQMzUr5tOTTD
-        iwAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <metadata name="DbConnectionToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>819, 17</value>
-  </metadata>
-  <data name="RemoveDbConnectionButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADzSURBVDhPzZEti0JBGIVHiywIZhE2bDGYjIKgv8HmNjFu
-        FsEmGDQLFsFm1qK/wWSziMUk7G5cv1i5+ox7RL17/UjigYeZOe85M3CveW5tjUlCGnyy7pdjTAwmMIW4
-        7PtEIQAtXt5a2LfhRePbIpyBH1jBEhbwrvF1EQzDQC+3oKH9kPVVMW8R8BEsg6NSBUp2r3ON1a/4fxFI
-        wOyk4L7gC1KKn4tAkGHnEFahCXWX12cNqXYUgzysXeFv+HR5v/Ch2p8YvGGOToMK96Dr4Y8hqvr+9Sxs
-        PIJzi4fvQE71/QURKID9ytUD9nzBK7K//ksfJGN2oLG+qe+KT8kAAAAASUVORK5CYII=
-</value>
-  </data>
-  <metadata name="AssemblyOpenDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>189, 17</value>
-  </metadata>
-  <metadata name="FlashingTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>368, 17</value>
-  </metadata>
-  <metadata name="ButtonTooltip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>686, 17</value>
   </metadata>
 </root>

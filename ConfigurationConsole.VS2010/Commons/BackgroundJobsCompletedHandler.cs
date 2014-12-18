@@ -6,7 +6,7 @@
  * Current Thread User : GUOCOLAND\wangyucai
  * Machine Name : GLCHQWYCWINW7
  * Visual Studio : Microsoft Visual Studio 2010 Ultimate Edition
- * Create Time : 2014-12-17 16:57:20
+ * Create Time : 2014-12-18 9:39:38
  * Common Language Runtime : 4.0.30319.18444
  * Minimum .Net Framework Version : 4.0
  * 
@@ -25,21 +25,20 @@ namespace SourcePro.Csharp.Lab.Commons
 {
     /// <summary>
     /// <para>
-    /// 生成反射信息成功回调委托。
+    /// 后台作业完成时执行的方法委托。
     /// </para>
     /// <para>
     /// Namespace : <see cref="SourcePro.Csharp.Lab.Commons"/>
     /// </para>
     /// <para>
-    /// Type : <see cref="GenerateReflectionInfoCompletedHandler"/>
+    /// Type : <see cref="BackgroundJobsCompletedHandler"/>
     /// </para>
     /// <para>
     /// The minimum .Net Framework version requirements : 4.0
     /// </para>
     /// </summary>
-    /// <param name="item"><see cref="DbProviderItem"/>对象实例。</param>
     /// <seealso cref="SourcePro.Csharp.Lab.Commons"/>
-    public delegate void GenerateReflectionInfoCompletedHandler(DbProviderItem item);
+    public delegate void BackgroundJobsCompletedHandler();
 }
 
 /*
