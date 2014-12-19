@@ -1289,6 +1289,7 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration
         /// </summary>
         public void Clear()
         {
+            this.BaseClear();
         }
         #endregion
     }
