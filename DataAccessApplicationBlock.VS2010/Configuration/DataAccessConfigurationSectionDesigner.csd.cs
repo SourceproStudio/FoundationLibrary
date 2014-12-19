@@ -257,6 +257,16 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration
             return false;
         }
         #endregion
+
+        #region Clear
+        /// <summary>
+        /// 清空此集合。
+        /// </summary>
+        public void Clear()
+        {
+            this.BaseClear();
+        }
+        #endregion
     }
 }
 namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration
@@ -570,6 +580,16 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration
         public override bool IsReadOnly()
         {
             return false;
+        }
+        #endregion
+
+        #region Clear
+        /// <summary>
+        /// 清空此集合。
+        /// </summary>
+        public void Clear()
+        {
+            this.BaseClear();
         }
         #endregion
     }
@@ -911,6 +931,16 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration
             return false;
         }
         #endregion
+
+        #region Clear
+        /// <summary>
+        /// 清空此集合。
+        /// </summary>
+        public void Clear()
+        {
+            this.BaseClear();
+        }
+        #endregion
     }
 }
 namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration
@@ -1250,6 +1280,15 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration
         public override bool IsReadOnly()
         {
             return false;
+        }
+        #endregion
+
+        #region Clear
+        /// <summary>
+        /// 清空此集合。
+        /// </summary>
+        public void Clear()
+        {
         }
         #endregion
     }

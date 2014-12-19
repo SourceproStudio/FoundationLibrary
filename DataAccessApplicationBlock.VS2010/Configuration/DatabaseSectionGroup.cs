@@ -116,6 +116,16 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration
             this.Sections.Add(name, section);
         }
         #endregion
+
+        #region ClearSections
+        /// <summary>
+        /// 清空所有的配置节。
+        /// </summary>
+        public void ClearSections()
+        {
+            this.Sections.Clear();
+        }
+        #endregion
     }
 }
 
