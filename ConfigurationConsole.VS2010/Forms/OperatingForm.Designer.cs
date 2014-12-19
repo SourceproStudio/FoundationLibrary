@@ -49,13 +49,12 @@
             this.HelpMenuStripItem = new System.Windows.Forms.ToolStripMenuItem();
             this.LicenseMenuStripItem = new System.Windows.Forms.ToolStripMenuItem();
             this.GithubMenuStripItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.AboutMenuStripItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainStatusStrip = new System.Windows.Forms.StatusStrip();
             this.CopyrightToolStripItem = new System.Windows.Forms.ToolStripStatusLabel();
             this.TabPagingContainer = new System.Windows.Forms.TabControl();
             this.SaveAsDialog = new System.Windows.Forms.SaveFileDialog();
             this.OpenDialog = new System.Windows.Forms.OpenFileDialog();
+            this.OpenGACAssemblyDialog = new System.Windows.Forms.OpenFileDialog();
             this.MainMenuStrip.SuspendLayout();
             this.MainStatusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -196,9 +195,7 @@
             // 
             this.HelpMenuStripItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.LicenseMenuStripItem,
-            this.GithubMenuStripItem,
-            this.toolStripSeparator3,
-            this.AboutMenuStripItem});
+            this.GithubMenuStripItem});
             this.HelpMenuStripItem.Name = "HelpMenuStripItem";
             this.HelpMenuStripItem.Size = new System.Drawing.Size(45, 20);
             this.HelpMenuStripItem.Text = "&Help";
@@ -217,17 +214,6 @@
             | System.Windows.Forms.Keys.V)));
             this.GithubMenuStripItem.Size = new System.Drawing.Size(181, 22);
             this.GithubMenuStripItem.Text = "&Github";
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(178, 6);
-            // 
-            // AboutMenuStripItem
-            // 
-            this.AboutMenuStripItem.Name = "AboutMenuStripItem";
-            this.AboutMenuStripItem.Size = new System.Drawing.Size(181, 22);
-            this.AboutMenuStripItem.Text = "&About me";
             // 
             // MainStatusStrip
             // 
@@ -271,6 +257,14 @@
             this.OpenDialog.Filter = ".Net Configuration|*.config";
             this.OpenDialog.Title = "Open .Net Configuration File";
             // 
+            // OpenGACAssemblyDialog
+            // 
+            this.OpenGACAssemblyDialog.DefaultExt = "dll";
+            this.OpenGACAssemblyDialog.FileName = "Assembly";
+            this.OpenGACAssemblyDialog.Filter = ".Net Assembly|*.dll";
+            this.OpenGACAssemblyDialog.Multiselect = true;
+            this.OpenGACAssemblyDialog.Title = "Select Assemblies And Install To GAC";
+            // 
             // OperatingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -310,8 +304,6 @@
         private System.Windows.Forms.ToolStripMenuItem DataAccessMenuStripItem;
         private System.Windows.Forms.ToolStripMenuItem LicenseMenuStripItem;
         private System.Windows.Forms.ToolStripMenuItem GithubMenuStripItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripMenuItem AboutMenuStripItem;
         private System.Windows.Forms.ToolStripMenuItem SettingMenuStripItem;
         private System.Windows.Forms.ToolStripMenuItem GacInstallMenuStripItem;
         private System.Windows.Forms.ToolStripMenuItem EnvarMenuStripItem;
@@ -322,5 +314,6 @@
         private System.Windows.Forms.TabControl TabPagingContainer;
         private System.Windows.Forms.SaveFileDialog SaveAsDialog;
         private System.Windows.Forms.OpenFileDialog OpenDialog;
+        private System.Windows.Forms.OpenFileDialog OpenGACAssemblyDialog;
     }
 }

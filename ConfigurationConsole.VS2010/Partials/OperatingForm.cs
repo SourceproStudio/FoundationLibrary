@@ -28,6 +28,9 @@ using SourcePro.Csharp.Lab.Commons;
 using SourcePro.Csharp.Lab.Controls;
 using SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration;
 using Config = System.Configuration.Configuration;
+using SourcePro.Csharp.Practices.FoundationLibrary.Commons.Deployment;
+using SourcePro.Csharp.Practices.FoundationLibrary.Commons;
+using SourcePro.Csharp.Practices.FoundationLibrary.Commons.IO;
 
 namespace SourcePro.Csharp.Lab.Forms
 {
@@ -99,6 +102,55 @@ namespace SourcePro.Csharp.Lab.Forms
             this.SaveAsMenuStripItem.Click += new EventHandler(HandleSaveAsMenuStripItemClickEvent);
             this.OpenMenuStripItem.Click += new EventHandler(HandleOpenMenuStripItemClickEvent);
             this.DataAccessMenuStripItem.Click += new EventHandler(HandleInsertDataAccessMenuStripItemClickEvent);
+            this.ExitMenuStripItem.Click += new EventHandler(HandleExitMenuStripItemClickEvent);
+            this.GacInstallMenuStripItem.Click += new EventHandler(HandleGACInstallMenuStripItemClickEvent);
+            this.EnvarMenuStripItem.Click += new EventHandler(HandleEnvironmentVariableMenuStripItemClickEvent);
+        }
+        #endregion
+
+        #region HandleEnvironmentVariableMenuStripItemClickEvent
+        private void HandleEnvironmentVariableMenuStripItemClickEvent(object sender, EventArgs e)
+        {
+            try
+            {
+                EnvironmentVariables.SetInstallationPathEnvironmentVariable(new ApplicationRunningDirectoryInfo(ApplicationOperatingMode.WindowsApplication).Path);
+                MessageBox.Show("Set environment variable completed !", "Completed !", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch
+            {
+                MessageBox.Show(string.Format("Unable to set environment variable \"{0}\" !", EnvironmentVariables.InstallationPathEnvironmentVariableName), "Error !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        #endregion
+
+        #region HandleGACInstallMenuStripItemClickEvent
+        private void HandleGACInstallMenuStripItemClickEvent(object sender, EventArgs e)
+        {
+            if (OpenGACAssemblyDialog.ShowDialog() == DialogResult.OK && OpenGACAssemblyDialog.FileNames.Length > 0)
+            {
+                try
+                {
+                    this.Cursor = Cursors.WaitCursor;
+                    foreach (string item in this.OpenGACAssemblyDialog.FileNames)
+                    {
+                        GacInstallation.Install(item);
+                    }
+                    this.Cursor = Cursors.Default;
+                    MessageBox.Show("Install Completed !", "Completed !", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch
+                {
+                    this.Cursor = Cursors.Default;
+                    MessageBox.Show("We cannot copy the file into GAC !", "Error !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+        #endregion
+
+        #region HandleExitMenuStripItemClickEvent
+        private void HandleExitMenuStripItemClickEvent(object sender, EventArgs e)
+        {
+            this.Close();
         }
         #endregion
 
@@ -133,6 +185,15 @@ namespace SourcePro.Csharp.Lab.Forms
                     this.TabPagingContainer.TabPages.Add(page);
                     page.Select();
                 }
+                if (!object.ReferenceEquals(_baseConfigure.SectionGroups[DatabaseSectionGroup.GroupName], null))
+                {
+                    this.SetMenuItemsEnabled(false, this.DataAccessMenuStripItem);
+                    this._dataAccessInserted = true;
+                    TabPage page = new TabPage("Database Access Configuration");
+                    page.Controls.Add(new DataAccessEditor() { Dock = DockStyle.Fill, BaseConfigure = this._baseConfigure });
+                    this.TabPagingContainer.TabPages.Add(page);
+                    page.Select();
+                }
                 this.SetMenuItemsEnabled(true, this.OperateMenuStripItem, this.SaveAsMenuStripItem, this.SaveMenuStripItem);
                 this.SetMenuItemsEnabled(false, this.NewMenuStripItem, this.OpenMenuStripItem);
             }
@@ -152,6 +213,10 @@ namespace SourcePro.Csharp.Lab.Forms
                         {
                             (item.Controls[0] as ConfigurationSourceEditor).ResetConfigurationSource(this.SaveAsDialog.FileName);
                         }
+                        if (item.Controls[0].GetType().Equals(typeof(DataAccessEditor)))
+                        {
+                            (item.Controls[0] as DataAccessEditor).ResetDatabaseConfiguration(this.SaveAsDialog.FileName);
+                        }
                     }
                 }
             }
@@ -168,6 +233,10 @@ namespace SourcePro.Csharp.Lab.Forms
                     if (item.Controls[0].GetType().Equals(typeof(ConfigurationSourceEditor)))
                     {
                         (item.Controls[0] as ConfigurationSourceEditor).ResetConfigurationSource();
+                    }
+                    if (item.Controls[0].GetType().Equals(typeof(DataAccessEditor)))
+                    {
+                        (item.Controls[0] as DataAccessEditor).ResetDatabaseConfiguration();
                     }
                 }
             }

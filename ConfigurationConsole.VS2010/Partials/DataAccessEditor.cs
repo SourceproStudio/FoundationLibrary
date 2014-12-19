@@ -20,11 +20,12 @@
 #endregion
 
 using System;
-using Config = System.Configuration.Configuration;
+using System.Drawing;
 using System.Windows.Forms;
 using SourcePro.Csharp.Lab.Forms;
-using System.Drawing;
+using SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration;
 using SourcePro.Csharp.Practices.FoundationLibrary.Data;
+using Config = System.Configuration.Configuration;
 
 namespace SourcePro.Csharp.Lab.Controls
 {
@@ -69,15 +70,148 @@ namespace SourcePro.Csharp.Lab.Controls
         {
             this.InitalizeProtectionsComboBox();
             this.RegisterControlsEvent();
+            this.InitializeControlsValues();
+        }
+        #endregion
+
+        #region InitializeProtectedProviderListView
+        private void InitializeProtectedProviderListView(DatabasePropertyProtectionSection configure)
+        {
+            if (!object.ReferenceEquals(configure, null) && !object.ReferenceEquals(configure.Protections, null))
+            {
+                foreach (DatabasePropertyProtectionElement item in configure.Protections)
+                {
+                    ListViewItem ctrlItem = new ListViewItem(item.Name);
+                    ctrlItem.SubItems.Add(new ListViewItem.ListViewSubItem() { Text = item.Type });
+                    this.DbProtectionListView.Items.Add(ctrlItem);
+                }
+            }
+        }
+        #endregion
+
+        #region InitializeDbProviderListView
+        private void InitializeDbProviderListView(DatabaseAccessProviderSection configure)
+        {
+            if (!object.ReferenceEquals(configure, null) && !object.ReferenceEquals(configure.Providers, null))
+            {
+                foreach (DatabaseAccessProviderElement item in configure.Providers)
+                {
+                    ListViewItem ctrlItem = new ListViewItem(item.Name);
+                    ctrlItem.SubItems.Add(new ListViewItem.ListViewSubItem() { Text = item.Type });
+                    this.DbProviderListView.Items.Add(ctrlItem);
+                }
+            }
+        }
+        #endregion
+
+        #region InitializeDbConnectionListView
+        private void InitializeDbConnectionListView(DatabaseConnectionSection configure)
+        {
+            if (!object.ReferenceEquals(configure, null) && !object.ReferenceEquals(configure.Connections, null))
+            {
+                foreach (DatabaseConnectionElement item in configure.Connections)
+                {
+                    ListViewItem ctrlItem = new ListViewItem(item.Name);
+                    #region Connection String Property
+                    string connectionString = item.ConnectionString;
+                    string connectionStringProtected = string.Empty;
+                    if (!object.ReferenceEquals(item.Protections, null) && !object.ReferenceEquals(item.Protections["connectionString"], null))
+                    {
+                        IsProtectedDatabasePropertyElement element = item.Protections["connectionString"];
+                        connectionString = element.ProtectedValue;
+                        connectionStringProtected = element.ProtectionName;
+                    }
+                    ctrlItem.SubItems.Add(new ListViewItem.ListViewSubItem() { Text = connectionString });
+                    ctrlItem.SubItems.Add(new ListViewItem.ListViewSubItem() { Text = connectionStringProtected });
+                    #endregion
+                    #region Command Timeout Property
+                    string commandTimeout = item.CommandTimeoutSeconds.ToString();
+                    string commandTimeoutProtected = string.Empty;
+                    if (!object.ReferenceEquals(item.Protections, null) && !object.ReferenceEquals(item.Protections["commandTimeoutSeconds"], null))
+                    {
+                        IsProtectedDatabasePropertyElement element = item.Protections["commandTimeoutSeconds"];
+                        commandTimeout = element.ProtectedValue;
+                        commandTimeoutProtected = element.ProtectionName;
+                    }
+                    ctrlItem.SubItems.Add(new ListViewItem.ListViewSubItem() { Text = commandTimeout });
+                    ctrlItem.SubItems.Add(new ListViewItem.ListViewSubItem() { Text = commandTimeoutProtected });
+                    #endregion
+                    #region Default Schema Name Property
+                    string schemaName = item.DefaultSechema;
+                    string schemaNameProtected = string.Empty;
+                    if (!object.ReferenceEquals(item.Protections, null) && !object.ReferenceEquals(item.Protections["defaultSechema"], null))
+                    {
+                        IsProtectedDatabasePropertyElement element = item.Protections["defaultSechema"];
+                        schemaName = element.ProtectedValue;
+                        schemaNameProtected = element.ProtectionName;
+                    }
+                    ctrlItem.SubItems.Add(new ListViewItem.ListViewSubItem() { Text = schemaName });
+                    ctrlItem.SubItems.Add(new ListViewItem.ListViewSubItem() { Text = schemaNameProtected });
+                    #endregion
+                    #region Provider's Name
+                    string providerName = item.Provider;
+                    string providerNameProtected = string.Empty;
+                    if (!object.ReferenceEquals(item.Protections, null) && !object.ReferenceEquals(item.Protections["provider"], null))
+                    {
+                        IsProtectedDatabasePropertyElement element = item.Protections["provider"];
+                        providerName = element.ProtectedValue;
+                        providerNameProtected = element.ProtectionName;
+                    }
+                    ctrlItem.SubItems.Add(new ListViewItem.ListViewSubItem() { Text = providerName });
+                    ctrlItem.SubItems.Add(new ListViewItem.ListViewSubItem() { Text = providerNameProtected });
+                    #endregion
+                    this.DbConnectionListView.Items.Add(ctrlItem);
+                }
+            }
+        }
+        #endregion
+
+        #region InitializeDefaultOptionsControls
+        private void InitializeDefaultOptionsControls(ListView dataSource,ComboBox target)
+        {
+            target.Items.Clear();
+            target.Items.Add("(none)");
+            foreach (ListViewItem item in dataSource.Items)
+                target.Items.Add(item.Text);
+        }
+        #endregion
+
+        #region InitializeDbDefaultOptions
+        private void InitializeDbDefaultOptions(DefaultDatabaseOptionsSection configure)
+        {
+            if (!object.ReferenceEquals(configure, null))
+            {
+                this.InitializeDefaultOptionsControls(this.DbConnectionListView, this.DefaultDbConnectionComboBox);
+                this.InitializeDefaultOptionsControls(this.DbProtectionListView, this.DefaultProtectionComboBox);
+                this.InitializeDefaultOptionsControls(this.DbProviderListView, this.DefaultDbProviderComboBox);
+                this.DefaultDbConnectionComboBox.Text = configure.DefaultDatabaseConnection;
+                this.DefaultDbProviderComboBox.Text = configure.DefaultDatabaseProvider;
+                this.DefaultProtectionComboBox.Text = configure.DefaultDatabaseProtection;
+            }
+        }
+        #endregion
+
+        #region InitializeControlsValues
+        private void InitializeControlsValues()
+        {
+            DatabaseSectionGroup dbConfigure = this.BaseConfigure.SectionGroups[DatabaseSectionGroup.GroupName] as DatabaseSectionGroup;
+            if (!object.ReferenceEquals(dbConfigure, null))
+            {
+                this.InitializeProtectedProviderListView(dbConfigure.DbProtection);
+                this.InitializeDbProviderListView(dbConfigure.DbProvider);
+                this.InitializeDbConnectionListView(dbConfigure.DbConnection);
+                this.InitializeDbDefaultOptions(dbConfigure.DbDefaultOptions);
+            }
         }
         #endregion
 
         #region RegisterControlsEvent
         private void RegisterControlsEvent()
         {
+            this.FlashingTimer.Tick += new EventHandler(HandleFlashingTimeTickEvent);
+
             this.BrowseDbProviderButton.Click += new EventHandler(HandleBrowseDbProviderTypesButtonClickEvent);
             this.SaveDbProviderButton.Click += new EventHandler(HandleSaveDbProviderButtonClickEvent);
-            this.FlashingTimer.Tick += new EventHandler(HandleFlashingTimeTickEvent);
             this.RemoveDbProviderButton.Click += new EventHandler(HandleRemoveDbProvidersButtonClickEvent);
 
             this.BrowseDbProtectionButton.Click += new EventHandler(HandleBrowseDbProtectedProviderTypesButtonClickEvent);
@@ -93,6 +227,49 @@ namespace SourcePro.Csharp.Lab.Controls
             this.DbProviderProtectionComboBox.DropDown += new EventHandler(HandleAllDbProtectedProviderDropDownEvent);
             this.SaveDbConnectionButton.Click += new EventHandler(HandleSaveDbConnectionButtonClickEvent);
             this.RemoveDbConnectionButton.Click += new EventHandler(HandleRemoveDbConnectionButtonClickEvent);
+
+            this.DefaultDbProviderComboBox.DropDown += new EventHandler(HandleDefaultProviderDropDownEvent);
+            this.DefaultProtectionComboBox.DropDown += new EventHandler(HandleDefaultProtectionDropDownEvent);
+            this.DefaultDbConnectionComboBox.DropDown += new EventHandler(HandleDefaultConnectionDropDownEvent);
+        }
+        #endregion
+
+        #region HandleDefaultConnectionDropDownEvent
+        private void HandleDefaultConnectionDropDownEvent(object sender, EventArgs e)
+        {
+            this.DefaultDbConnectionComboBox.Items.Clear();
+            this.DefaultDbConnectionComboBox.Items.Add("(none)");
+            foreach (ListViewItem item in this.DbConnectionListView.Items)
+            {
+                if (object.ReferenceEquals(item.Tag, null))
+                    this.DefaultDbConnectionComboBox.Items.Add(item.Text);
+            }
+        }
+        #endregion
+
+        #region HandleDefaultProtectionDropDownEvent
+        private void HandleDefaultProtectionDropDownEvent(object sender, EventArgs e)
+        {
+            this.DefaultProtectionComboBox.Items.Clear();
+            this.DefaultProtectionComboBox.Items.Add("(none)");
+            foreach (ListViewItem item in this.DbProtectionListView.Items)
+            {
+                if (object.ReferenceEquals(item.Tag, null))
+                    this.DefaultProtectionComboBox.Items.Add(item.Text);
+            }
+        }
+        #endregion
+
+        #region HandleDefaultProviderDropDownEvent
+        private void HandleDefaultProviderDropDownEvent(object sender, EventArgs e)
+        {
+            this.DefaultDbProviderComboBox.Items.Clear();
+            this.DefaultDbProviderComboBox.Items.Add("(none)");
+            foreach (ListViewItem item in this.DbProviderListView.Items)
+            {
+                if (object.ReferenceEquals(item.Tag, null))
+                    this.DefaultDbProviderComboBox.Items.Add(item.Text);
+            }
         }
         #endregion
 
@@ -479,6 +656,203 @@ namespace SourcePro.Csharp.Lab.Controls
         {
             base.OnLoad(e);
             this.InitializeControls();
+        }
+        #endregion
+
+        #region ResetDatabaseProviderConfigure
+        private DatabaseAccessProviderSection ResetDatabaseProviderConfigure(out bool isEmpty)
+        {
+            isEmpty = object.ReferenceEquals(this.BaseConfigure.SectionGroups[DatabaseSectionGroup.GroupName], null)
+                || object.ReferenceEquals(this.BaseConfigure.SectionGroups[DatabaseSectionGroup.GroupName].Sections[DatabaseAccessProviderSection.SectionName], null);
+            DatabaseAccessProviderSection configure = null;
+            if (isEmpty)
+            {
+                configure = new DatabaseAccessProviderSection();
+                configure.Providers = new DatabaseAccessProviderElementCollection();
+            }
+            else
+            {
+                configure = this.BaseConfigure.SectionGroups[DatabaseSectionGroup.GroupName].Sections[DatabaseAccessProviderSection.SectionName] as DatabaseAccessProviderSection;
+                if (!object.ReferenceEquals(configure.Providers, null)) configure.Providers.Clear();
+                else configure.Providers = new DatabaseAccessProviderElementCollection();
+            }
+            foreach (ListViewItem item in this.DbProviderListView.Items)
+            {
+                if (object.ReferenceEquals(item.Tag, null))
+                {
+                    configure.Providers.Add(new DatabaseAccessProviderElement() { Name = item.Text, Type = item.SubItems[1].Text });
+                }
+            }
+            this.ProtectedConfigure(configure);
+            return configure;
+        }
+        #endregion
+
+        #region ResetDatabaseProtectionConfigure
+        private DatabasePropertyProtectionSection ResetDatabaseProtectionConfigure(out bool isEmpty)
+        {
+            isEmpty = object.ReferenceEquals(this.BaseConfigure.SectionGroups[DatabaseSectionGroup.GroupName], null)
+                || object.ReferenceEquals(this.BaseConfigure.SectionGroups[DatabaseSectionGroup.GroupName].Sections[DatabasePropertyProtectionSection.SectionName], null);
+            DatabasePropertyProtectionSection configure = null;
+            if (isEmpty)
+            {
+                configure = new DatabasePropertyProtectionSection() { Protections = new DatabasePropertyProtectionElementCollection() };
+            }
+            else
+            {
+                configure = this.BaseConfigure.SectionGroups[DatabaseSectionGroup.GroupName].Sections[DatabasePropertyProtectionSection.SectionName] as DatabasePropertyProtectionSection;
+                if (!object.ReferenceEquals(configure.Protections, null)) configure.Protections.Clear();
+                else configure.Protections = new DatabasePropertyProtectionElementCollection();
+            }
+            foreach (ListViewItem item in this.DbProtectionListView.Items)
+            {
+                if (object.ReferenceEquals(item.Tag, null))
+                {
+                    configure.Protections.Add(new DatabasePropertyProtectionElement() { Name = item.Text, Type = item.SubItems[1].Text });
+                }
+            }
+            this.ProtectedConfigure(configure);
+            return configure;
+        }
+        #endregion
+
+        #region ResetDatabaseConnectionConfigure
+        private DatabaseConnectionSection ResetDatabaseConnectionConfigure(out bool isEmpty)
+        {
+            isEmpty = object.ReferenceEquals(this.BaseConfigure.SectionGroups[DatabaseSectionGroup.GroupName], null)
+                || object.ReferenceEquals(this.BaseConfigure.SectionGroups[DatabaseSectionGroup.GroupName].Sections[DatabaseConnectionSection.SectionName], null);
+            DatabaseConnectionSection configure = null;
+            if (isEmpty)
+            {
+                configure = new DatabaseConnectionSection() { Connections = new DatabaseConnectionElementCollection() };
+            }
+            else
+            {
+                configure = this.BaseConfigure.SectionGroups[DatabaseSectionGroup.GroupName].Sections[DatabaseConnectionSection.SectionName] as DatabaseConnectionSection;
+                if (!object.ReferenceEquals(configure.Connections, null)) configure.Connections.Clear();
+                else configure.Connections = new DatabaseConnectionElementCollection();
+            }
+            foreach (ListViewItem item in this.DbConnectionListView.Items)
+            {
+                if (object.ReferenceEquals(item.Tag, null))
+                {
+                    DatabaseConnectionElement element = new DatabaseConnectionElement()
+                    {
+                        Name = item.Text,
+                        ConnectionString = string.IsNullOrWhiteSpace(item.SubItems[2].Text) ? item.SubItems[1].Text : string.Empty,
+                        CommandTimeoutSeconds = string.IsNullOrWhiteSpace(item.SubItems[4].Text) ? int.Parse(item.SubItems[3].Text) : 0,
+                        DefaultSechema = string.IsNullOrWhiteSpace(item.SubItems[6].Text) ? item.SubItems[5].Text : string.Empty,
+                        Provider = string.IsNullOrWhiteSpace(item.SubItems[8].Text) ? item.SubItems[7].Text : string.Empty,
+                        Protections = new IsProtectedDatabasePropertyElementCollection()
+                    };
+                    if (!string.IsNullOrWhiteSpace(item.SubItems[2].Text))
+                        element.Protections.Add(new IsProtectedDatabasePropertyElement() { PropertyName = "connectionString", ProtectedValue = item.SubItems[1].Text, ProtectionName = item.SubItems[2].Text });
+                    if (!string.IsNullOrWhiteSpace(item.SubItems[4].Text))
+                        element.Protections.Add(new IsProtectedDatabasePropertyElement() { PropertyName = "commandTimeoutSeconds", ProtectedValue = item.SubItems[3].Text, ProtectionName = item.SubItems[4].Text });
+                    if (!string.IsNullOrWhiteSpace(item.SubItems[6].Text))
+                        element.Protections.Add(new IsProtectedDatabasePropertyElement() { PropertyName = "defaultSechema", ProtectedValue = item.SubItems[5].Text, ProtectionName = item.SubItems[6].Text });
+                    if (!string.IsNullOrWhiteSpace(item.SubItems[8].Text))
+                        element.Protections.Add(new IsProtectedDatabasePropertyElement() { PropertyName = "provider", ProtectedValue = item.SubItems[7].Text, ProtectionName = item.SubItems[8].Text });
+                    configure.Connections.Add(element);
+                }
+            }
+            this.ProtectedConfigure(configure);
+            return configure;
+        }
+        #endregion
+
+        #region ResetDatabaseDefaultConfigure
+        private DefaultDatabaseOptionsSection ResetDatabaseDefaultConfigure(out bool isEmpty)
+        {
+            isEmpty = object.ReferenceEquals(this.BaseConfigure.SectionGroups[DatabaseSectionGroup.GroupName], null)
+                || object.ReferenceEquals(this.BaseConfigure.SectionGroups[DatabaseSectionGroup.GroupName].Sections[DefaultDatabaseOptionsSection.SectionName], null);
+            DefaultDatabaseOptionsSection configure = null;
+            if (isEmpty)
+            {
+                configure = new DefaultDatabaseOptionsSection();
+            }
+            else configure = this.BaseConfigure.SectionGroups[DatabaseSectionGroup.GroupName].Sections[DefaultDatabaseOptionsSection.SectionName] as DefaultDatabaseOptionsSection;
+            configure.DefaultDatabaseConnection = string.IsNullOrWhiteSpace(this.DefaultDbConnectionComboBox.Text) || this.DefaultDbConnectionComboBox.Text.Equals("(none)")
+                ? string.Empty : this.DefaultDbConnectionComboBox.Text;
+            configure.DefaultDatabaseProtection = string.IsNullOrWhiteSpace(this.DefaultProtectionComboBox.Text) || this.DefaultProtectionComboBox.Text.Equals("(none)")
+                ? string.Empty : this.DefaultProtectionComboBox.Text;
+            configure.DefaultDatabaseProvider = string.IsNullOrWhiteSpace(this.DefaultDbProviderComboBox.Text) || this.DefaultDbProviderComboBox.Text.Equals("(none)")
+                ? string.Empty : this.DefaultDbProviderComboBox.Text;
+            this.ProtectedConfigure(configure);
+            return configure;
+        }
+        #endregion
+
+        #region ProtectedConfigure
+        private void ProtectedConfigure(System.Configuration.ConfigurationSection configure)
+        {
+            string protectedProviderName = string.IsNullOrWhiteSpace(this.ProtectionProviderSelectionComboBox.Text) || this.ProtectionProviderSelectionComboBox.Text.Equals("(none)")
+                ? string.Empty : this.ProtectionProviderSelectionComboBox.Text;
+            if (string.IsNullOrWhiteSpace(protectedProviderName))
+            {
+                if (configure.SectionInformation.IsProtected)
+                {
+                    configure.SectionInformation.UnprotectSection();
+                    configure.SectionInformation.ForceSave = true;
+                }
+            }
+            else
+            {
+                if (!configure.SectionInformation.IsProtected)
+                {
+                    configure.SectionInformation.ProtectSection(protectedProviderName);
+                    configure.SectionInformation.ForceSave = true;
+                }
+            }
+        }
+        #endregion
+
+        #region ResetDatabaseConfigure
+        private DatabaseSectionGroup ResetDatabaseConfigure(out bool isEmpty)
+        {
+            isEmpty = object.ReferenceEquals(this.BaseConfigure.SectionGroups[DatabaseSectionGroup.GroupName], null);
+            DatabaseSectionGroup configure = null;
+            bool dbConnectionIsEmpty = false;
+            DatabaseConnectionSection dbConnectionConfigure = this.ResetDatabaseConnectionConfigure(out dbConnectionIsEmpty);
+            bool dbProviderIsEmpty = false;
+            DatabaseAccessProviderSection dbProviderConfigure = this.ResetDatabaseProviderConfigure(out dbProviderIsEmpty);
+            bool dbProtectionIsEmpty = false;
+            DatabasePropertyProtectionSection dbProtectionConfigure = this.ResetDatabaseProtectionConfigure(out dbProtectionIsEmpty);
+            bool dbDefaultIsEmpty = false;
+            DefaultDatabaseOptionsSection dbDefaultConfigure = this.ResetDatabaseDefaultConfigure(out dbDefaultIsEmpty);
+            if (isEmpty)
+            {
+                configure = new DatabaseSectionGroup();
+                this.BaseConfigure.SectionGroups.Add(DatabaseSectionGroup.GroupName, configure);
+            }
+            else
+            {
+                configure = this.BaseConfigure.SectionGroups[DatabaseSectionGroup.GroupName] as DatabaseSectionGroup;
+            }
+            if (dbConnectionIsEmpty)
+                configure.Add(DatabaseConnectionSection.SectionName, dbConnectionConfigure);
+            if (dbProviderIsEmpty)
+                configure.Add(DatabaseAccessProviderSection.SectionName, dbProviderConfigure);
+            if (dbProtectionIsEmpty)
+                configure.Add(DatabasePropertyProtectionSection.SectionName, dbProtectionConfigure);
+            if (dbDefaultIsEmpty)
+                configure.Add(DefaultDatabaseOptionsSection.SectionName, dbDefaultConfigure);
+            return configure;
+        }
+        #endregion
+
+        #region ResetDatabaseConfiguration
+        public void ResetDatabaseConfiguration(string path = "")
+        {
+            bool dbConfigureIsEmpty = false;
+            //DatabaseSectionGroup configure = this.ResetDatabaseConfigure(out dbConfigureIsEmpty);
+            //if (dbConfigureIsEmpty) this.BaseConfigure.SectionGroups.Add(DatabaseSectionGroup.GroupName, configure);
+            this.ResetDatabaseConfigure(out dbConfigureIsEmpty);
+            if (string.IsNullOrWhiteSpace(path))
+            {
+                this.BaseConfigure.Save(System.Configuration.ConfigurationSaveMode.Full);
+            }
+            else this.BaseConfigure.SaveAs(path, System.Configuration.ConfigurationSaveMode.Full);
         }
         #endregion
     }

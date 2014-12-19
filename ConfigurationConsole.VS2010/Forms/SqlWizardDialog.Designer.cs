@@ -76,7 +76,7 @@
             // SqlConnectionBuilderPropertyGrid
             // 
             this.SqlConnectionBuilderPropertyGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SqlConnectionBuilderPropertyGrid.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SqlConnectionBuilderPropertyGrid.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SqlConnectionBuilderPropertyGrid.Location = new System.Drawing.Point(0, 24);
             this.SqlConnectionBuilderPropertyGrid.Name = "SqlConnectionBuilderPropertyGrid";
             this.SqlConnectionBuilderPropertyGrid.PropertySort = System.Windows.Forms.PropertySort.Alphabetical;
@@ -93,7 +93,6 @@
             this.Controls.Add(this.MainMenuStrip);
             this.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.MainMenuStrip = this.MainMenuStrip;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "SqlWizardDialog";
             this.ShowIcon = false;

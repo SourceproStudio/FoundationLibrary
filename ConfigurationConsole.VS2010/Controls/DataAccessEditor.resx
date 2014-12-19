@@ -124,12 +124,12 @@
   <data name="RemoveDbProviderButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEPSURBVDhPzZE9awJhEIT3bCQQsJaARRqLVCkFQX9DOu0k
-        pbUE7IQUWgs2gp21NvobrOxsxMYqkFiaxM87n1f38DwPvUocGN7d2ZlduJP7hiOShlloqRQetsjLWmSy
-        EplSv6ocDgSiW5EWlx1D6jbag46vA/Mbl+dwAf/hH1pex5eBMb4RGejlFmyYGm3Im1BbMDBYBCpctHXB
-        JwvLpta+xhtR+zkwpwh/eQInC5j90GfUfgoMjwQ6rtmQvgnrPq3PG9PYEWx+58LSa6afwW+ftsZb1NgB
-        DJ755yOv0ZBrPdj163jHLElqfH89x+aN34j2axig22QKGt8veIIlrpmvXHVp+iAN7wf15V96I4jsAPOj
-        vkoAi9ObAAAAAElFTkSuQmCC
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAERSURBVDhPzZG/S0JxFMWPLSEIzhI4tDg4OQaB/g1ttUVj
+        swRugUPNQkvg5qxL/g1ObS3S0hRYo+aPZ08/39eV3ns9nk7SgcP33nPPuRfe0//GSjqFNZgxaXf4UtmT
+        XhfSG3XF5N1A4PBbanN55UjdQcvaeDswn82lMZzBKfxCu7BxOjAWltLALrfhg6vRnnmLZksGhgyBWy76
+        tqDJwoarrb/nPTD7X2A+IfweCkQWMPugr5o9Cgw5At2N2ZH+EbZiWp83b7FfsPmKC/Owmf4TjmKah/fa
+        Yj9gcMw/fwkbHbn2BHtxHe+QJSWLB9fP2byMG9Emjgm6T+bS4sGCI1jnmvvKdxu6PknDe0Od/kv3BGkN
+        2b2+Ow7ovJIAAAAASUVORK5CYII=
 </value>
   </data>
   <metadata name="DbProtectionToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -138,12 +138,12 @@
   <data name="RemoveDbProtectionButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEKSURBVDhPzZExa8JwEMVPl1IQnEuhg4uDk6Mg1M/gpps4
-        OpeCW6GDzoKLkM1ZF/0MTm4uxcVJqI5aFdPE39+eGNMQM4kPHv+7d+/dQSL3DVckDwswplJ0OCIZW2QK
-        Z9RZlaOBwMOviMVl15C6i/ao4+vAXOTyCm7hBv6glXUcDoxPBEZ62YJtU6ONeV/UFgwMMQIfmB1d8MnC
-        uqm1b/LG1f4fmHOE557AxQJmC/pXtV8CQ4JA72Q2pO/Alk8b8iY1dgabq1zYec30S/jt0/Z4axr7A4MU
-        g4nXaMi1Aez7dbxfLElr/Hi9hGgHGNeGAbpDpqLx44Jn+MY185UbJ5o+SMP7Th3+S28EkQMzUr5tOTTD
-        iwAAAABJRU5ErkJggg==
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAENSURBVDhPzZExa8JwEMUvLkUoOIvQwaWDU0ehoJ/Brd2K
+        o3MR3AoOdRa6CG7Odmk/Qyc3l9Klk9A6VtuSmPR36QWTNKRO4oPH/+7de3eQyGEjEDmHTeiYtDt8kZor
+        8gJfqc9M3g0EjjYiYy4HSuoJWtHG/wNzi8sf8At+wjXapY3zgbHsiTzZ5TG80xptxntitmxgcAjccNG3
+        BX0W9rS2fsBbMPtfYK4TXsQCiQXM3ukbZk8CwzGBaWRW0o/gMKU98pYstgWb21z4jpvpl/Atpbl4Oxb7
+        BYMqg3ncqOTaA7xP63ifWXJq8fD6BaKXYVwpM3SfzJXFwwUVeM01/cq3EbXP0vB2qfN/6Z4g8gMQxL5a
+        uW2qdAAAAABJRU5ErkJggg==
 </value>
   </data>
   <metadata name="DbConnectionToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -152,11 +152,12 @@
   <data name="RemoveDbConnectionButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADzSURBVDhPzZEti0JBGIVHiywIZhE2bDGYjIKgv8HmNjFu
-        FsEmGDQLFsFm1qK/wWSziMUk7G5cv1i5+ox7RL17/UjigYeZOe85M3CveW5tjUlCGnyy7pdjTAwmMIW4
-        7PtEIQAtXt5a2LfhRePbIpyBH1jBEhbwrvF1EQzDQC+3oKH9kPVVMW8R8BEsg6NSBUp2r3ON1a/4fxFI
-        wOyk4L7gC1KKn4tAkGHnEFahCXWX12cNqXYUgzysXeFv+HR5v/Ch2p8YvGGOToMK96Dr4Y8hqvr+9Sxs
-        PIJzi4fvQE71/QURKID9ytUD9nzBK7K//ksfJGN2oLG+qe+KT8kAAAAASUVORK5CYII=
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEESURBVDhPzZG/S0JhFIbPbREhcA6hwaWhqVEI8m9wsy0a
+        m0NoExxyFlyCuzXron+DU1tLtDQF2pg/wrz6fLdXvN0+1El64eU73znPez641/63FmbnuIQDtXZXZHY6
+        N3vFb9Rnau8mAhmCIS8vnKkf6WU13i7gMqFPPMUTPKZ3qfFmAR4R6OvlELdUP3EeC/MLIACs4UihOgvv
+        XK17g/NA+F8BF4HeE4H0giH3C+G/BXAI0F7BCjzgZqrX48wpthabrxl+peAPPEj1ZrA3iv2IQYHBcxIU
+        3MUdT/+FJSeKx69XaH57wJGzpx+RuVI8XpDHtwzcV75f2d19Pdgq9eZfuieZLQFatr6Cx9ltAQAAAABJ
+        RU5ErkJggg==
 </value>
   </data>
   <metadata name="AssemblyOpenDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">

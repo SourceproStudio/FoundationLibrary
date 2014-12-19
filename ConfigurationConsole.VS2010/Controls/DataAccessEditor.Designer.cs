@@ -64,33 +64,27 @@
             this.RemoveDbProtectionButton = new System.Windows.Forms.ToolStripButton();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.DbConnectionSplitterContainer = new System.Windows.Forms.SplitContainer();
+            this.SaveDbConnectionButton = new System.Windows.Forms.Button();
+            this.SplitterLine03 = new System.Windows.Forms.Panel();
+            this.DbProviderComboBox = new System.Windows.Forms.ComboBox();
+            this.DefaultSchemaNameInput = new System.Windows.Forms.TextBox();
+            this.DbProviderProtectionComboBox = new System.Windows.Forms.ComboBox();
+            this.DefaultSchemaNameProtectionComboBox = new System.Windows.Forms.ComboBox();
+            this.CommandTimeoutProtectionComboBox = new System.Windows.Forms.ComboBox();
+            this.CommandTimeoutNumUpDown = new System.Windows.Forms.NumericUpDown();
+            this.DbConnectionStringProtectionComboBox = new System.Windows.Forms.ComboBox();
             this.BuildSQLConnectionStringButton = new System.Windows.Forms.Button();
+            this.DescriptionLabel09 = new System.Windows.Forms.Label();
+            this.DescriptionLabel11 = new System.Windows.Forms.Label();
+            this.DescriptionLabel13 = new System.Windows.Forms.Label();
+            this.DescriptionLabel12 = new System.Windows.Forms.Label();
+            this.DescriptionLabel10 = new System.Windows.Forms.Label();
+            this.DescriptionLabel08 = new System.Windows.Forms.Label();
+            this.DescriptionLabel07 = new System.Windows.Forms.Label();
             this.DescriptionLabel06 = new System.Windows.Forms.Label();
             this.DbConnectionStringInput = new System.Windows.Forms.TextBox();
             this.DbConnectionIdentifierInput = new System.Windows.Forms.TextBox();
             this.DescriptionLabel05 = new System.Windows.Forms.Label();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.AssemblyOpenDialog = new System.Windows.Forms.OpenFileDialog();
-            this.FlashingTimer = new System.Windows.Forms.Timer(this.components);
-            this.ButtonTooltip = new System.Windows.Forms.ToolTip(this.components);
-            this.DescriptionLabel07 = new System.Windows.Forms.Label();
-            this.DbConnectionStringProtectionComboBox = new System.Windows.Forms.ComboBox();
-            this.DescriptionLabel08 = new System.Windows.Forms.Label();
-            this.CommandTimeoutNumUpDown = new System.Windows.Forms.NumericUpDown();
-            this.DescriptionLabel09 = new System.Windows.Forms.Label();
-            this.CommandTimeoutProtectionComboBox = new System.Windows.Forms.ComboBox();
-            this.DescriptionLabel10 = new System.Windows.Forms.Label();
-            this.DefaultSchemaNameInput = new System.Windows.Forms.TextBox();
-            this.DescriptionLabel11 = new System.Windows.Forms.Label();
-            this.DefaultSchemaNameProtectionComboBox = new System.Windows.Forms.ComboBox();
-            this.DescriptionLabel12 = new System.Windows.Forms.Label();
-            this.DbProviderComboBox = new System.Windows.Forms.ComboBox();
-            this.DescriptionLabel13 = new System.Windows.Forms.Label();
-            this.DbProviderProtectionComboBox = new System.Windows.Forms.ComboBox();
-            this.SplitterLine03 = new System.Windows.Forms.Panel();
-            this.SaveDbConnectionButton = new System.Windows.Forms.Button();
-            this.DbConnectionToolStrip = new System.Windows.Forms.ToolStrip();
-            this.RemoveDbConnectionButton = new System.Windows.Forms.ToolStripButton();
             this.DbConnectionListView = new System.Windows.Forms.ListView();
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -101,6 +95,18 @@
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DbConnectionToolStrip = new System.Windows.Forms.ToolStrip();
+            this.RemoveDbConnectionButton = new System.Windows.Forms.ToolStripButton();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.AssemblyOpenDialog = new System.Windows.Forms.OpenFileDialog();
+            this.FlashingTimer = new System.Windows.Forms.Timer(this.components);
+            this.ButtonTooltip = new System.Windows.Forms.ToolTip(this.components);
+            this.DescriptionLabel14 = new System.Windows.Forms.Label();
+            this.DefaultDbProviderComboBox = new System.Windows.Forms.ComboBox();
+            this.DescriptionLabel15 = new System.Windows.Forms.Label();
+            this.DefaultProtectionComboBox = new System.Windows.Forms.ComboBox();
+            this.DescriptionLabel16 = new System.Windows.Forms.Label();
+            this.DefaultDbConnectionComboBox = new System.Windows.Forms.ComboBox();
             this.CaptionPanel.SuspendLayout();
             this.TabPagingContainer.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -122,6 +128,7 @@
             this.DbConnectionSplitterContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CommandTimeoutNumUpDown)).BeginInit();
             this.DbConnectionToolStrip.SuspendLayout();
+            this.tabPage6.SuspendLayout();
             this.SuspendLayout();
             // 
             // CaptionPanel
@@ -539,18 +546,177 @@
             this.DbConnectionSplitterContainer.SplitterWidth = 2;
             this.DbConnectionSplitterContainer.TabIndex = 0;
             // 
+            // SaveDbConnectionButton
+            // 
+            this.SaveDbConnectionButton.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.SaveDbConnectionButton.FlatAppearance.BorderSize = 0;
+            this.SaveDbConnectionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveDbConnectionButton.Location = new System.Drawing.Point(11, 516);
+            this.SaveDbConnectionButton.Name = "SaveDbConnectionButton";
+            this.SaveDbConnectionButton.Size = new System.Drawing.Size(50, 23);
+            this.SaveDbConnectionButton.TabIndex = 10;
+            this.SaveDbConnectionButton.Text = "OK";
+            this.SaveDbConnectionButton.UseVisualStyleBackColor = false;
+            // 
+            // SplitterLine03
+            // 
+            this.SplitterLine03.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SplitterLine03.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.SplitterLine03.Location = new System.Drawing.Point(11, 508);
+            this.SplitterLine03.Name = "SplitterLine03";
+            this.SplitterLine03.Size = new System.Drawing.Size(220, 2);
+            this.SplitterLine03.TabIndex = 9;
+            // 
+            // DbProviderComboBox
+            // 
+            this.DbProviderComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DbProviderComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.DbProviderComboBox.FormattingEnabled = true;
+            this.DbProviderComboBox.Location = new System.Drawing.Point(11, 416);
+            this.DbProviderComboBox.Name = "DbProviderComboBox";
+            this.DbProviderComboBox.Size = new System.Drawing.Size(220, 23);
+            this.DbProviderComboBox.TabIndex = 8;
+            // 
+            // DefaultSchemaNameInput
+            // 
+            this.DefaultSchemaNameInput.Location = new System.Drawing.Point(11, 311);
+            this.DefaultSchemaNameInput.Name = "DefaultSchemaNameInput";
+            this.DefaultSchemaNameInput.Size = new System.Drawing.Size(238, 21);
+            this.DefaultSchemaNameInput.TabIndex = 7;
+            this.DefaultSchemaNameInput.Text = "dbo";
+            // 
+            // DbProviderProtectionComboBox
+            // 
+            this.DbProviderProtectionComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DbProviderProtectionComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.DbProviderProtectionComboBox.FormattingEnabled = true;
+            this.DbProviderProtectionComboBox.Location = new System.Drawing.Point(11, 459);
+            this.DbProviderProtectionComboBox.Name = "DbProviderProtectionComboBox";
+            this.DbProviderProtectionComboBox.Size = new System.Drawing.Size(220, 23);
+            this.DbProviderProtectionComboBox.TabIndex = 6;
+            // 
+            // DefaultSchemaNameProtectionComboBox
+            // 
+            this.DefaultSchemaNameProtectionComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DefaultSchemaNameProtectionComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.DefaultSchemaNameProtectionComboBox.FormattingEnabled = true;
+            this.DefaultSchemaNameProtectionComboBox.Location = new System.Drawing.Point(11, 353);
+            this.DefaultSchemaNameProtectionComboBox.Name = "DefaultSchemaNameProtectionComboBox";
+            this.DefaultSchemaNameProtectionComboBox.Size = new System.Drawing.Size(220, 23);
+            this.DefaultSchemaNameProtectionComboBox.TabIndex = 6;
+            // 
+            // CommandTimeoutProtectionComboBox
+            // 
+            this.CommandTimeoutProtectionComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CommandTimeoutProtectionComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CommandTimeoutProtectionComboBox.FormattingEnabled = true;
+            this.CommandTimeoutProtectionComboBox.Location = new System.Drawing.Point(11, 244);
+            this.CommandTimeoutProtectionComboBox.Name = "CommandTimeoutProtectionComboBox";
+            this.CommandTimeoutProtectionComboBox.Size = new System.Drawing.Size(220, 23);
+            this.CommandTimeoutProtectionComboBox.TabIndex = 6;
+            // 
+            // CommandTimeoutNumUpDown
+            // 
+            this.CommandTimeoutNumUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CommandTimeoutNumUpDown.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CommandTimeoutNumUpDown.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.CommandTimeoutNumUpDown.Location = new System.Drawing.Point(11, 202);
+            this.CommandTimeoutNumUpDown.Name = "CommandTimeoutNumUpDown";
+            this.CommandTimeoutNumUpDown.Size = new System.Drawing.Size(220, 21);
+            this.CommandTimeoutNumUpDown.TabIndex = 5;
+            // 
+            // DbConnectionStringProtectionComboBox
+            // 
+            this.DbConnectionStringProtectionComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DbConnectionStringProtectionComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.DbConnectionStringProtectionComboBox.FormattingEnabled = true;
+            this.DbConnectionStringProtectionComboBox.Location = new System.Drawing.Point(11, 136);
+            this.DbConnectionStringProtectionComboBox.Name = "DbConnectionStringProtectionComboBox";
+            this.DbConnectionStringProtectionComboBox.Size = new System.Drawing.Size(220, 23);
+            this.DbConnectionStringProtectionComboBox.TabIndex = 4;
+            // 
             // BuildSQLConnectionStringButton
             // 
             this.BuildSQLConnectionStringButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BuildSQLConnectionStringButton.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BuildSQLConnectionStringButton.FlatAppearance.BorderSize = 0;
             this.BuildSQLConnectionStringButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BuildSQLConnectionStringButton.Location = new System.Drawing.Point(200, 96);
+            this.BuildSQLConnectionStringButton.Location = new System.Drawing.Point(191, 96);
             this.BuildSQLConnectionStringButton.Name = "BuildSQLConnectionStringButton";
             this.BuildSQLConnectionStringButton.Size = new System.Drawing.Size(40, 21);
             this.BuildSQLConnectionStringButton.TabIndex = 3;
             this.BuildSQLConnectionStringButton.Text = "SQL";
             this.BuildSQLConnectionStringButton.UseVisualStyleBackColor = false;
+            // 
+            // DescriptionLabel09
+            // 
+            this.DescriptionLabel09.AutoSize = true;
+            this.DescriptionLabel09.Location = new System.Drawing.Point(8, 226);
+            this.DescriptionLabel09.Name = "DescriptionLabel09";
+            this.DescriptionLabel09.Size = new System.Drawing.Size(172, 15);
+            this.DescriptionLabel09.TabIndex = 2;
+            this.DescriptionLabel09.Text = "Command Timeout Protection";
+            // 
+            // DescriptionLabel11
+            // 
+            this.DescriptionLabel11.AutoSize = true;
+            this.DescriptionLabel11.Location = new System.Drawing.Point(8, 335);
+            this.DescriptionLabel11.Name = "DescriptionLabel11";
+            this.DescriptionLabel11.Size = new System.Drawing.Size(190, 15);
+            this.DescriptionLabel11.TabIndex = 2;
+            this.DescriptionLabel11.Text = "Default Schema Name Protection";
+            // 
+            // DescriptionLabel13
+            // 
+            this.DescriptionLabel13.AutoSize = true;
+            this.DescriptionLabel13.Location = new System.Drawing.Point(8, 442);
+            this.DescriptionLabel13.Name = "DescriptionLabel13";
+            this.DescriptionLabel13.Size = new System.Drawing.Size(167, 15);
+            this.DescriptionLabel13.TabIndex = 2;
+            this.DescriptionLabel13.Text = "Database Provider Protection";
+            // 
+            // DescriptionLabel12
+            // 
+            this.DescriptionLabel12.AutoSize = true;
+            this.DescriptionLabel12.Location = new System.Drawing.Point(8, 400);
+            this.DescriptionLabel12.Name = "DescriptionLabel12";
+            this.DescriptionLabel12.Size = new System.Drawing.Size(109, 15);
+            this.DescriptionLabel12.TabIndex = 2;
+            this.DescriptionLabel12.Text = "Database Provider";
+            // 
+            // DescriptionLabel10
+            // 
+            this.DescriptionLabel10.AutoSize = true;
+            this.DescriptionLabel10.Location = new System.Drawing.Point(8, 293);
+            this.DescriptionLabel10.Name = "DescriptionLabel10";
+            this.DescriptionLabel10.Size = new System.Drawing.Size(132, 15);
+            this.DescriptionLabel10.TabIndex = 2;
+            this.DescriptionLabel10.Text = "Default Schema Name";
+            // 
+            // DescriptionLabel08
+            // 
+            this.DescriptionLabel08.AutoSize = true;
+            this.DescriptionLabel08.Location = new System.Drawing.Point(8, 184);
+            this.DescriptionLabel08.Name = "DescriptionLabel08";
+            this.DescriptionLabel08.Size = new System.Drawing.Size(114, 15);
+            this.DescriptionLabel08.TabIndex = 2;
+            this.DescriptionLabel08.Text = "Command Timeout";
+            // 
+            // DescriptionLabel07
+            // 
+            this.DescriptionLabel07.AutoSize = true;
+            this.DescriptionLabel07.Location = new System.Drawing.Point(8, 118);
+            this.DescriptionLabel07.Name = "DescriptionLabel07";
+            this.DescriptionLabel07.Size = new System.Drawing.Size(220, 15);
+            this.DescriptionLabel07.TabIndex = 2;
+            this.DescriptionLabel07.Text = "Database Connection String Protection";
             // 
             // DescriptionLabel06
             // 
@@ -567,7 +733,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DbConnectionStringInput.Location = new System.Drawing.Point(11, 96);
             this.DbConnectionStringInput.Name = "DbConnectionStringInput";
-            this.DbConnectionStringInput.Size = new System.Drawing.Size(188, 21);
+            this.DbConnectionStringInput.Size = new System.Drawing.Size(179, 21);
             this.DbConnectionStringInput.TabIndex = 1;
             // 
             // DbConnectionIdentifierInput
@@ -576,7 +742,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DbConnectionIdentifierInput.Location = new System.Drawing.Point(11, 34);
             this.DbConnectionIdentifierInput.Name = "DbConnectionIdentifierInput";
-            this.DbConnectionIdentifierInput.Size = new System.Drawing.Size(229, 21);
+            this.DbConnectionIdentifierInput.Size = new System.Drawing.Size(220, 21);
             this.DbConnectionIdentifierInput.TabIndex = 1;
             // 
             // DescriptionLabel05
@@ -587,215 +753,6 @@
             this.DescriptionLabel05.Size = new System.Drawing.Size(177, 15);
             this.DescriptionLabel05.TabIndex = 0;
             this.DescriptionLabel05.Text = "Database Connection Identifier";
-            // 
-            // tabPage6
-            // 
-            this.tabPage6.Location = new System.Drawing.Point(4, 27);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(970, 440);
-            this.tabPage6.TabIndex = 3;
-            this.tabPage6.Text = "Default Options";
-            this.tabPage6.UseVisualStyleBackColor = true;
-            // 
-            // AssemblyOpenDialog
-            // 
-            this.AssemblyOpenDialog.DefaultExt = "dll";
-            this.AssemblyOpenDialog.FileName = "Assembly";
-            this.AssemblyOpenDialog.Filter = ".Net Assembly|*.dll|.Net Assembly|*.exe|All Files|*.*";
-            this.AssemblyOpenDialog.Multiselect = true;
-            this.AssemblyOpenDialog.Title = "Select A .Net Assembly";
-            // 
-            // FlashingTimer
-            // 
-            this.FlashingTimer.Interval = 300;
-            // 
-            // ButtonTooltip
-            // 
-            this.ButtonTooltip.ShowAlways = true;
-            this.ButtonTooltip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.ButtonTooltip.ToolTipTitle = "This Button";
-            // 
-            // DescriptionLabel07
-            // 
-            this.DescriptionLabel07.AutoSize = true;
-            this.DescriptionLabel07.Location = new System.Drawing.Point(8, 118);
-            this.DescriptionLabel07.Name = "DescriptionLabel07";
-            this.DescriptionLabel07.Size = new System.Drawing.Size(220, 15);
-            this.DescriptionLabel07.TabIndex = 2;
-            this.DescriptionLabel07.Text = "Database Connection String Protection";
-            // 
-            // DbConnectionStringProtectionComboBox
-            // 
-            this.DbConnectionStringProtectionComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.DbConnectionStringProtectionComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.DbConnectionStringProtectionComboBox.FormattingEnabled = true;
-            this.DbConnectionStringProtectionComboBox.Location = new System.Drawing.Point(11, 136);
-            this.DbConnectionStringProtectionComboBox.Name = "DbConnectionStringProtectionComboBox";
-            this.DbConnectionStringProtectionComboBox.Size = new System.Drawing.Size(229, 23);
-            this.DbConnectionStringProtectionComboBox.TabIndex = 4;
-            // 
-            // DescriptionLabel08
-            // 
-            this.DescriptionLabel08.AutoSize = true;
-            this.DescriptionLabel08.Location = new System.Drawing.Point(8, 184);
-            this.DescriptionLabel08.Name = "DescriptionLabel08";
-            this.DescriptionLabel08.Size = new System.Drawing.Size(114, 15);
-            this.DescriptionLabel08.TabIndex = 2;
-            this.DescriptionLabel08.Text = "Command Timeout";
-            // 
-            // CommandTimeoutNumUpDown
-            // 
-            this.CommandTimeoutNumUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.CommandTimeoutNumUpDown.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CommandTimeoutNumUpDown.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.CommandTimeoutNumUpDown.Location = new System.Drawing.Point(11, 202);
-            this.CommandTimeoutNumUpDown.Name = "CommandTimeoutNumUpDown";
-            this.CommandTimeoutNumUpDown.Size = new System.Drawing.Size(229, 21);
-            this.CommandTimeoutNumUpDown.TabIndex = 5;
-            // 
-            // DescriptionLabel09
-            // 
-            this.DescriptionLabel09.AutoSize = true;
-            this.DescriptionLabel09.Location = new System.Drawing.Point(8, 226);
-            this.DescriptionLabel09.Name = "DescriptionLabel09";
-            this.DescriptionLabel09.Size = new System.Drawing.Size(172, 15);
-            this.DescriptionLabel09.TabIndex = 2;
-            this.DescriptionLabel09.Text = "Command Timeout Protection";
-            // 
-            // CommandTimeoutProtectionComboBox
-            // 
-            this.CommandTimeoutProtectionComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.CommandTimeoutProtectionComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CommandTimeoutProtectionComboBox.FormattingEnabled = true;
-            this.CommandTimeoutProtectionComboBox.Location = new System.Drawing.Point(11, 244);
-            this.CommandTimeoutProtectionComboBox.Name = "CommandTimeoutProtectionComboBox";
-            this.CommandTimeoutProtectionComboBox.Size = new System.Drawing.Size(229, 23);
-            this.CommandTimeoutProtectionComboBox.TabIndex = 6;
-            // 
-            // DescriptionLabel10
-            // 
-            this.DescriptionLabel10.AutoSize = true;
-            this.DescriptionLabel10.Location = new System.Drawing.Point(8, 293);
-            this.DescriptionLabel10.Name = "DescriptionLabel10";
-            this.DescriptionLabel10.Size = new System.Drawing.Size(132, 15);
-            this.DescriptionLabel10.TabIndex = 2;
-            this.DescriptionLabel10.Text = "Default Schema Name";
-            // 
-            // DefaultSchemaNameInput
-            // 
-            this.DefaultSchemaNameInput.Location = new System.Drawing.Point(11, 311);
-            this.DefaultSchemaNameInput.Name = "DefaultSchemaNameInput";
-            this.DefaultSchemaNameInput.Size = new System.Drawing.Size(238, 21);
-            this.DefaultSchemaNameInput.TabIndex = 7;
-            this.DefaultSchemaNameInput.Text = "dbo";
-            // 
-            // DescriptionLabel11
-            // 
-            this.DescriptionLabel11.AutoSize = true;
-            this.DescriptionLabel11.Location = new System.Drawing.Point(8, 335);
-            this.DescriptionLabel11.Name = "DescriptionLabel11";
-            this.DescriptionLabel11.Size = new System.Drawing.Size(190, 15);
-            this.DescriptionLabel11.TabIndex = 2;
-            this.DescriptionLabel11.Text = "Default Schema Name Protection";
-            // 
-            // DefaultSchemaNameProtectionComboBox
-            // 
-            this.DefaultSchemaNameProtectionComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.DefaultSchemaNameProtectionComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.DefaultSchemaNameProtectionComboBox.FormattingEnabled = true;
-            this.DefaultSchemaNameProtectionComboBox.Location = new System.Drawing.Point(11, 353);
-            this.DefaultSchemaNameProtectionComboBox.Name = "DefaultSchemaNameProtectionComboBox";
-            this.DefaultSchemaNameProtectionComboBox.Size = new System.Drawing.Size(229, 23);
-            this.DefaultSchemaNameProtectionComboBox.TabIndex = 6;
-            // 
-            // DescriptionLabel12
-            // 
-            this.DescriptionLabel12.AutoSize = true;
-            this.DescriptionLabel12.Location = new System.Drawing.Point(8, 400);
-            this.DescriptionLabel12.Name = "DescriptionLabel12";
-            this.DescriptionLabel12.Size = new System.Drawing.Size(109, 15);
-            this.DescriptionLabel12.TabIndex = 2;
-            this.DescriptionLabel12.Text = "Database Provider";
-            // 
-            // DbProviderComboBox
-            // 
-            this.DbProviderComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.DbProviderComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.DbProviderComboBox.FormattingEnabled = true;
-            this.DbProviderComboBox.Location = new System.Drawing.Point(11, 416);
-            this.DbProviderComboBox.Name = "DbProviderComboBox";
-            this.DbProviderComboBox.Size = new System.Drawing.Size(229, 23);
-            this.DbProviderComboBox.TabIndex = 8;
-            // 
-            // DescriptionLabel13
-            // 
-            this.DescriptionLabel13.AutoSize = true;
-            this.DescriptionLabel13.Location = new System.Drawing.Point(8, 442);
-            this.DescriptionLabel13.Name = "DescriptionLabel13";
-            this.DescriptionLabel13.Size = new System.Drawing.Size(167, 15);
-            this.DescriptionLabel13.TabIndex = 2;
-            this.DescriptionLabel13.Text = "Database Provider Protection";
-            // 
-            // DbProviderProtectionComboBox
-            // 
-            this.DbProviderProtectionComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.DbProviderProtectionComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.DbProviderProtectionComboBox.FormattingEnabled = true;
-            this.DbProviderProtectionComboBox.Location = new System.Drawing.Point(11, 459);
-            this.DbProviderProtectionComboBox.Name = "DbProviderProtectionComboBox";
-            this.DbProviderProtectionComboBox.Size = new System.Drawing.Size(229, 23);
-            this.DbProviderProtectionComboBox.TabIndex = 6;
-            // 
-            // SplitterLine03
-            // 
-            this.SplitterLine03.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.SplitterLine03.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.SplitterLine03.Location = new System.Drawing.Point(11, 508);
-            this.SplitterLine03.Name = "SplitterLine03";
-            this.SplitterLine03.Size = new System.Drawing.Size(229, 2);
-            this.SplitterLine03.TabIndex = 9;
-            // 
-            // SaveDbConnectionButton
-            // 
-            this.SaveDbConnectionButton.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.SaveDbConnectionButton.FlatAppearance.BorderSize = 0;
-            this.SaveDbConnectionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SaveDbConnectionButton.Location = new System.Drawing.Point(11, 516);
-            this.SaveDbConnectionButton.Name = "SaveDbConnectionButton";
-            this.SaveDbConnectionButton.Size = new System.Drawing.Size(50, 23);
-            this.SaveDbConnectionButton.TabIndex = 10;
-            this.SaveDbConnectionButton.Text = "OK";
-            this.SaveDbConnectionButton.UseVisualStyleBackColor = false;
-            // 
-            // DbConnectionToolStrip
-            // 
-            this.DbConnectionToolStrip.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.DbConnectionToolStrip.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DbConnectionToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.RemoveDbConnectionButton});
-            this.DbConnectionToolStrip.Location = new System.Drawing.Point(0, 0);
-            this.DbConnectionToolStrip.Name = "DbConnectionToolStrip";
-            this.DbConnectionToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.DbConnectionToolStrip.Size = new System.Drawing.Size(706, 25);
-            this.DbConnectionToolStrip.TabIndex = 0;
-            this.DbConnectionToolStrip.Text = "toolStrip1";
-            // 
-            // RemoveDbConnectionButton
-            // 
-            this.RemoveDbConnectionButton.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RemoveDbConnectionButton.ForeColor = System.Drawing.Color.Maroon;
-            this.RemoveDbConnectionButton.Image = ((System.Drawing.Image)(resources.GetObject("RemoveDbConnectionButton.Image")));
-            this.RemoveDbConnectionButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.RemoveDbConnectionButton.Name = "RemoveDbConnectionButton";
-            this.RemoveDbConnectionButton.Size = new System.Drawing.Size(139, 22);
-            this.RemoveDbConnectionButton.Text = "Remove Selected！";
             // 
             // DbConnectionListView
             // 
@@ -816,6 +773,7 @@
             this.DbConnectionListView.Location = new System.Drawing.Point(0, 25);
             this.DbConnectionListView.Name = "DbConnectionListView";
             this.DbConnectionListView.Size = new System.Drawing.Size(706, 512);
+            this.DbConnectionListView.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.DbConnectionListView.TabIndex = 1;
             this.DbConnectionListView.UseCompatibleStateImageBehavior = false;
             this.DbConnectionListView.View = System.Windows.Forms.View.Details;
@@ -860,6 +818,119 @@
             // 
             this.columnHeader13.Text = "Protected Provider";
             // 
+            // DbConnectionToolStrip
+            // 
+            this.DbConnectionToolStrip.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.DbConnectionToolStrip.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DbConnectionToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.RemoveDbConnectionButton});
+            this.DbConnectionToolStrip.Location = new System.Drawing.Point(0, 0);
+            this.DbConnectionToolStrip.Name = "DbConnectionToolStrip";
+            this.DbConnectionToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.DbConnectionToolStrip.Size = new System.Drawing.Size(706, 25);
+            this.DbConnectionToolStrip.TabIndex = 0;
+            this.DbConnectionToolStrip.Text = "toolStrip1";
+            // 
+            // RemoveDbConnectionButton
+            // 
+            this.RemoveDbConnectionButton.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RemoveDbConnectionButton.ForeColor = System.Drawing.Color.Maroon;
+            this.RemoveDbConnectionButton.Image = ((System.Drawing.Image)(resources.GetObject("RemoveDbConnectionButton.Image")));
+            this.RemoveDbConnectionButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.RemoveDbConnectionButton.Name = "RemoveDbConnectionButton";
+            this.RemoveDbConnectionButton.Size = new System.Drawing.Size(139, 22);
+            this.RemoveDbConnectionButton.Text = "Remove Selected！";
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.BackColor = System.Drawing.Color.White;
+            this.tabPage6.Controls.Add(this.DescriptionLabel16);
+            this.tabPage6.Controls.Add(this.DescriptionLabel15);
+            this.tabPage6.Controls.Add(this.DefaultDbConnectionComboBox);
+            this.tabPage6.Controls.Add(this.DefaultProtectionComboBox);
+            this.tabPage6.Controls.Add(this.DefaultDbProviderComboBox);
+            this.tabPage6.Controls.Add(this.DescriptionLabel14);
+            this.tabPage6.Location = new System.Drawing.Point(4, 27);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Size = new System.Drawing.Size(970, 539);
+            this.tabPage6.TabIndex = 3;
+            this.tabPage6.Text = "Default Options";
+            // 
+            // AssemblyOpenDialog
+            // 
+            this.AssemblyOpenDialog.DefaultExt = "dll";
+            this.AssemblyOpenDialog.FileName = "Assembly";
+            this.AssemblyOpenDialog.Filter = ".Net Assembly|*.dll|.Net Assembly|*.exe|All Files|*.*";
+            this.AssemblyOpenDialog.Multiselect = true;
+            this.AssemblyOpenDialog.Title = "Select A .Net Assembly";
+            // 
+            // FlashingTimer
+            // 
+            this.FlashingTimer.Interval = 300;
+            // 
+            // ButtonTooltip
+            // 
+            this.ButtonTooltip.ShowAlways = true;
+            this.ButtonTooltip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.ButtonTooltip.ToolTipTitle = "This Button";
+            // 
+            // DescriptionLabel14
+            // 
+            this.DescriptionLabel14.AutoSize = true;
+            this.DescriptionLabel14.Location = new System.Drawing.Point(6, 15);
+            this.DescriptionLabel14.Name = "DescriptionLabel14";
+            this.DescriptionLabel14.Size = new System.Drawing.Size(151, 15);
+            this.DescriptionLabel14.TabIndex = 0;
+            this.DescriptionLabel14.Text = "Default Database Provider";
+            // 
+            // DefaultDbProviderComboBox
+            // 
+            this.DefaultDbProviderComboBox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.DefaultDbProviderComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.DefaultDbProviderComboBox.FormattingEnabled = true;
+            this.DefaultDbProviderComboBox.Location = new System.Drawing.Point(9, 34);
+            this.DefaultDbProviderComboBox.Name = "DefaultDbProviderComboBox";
+            this.DefaultDbProviderComboBox.Size = new System.Drawing.Size(300, 23);
+            this.DefaultDbProviderComboBox.TabIndex = 1;
+            // 
+            // DescriptionLabel15
+            // 
+            this.DescriptionLabel15.AutoSize = true;
+            this.DescriptionLabel15.Location = new System.Drawing.Point(6, 80);
+            this.DescriptionLabel15.Name = "DescriptionLabel15";
+            this.DescriptionLabel15.Size = new System.Drawing.Size(266, 15);
+            this.DescriptionLabel15.TabIndex = 2;
+            this.DescriptionLabel15.Text = "Default Database Properties Protected Provider";
+            // 
+            // DefaultProtectionComboBox
+            // 
+            this.DefaultProtectionComboBox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.DefaultProtectionComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.DefaultProtectionComboBox.FormattingEnabled = true;
+            this.DefaultProtectionComboBox.Location = new System.Drawing.Point(9, 98);
+            this.DefaultProtectionComboBox.Name = "DefaultProtectionComboBox";
+            this.DefaultProtectionComboBox.Size = new System.Drawing.Size(300, 23);
+            this.DefaultProtectionComboBox.TabIndex = 1;
+            // 
+            // DescriptionLabel16
+            // 
+            this.DescriptionLabel16.AutoSize = true;
+            this.DescriptionLabel16.Location = new System.Drawing.Point(6, 145);
+            this.DescriptionLabel16.Name = "DescriptionLabel16";
+            this.DescriptionLabel16.Size = new System.Drawing.Size(169, 15);
+            this.DescriptionLabel16.TabIndex = 2;
+            this.DescriptionLabel16.Text = "Default Database Connection";
+            // 
+            // DefaultDbConnectionComboBox
+            // 
+            this.DefaultDbConnectionComboBox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.DefaultDbConnectionComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.DefaultDbConnectionComboBox.FormattingEnabled = true;
+            this.DefaultDbConnectionComboBox.Location = new System.Drawing.Point(9, 163);
+            this.DefaultDbConnectionComboBox.Name = "DefaultDbConnectionComboBox";
+            this.DefaultDbConnectionComboBox.Size = new System.Drawing.Size(300, 23);
+            this.DefaultDbConnectionComboBox.TabIndex = 1;
+            // 
             // DataAccessEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -902,6 +973,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.CommandTimeoutNumUpDown)).EndInit();
             this.DbConnectionToolStrip.ResumeLayout(false);
             this.DbConnectionToolStrip.PerformLayout();
+            this.tabPage6.ResumeLayout(false);
+            this.tabPage6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -979,5 +1052,11 @@
         private System.Windows.Forms.ColumnHeader columnHeader11;
         private System.Windows.Forms.ColumnHeader columnHeader12;
         private System.Windows.Forms.ColumnHeader columnHeader13;
+        private System.Windows.Forms.Label DescriptionLabel14;
+        private System.Windows.Forms.ComboBox DefaultDbProviderComboBox;
+        private System.Windows.Forms.Label DescriptionLabel15;
+        private System.Windows.Forms.ComboBox DefaultProtectionComboBox;
+        private System.Windows.Forms.Label DescriptionLabel16;
+        private System.Windows.Forms.ComboBox DefaultDbConnectionComboBox;
     }
 }
