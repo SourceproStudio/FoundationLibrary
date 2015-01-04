@@ -5,13 +5,13 @@ using System.Runtime.InteropServices;
 // 有关程序集的常规信息通过以下
 // 特性集控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("SourcePro Studio C# Development Library")]
-[assembly: AssemblyDescription("SourcePro Studio C# Development Foundation Library")]
+[assembly: AssemblyTitle("Microsoft C#.NET Programming Foundation Library")]
+[assembly: AssemblyDescription("C#编程基础库")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("SourcePro Studio")]
-[assembly: AssemblyProduct("SourcePro Studio Library")]
-[assembly: AssemblyCopyright("Copyright © 2014 Wang Yucai. All rights reserved.")]
-[assembly: AssemblyTrademark("SourceProStudio™")]
+[assembly: AssemblyProduct("SourcePro Studio C# Programming Foundation Library")]
+[assembly: AssemblyCopyright("Copyright © 2015 Wang Yucai. All rights reserved.")]
+[assembly: AssemblyTrademark("SourcePro Studio™")]
 [assembly: AssemblyCulture("")]
 
 // 将 ComVisible 设置为 false 使此程序集中的类型
@@ -33,5 +33,8 @@ using System.Runtime.InteropServices;
 // 方法是按如下所示使用“*”:
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.5459.54947")]
+[assembly: AssemblyFileVersion("1.0.5482.51806")]
 /*Generate By AssemblyInfoManager v2.0.5441.37112. Time: 2014-12-12 15:15:47*/
+
+
+/*Generate By AssemblyInfo Editor 1.0.0.0, Update Time 2015-01-04 14:25:46*/
