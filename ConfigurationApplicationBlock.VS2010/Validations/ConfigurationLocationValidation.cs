@@ -47,7 +47,7 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.Val
         private RegexMatching _matching2;
         private bool _waveStart = false;
         private char _followWave;
-        private bool _environmentVarStart;
+        private bool _environmentVarStart = false;
         private char _followEnvironmentVar;
         private const string Group1 = "StartWith";
         private const string Group2 = "Suffix";
@@ -158,7 +158,7 @@ namespace SourcePro.Csharp.Practices.FoundationLibrary.Commons.Configuration.Val
                         ? match.Groups[Group2].Value.ToCharArray()[0] : '0';
                     this.EnvironmentVariableName = match.Groups[Group1].Value.Replace("%", string.Empty);
                 }
-                else
+                else if (this.Matching2.IsMatch(path))
                 {
                     match = this.Matching2.Match(path, RegexOptions.None);
                     this.WaveStart = match.Success && !object.ReferenceEquals(match.Groups[Group1], null) && match.Groups[Group1].Success;
